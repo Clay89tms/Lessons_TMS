@@ -21,8 +21,9 @@ public class CarsServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("---DO GET---");
         ServletOutputStream outputStream = resp.getOutputStream();
-        outputStream.println("Hello people! this is DO GET");
+        outputStream.println("Hello people! this is DO GET" + req.getAttribute("attr"));
         outputStream.close();
     }
 }
