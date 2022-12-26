@@ -1,8 +1,8 @@
 package org.example;
-
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,7 +23,7 @@ public class CarsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("---DO GET---");
         ServletOutputStream outputStream = resp.getOutputStream();
-        outputStream.println("Hello people! this is DO GET" + req.getAttribute("attr"));
+        outputStream.println("Hello people! this is DO GET" + req.getAttribute("user1"));
         outputStream.close();
     }
 }
