@@ -1,15 +1,33 @@
 package org.example;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
+@WebServlet(value = "/idcars")
 public class IdCarsServlet extends HttpServlet {
 
     private static Map<String, CarCreate> map = new HashMap<>();
+
+
+    @Override
+    protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("/IdCarServletFirstSession.html").forward(req, resp);
+    }
+
+    @Override
+    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH.mm.ss");
+        resp.addCookie(new Cookie("LastTime", simpleDateFormat.format(new Date())));
+        super.service(req, resp);
+    }
+
     private static CarCreate car;
 
     @Override
@@ -40,9 +58,9 @@ public class IdCarsServlet extends HttpServlet {
 
     private String carToString(Map<String, CarCreate> map, List<String> list, int i) {
         return "[id = " + map.get(list.get(i)).getId() + "\t" +
-                    ", type = " + map.get(list.get(i)).getType() + "\t" +
-                    ", color = " + map.get(list.get(i)).getColor() + "\t" +
-                    ", price = " + map.get(list.get(i)).getPrice() + "]";
+                ", type = " + map.get(list.get(i)).getType() + "\t" +
+                ", color = " + map.get(list.get(i)).getColor() + "\t" +
+                ", price = " + map.get(list.get(i)).getPrice() + "]";
     }
 
     @Override
@@ -69,13 +87,15 @@ public class IdCarsServlet extends HttpServlet {
         String type = req.getParameter("type");
         String color = req.getParameter("color");
         String price = req.getParameter("price");
-        carSetData(id, type, color, price);
+
 
         if ((id != null) && (!map.isEmpty())) {
             List<String> list1 = new ArrayList<>();
             list1.addAll(map.keySet());
+
             for (int i = 0; i < list1.size(); i++) {
-                if (list1.get(i).equals(id)) {
+                if (list1.get(i).equals(id) && (type.equals(map.get(list1.get(i)).getType()))) {
+                    carSetData(id, type, color, price);
                     map.put(id, car);
                 }
             }

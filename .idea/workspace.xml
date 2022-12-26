@@ -6,14 +6,27 @@
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L23 HW Com1 (p3)">
-      <change afterPath="$PROJECT_DIR$/L22/src/main/java/org/example/CarCreate.java" afterDir="false" />
+    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L23 HW Com2 (p3)">
+      <change afterPath="$PROJECT_DIR$/L22/src/main/java/org/example/IdCarsServletSessionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L22/src/main/java/org/example/SessionList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L22/src/main/java/org/example/webweb.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L22/src/main/webapp/IdCarServletFirstSession.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L22/src/main/webapp/boot.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L22/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/L22/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/L22/src/main/java/hw23.txt" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/java/hw23.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L22/src/main/java/org/example/BookListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/java/org/example/BookListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L22/src/main/java/org/example/CarsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/java/org/example/CarsServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/L22/src/main/java/org/example/IdCarsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/java/org/example/IdCarsServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L22/src/main/java/org/example/LogFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/java/org/example/LogFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L22/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L22/src/main/webapp/WEB-INF/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/webapp/book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L22/src/main/webapp/WEB-INF/book.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/webapp/book.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L22/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/L22/src/main/webapp/ttt.html" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/webapp/ttt.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/L22/target/Servlet-1.3-clay.war" beforeDir="false" afterPath="$PROJECT_DIR$/L22/target/Servlet-1.3-clay.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +38,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Tag Library Descriptor" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -80,24 +93,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/Lessons_TMS",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Lessons_TMS/javax.servlet-api-3.1.0.jar&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Clay\IdeaProjects\Lessons_TMS\L22\src" />
@@ -106,11 +127,11 @@
       <recent name="C:\Users\Clay\IdeaProjects\Lessons_TMS\L22\src\main\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src\main\java\org\example" />
       <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src\main\webapp\WEB-INF" />
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src\main\webapp\app" />
-      <recent name="C:\Users\Clay\IdeaProjects\Lessons_TMS\L22" />
-      <recent name="C:\Users\Clay\IdeaProjects\Lessons_TMS\L22\src" />
-      <recent name="C:\Users\Clay\IdeaProjects\Lessons_TMS" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src\test" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src\main" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.70">
@@ -128,7 +149,8 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.70" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/idcars" />
+      <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="Servlet:war">
@@ -236,7 +258,10 @@
       <workItem from="1671047063989" duration="2531000" />
       <workItem from="1671049607597" duration="1027000" />
       <workItem from="1671276704731" duration="27000" />
-      <workItem from="1671297357373" duration="60446000" />
+      <workItem from="1671297357373" duration="98366000" />
+      <workItem from="1671897764643" duration="2317000" />
+      <workItem from="1671903890763" duration="2100000" />
+      <workItem from="1671906072254" duration="7691000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1671047214017</created>
@@ -273,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671568577980</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="L23 HW Com2 (p3)">
+      <created>1671719703508</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671719703508</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +314,11 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="59945ad7-3743-47af-91eb-c794e7ab51a5">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -308,7 +345,8 @@
     <MESSAGE value="L22 Commit 1&#10;add servlet" />
     <MESSAGE value="L23 Work online - Commit 1" />
     <MESSAGE value="L23 HW Com1 (p3)" />
-    <option name="LAST_COMMIT_MESSAGE" value="L23 HW Com1 (p3)" />
+    <MESSAGE value="L23 HW Com2 (p3)" />
+    <option name="LAST_COMMIT_MESSAGE" value="L23 HW Com2 (p3)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -318,7 +356,56 @@
           <line>8</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L22/src/main/java/org/example/IdCarsServletSessionListener.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L22/src/main/java/org/example/LogFilter.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L22/src/main/java/org/example/BookListener.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L22/src/main/java/org/example/LogFilter.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L22/src/main/java/org/example/LogFilter.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L22/src/main/java/org/example/LogFilter.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L22/src/main/java/org/example/IdCarsServlet.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L22/src/main/java/org/example/IdCarsServlet.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L22/src/main/java/org/example/IdCarsServlet.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
