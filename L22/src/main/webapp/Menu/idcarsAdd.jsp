@@ -54,13 +54,14 @@ Metod Search
         List<String> list1 = new ArrayList<>();
         list1.addAll(mapCar.keySet());
         for (int i = 0; i < list1.size(); i++) {
-            response.getOutputStream().print(
+
+            out.println(
                     "id = " + mapCar.get(list1.get(i)).getId() + ";\t" +
                             "type = " + mapCar.get(list1.get(i)).getType() + ";\t" +
                             "color = " + mapCar.get(list1.get(i)).getColor() + ";\t" +
                             "price = " + mapCar.get(list1.get(i)).getPrice() + "<br>");
         }
-        response.getOutputStream().print("<br><a href=\"../start.jsp\">Back menu</a><br>");
+        out.println("<br><a href=\"../start.jsp\">Back menu</a><br>");
     }
 %>
 
