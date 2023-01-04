@@ -1,7 +1,9 @@
 package idCarsServlet;
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class IdCarsMap {
@@ -25,8 +27,24 @@ public class IdCarsMap {
         mapCar.put(id, carCreate);
     }
 
-    public static void deleteCarMap(String id){
+    public static void deleteCarMap(String id) {
         mapCar.remove(id);
+    }
+
+    public static CarCreate carCreateSearch(String id) {
+        Map<String, CarCreate> mapCar = getMapCar();
+        List<String> list1 = new ArrayList<>();
+        list1.addAll(mapCar.keySet());
+        boolean b = true;
+        CarCreate carCreateS = new CarCreate();
+        for (int i = 0; i < list1.size(); i++) {
+            if ((b) && (id.equals(list1.get(i)))) {
+                carCreateS = mapCar.get(list1.get(i));
+                b = false;
+            }
+
+        }
+        return carCreateS;
     }
 
 

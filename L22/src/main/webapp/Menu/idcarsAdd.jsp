@@ -41,30 +41,26 @@ Metod Delete
 </form>
 
 <br>
-<a href="../start.jsp">Back</a>
 <br>
 <hr>
-<hr>
 Metod Search
-
+<br>
+<form method="post" action="idcarsSearch">
+    <input type="text" name="id">
+    <button style="width: 150px">Search</button>
+</form>
+<br>
 <%
-
-    if (!request.getAttribute("mapCar").equals(null)) {
-        Map<String, CarCreate> mapCar = (Map<String, CarCreate>) request.getAttribute("mapCar");
-        List<String> list1 = new ArrayList<>();
-        list1.addAll(mapCar.keySet());
-        for (int i = 0; i < list1.size(); i++) {
-
-            out.println(
-                    "id = " + mapCar.get(list1.get(i)).getId() + ";\t" +
-                            "type = " + mapCar.get(list1.get(i)).getType() + ";\t" +
-                            "color = " + mapCar.get(list1.get(i)).getColor() + ";\t" +
-                            "price = " + mapCar.get(list1.get(i)).getPrice() + "<br>");
-        }
-        out.println("<br><a href=\"../start.jsp\">Back menu</a><br>");
+    if (request.getAttribute("carCreateSearch") != null) {
+        CarCreate carCreateSearch = (CarCreate) request.getAttribute("carCreateSearch");
+        out.println("id = " + carCreateSearch.getId() + ";  type = "
+                + carCreateSearch.getType() + ";  color = "
+                + carCreateSearch.getColor() + ";  price = "
+                + carCreateSearch.getPrice() + "<br><hr>");
     }
+
 %>
-
-
+<br>
+<button onclick="location.href='../start.jsp'">Back to main</button>
 </body>
 </html>

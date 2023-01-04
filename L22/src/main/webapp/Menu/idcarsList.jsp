@@ -25,15 +25,15 @@
         list1.addAll(mapCar.keySet());
         for (int i = 0; i < list1.size(); i++) {
             out.println(
-                    "id = " + mapCar.get(list1.get(i)).getId() + ";\t" +
-                            "type = " + mapCar.get(list1.get(i)).getType() + ";\t" +
-                            "color = " + mapCar.get(list1.get(i)).getColor() + ";\t" +
+                    "id = " + mapCar.get(list1.get(i)).getId() + ";  " +
+                            "type = " + mapCar.get(list1.get(i)).getType() + ";  " +
+                            "color = " + mapCar.get(list1.get(i)).getColor() + ";  " +
                             "price = " + mapCar.get(list1.get(i)).getPrice() + "<br>");
         }
-        out.println("<br><a href=\"../start.jsp\">Back menu</a><br>");
     }
 %>
-    <button onclick="location.href='../index.html'">Back to main</button>
+<br>
+    <button onclick="location.href='../start.jsp'">Back to main</button>
 
 </body>
 </html>
