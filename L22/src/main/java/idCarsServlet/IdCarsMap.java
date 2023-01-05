@@ -10,7 +10,7 @@ public class IdCarsMap {
 
     private static Map<String, CarCreate> mapCar = new HashMap<>();
 
-    String id;
+    private String id;
 
     public IdCarsMap() {
     }
@@ -35,12 +35,11 @@ public class IdCarsMap {
         Map<String, CarCreate> mapCar = getMapCar();
         List<String> list1 = new ArrayList<>();
         list1.addAll(mapCar.keySet());
-        boolean b = true;
         CarCreate carCreateS = new CarCreate();
         for (int i = 0; i < list1.size(); i++) {
-            if ((b) && (id.equals(list1.get(i)))) {
+            if (id.equals(list1.get(i))) {
                 carCreateS = mapCar.get(list1.get(i));
-                b = false;
+                return carCreateS;
             }
 
         }

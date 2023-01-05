@@ -12,7 +12,7 @@ import static idCarsServlet.IdCarsMap.*;
 
 @WebServlet("/idcarsAdd")
 public class IdCarsAdd extends HttpServlet {
-    CarCreate carCreate;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("mapCar", getMapCar());
@@ -25,9 +25,9 @@ public class IdCarsAdd extends HttpServlet {
         String type = req.getParameter("type");
         String color = req.getParameter("color");
         String price = req.getParameter("price");
-        carCreate = new CarCreate();
 
-        carAddNew(id, type, color, price);
+
+        CarCreate carCreate = new CarCreate(id, type, color, price);
         setMapCar(id, carCreate);
 
 
@@ -35,13 +35,14 @@ public class IdCarsAdd extends HttpServlet {
         resp.sendRedirect("/idcarsAdd");
     }
 
-    private CarCreate carAddNew(String id, String type, String color, String price) {
-        carCreate.setId(id);
-        carCreate.setType(type);
-        carCreate.setColor(color);
-        carCreate.setPrice(price);
-        return carCreate;
-    }
+//    private CarCreate carAddNew(String id, String type, String color, String price) {
+//        CarCreate carCreate = new CarCreate();
+//        carCreate.setId(id);
+//        carCreate.setType(type);
+//        carCreate.setColor(color);
+//        carCreate.setPrice(price);
+//        return carCreate;
+//    }
 
 
 }
