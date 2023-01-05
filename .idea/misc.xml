@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/L22" />
+    <file type="web" url="file://$PROJECT_DIR$/L27JSTL" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
