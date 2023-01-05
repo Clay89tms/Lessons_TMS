@@ -17,6 +17,7 @@
 
 <p style="background-color:aquamarine">Menu Cars</p>
 
+
 <%
 
     if (request.getAttribute("mapCar") != null) {
@@ -24,16 +25,23 @@
         List<String> list1 = new ArrayList<>();
         list1.addAll(mapCar.keySet());
         for (int i = 0; i < list1.size(); i++) {
-            out.println(
+                String id = mapCar.get(list1.get(i)).getId();
+            out.print(
                     "id = " + mapCar.get(list1.get(i)).getId() + ";  " +
                             "type = " + mapCar.get(list1.get(i)).getType() + ";  " +
                             "color = " + mapCar.get(list1.get(i)).getColor() + ";  " +
-                            "price = " + mapCar.get(list1.get(i)).getPrice() + "<br>");
+                            "price = " + mapCar.get(list1.get(i)).getPrice() +
+                            "<form method='post' action='idcarsDeleleId'>" +
+                            "<input type='hidden' name='id' value='"+id+"'><input type=\"submit\" value=\"deleteCar\">" +
+                            "</form>");
+            out.println("<br>");
         }
     }
 %>
+<%--<input type="submit" value="deleteCar">--%>
+<%--<input type="hidden" name="id" value="${mapCar.get(list1.get(i)).getId()}">--%>
 <br>
-    <button onclick="location.href='../start.jsp'">Back to main</button>
+<button onclick="location.href='../start.jsp'">Back to main</button>
 
 </body>
 </html>

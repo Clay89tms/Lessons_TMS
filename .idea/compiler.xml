@@ -7,11 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="L22" />
+        <module name="Servlet" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="l22" target="11" />
-      <module name="Servlet" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

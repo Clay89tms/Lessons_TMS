@@ -9,14 +9,16 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L22 Commit">
+    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L26 HW Com3 100%">
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L22/src/main/java/idCarsServlet/IdCarsDeleteId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/L22/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/L22/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L22/src/main/java/idCarsServlet/CarCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/java/idCarsServlet/CarCreate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L22/src/main/java/idCarsServlet/IdCarsAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/java/idCarsServlet/IdCarsAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L22/src/main/java/idCarsServlet/IdCarsMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/java/idCarsServlet/IdCarsMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L22/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/L22/src/main/webapp/Menu/idcarsAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/webapp/Menu/idcarsAdd.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L22/src/main/webapp/Menu/idcarsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/webapp/Menu/idcarsList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L22/src/main/webapp/start.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/webapp/start.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L22/target/Servlet-1.3-clay.war" beforeDir="false" afterPath="$PROJECT_DIR$/L22/target/Servlet-1.3-clay.war" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +142,7 @@
     </configuration>
     <configuration name="Tomcat 9.0.70" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/start.jsp" />
-      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
@@ -304,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672778762828</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="L26 HW Com2">
+      <created>1672779986538</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672779986538</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +355,8 @@
     <MESSAGE value="L23 HW Com1 (p3)" />
     <MESSAGE value="L23 HW Com2 (p3)" />
     <MESSAGE value="L26 HW Com1" />
-    <option name="LAST_COMMIT_MESSAGE" value="L26 HW Com1" />
+    <MESSAGE value="L26 HW Com2" />
+    <option name="LAST_COMMIT_MESSAGE" value="L26 HW Com2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

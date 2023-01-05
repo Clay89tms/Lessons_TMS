@@ -38,6 +38,11 @@ Metod Delete
 <form method="post" action="idcarsDelele">
     <input type="text" name="id">
     <button style="width: 150px">Delete</button>
+
+</form>
+
+<form method="post" action="idcarsDelele">
+    <input name="id">
 </form>
 
 <br>
