@@ -31,24 +31,11 @@ public class IdCarsMap {
         mapCar.remove(id);
     }
 
-    public static CarCreate carCreateSearch(String id) {
-        Map<String, CarCreate> mapCar = getMapCar();
-        List<String> list1 = new ArrayList<>();
-        list1.addAll(mapCar.keySet());
-        CarCreate carCreateS = new CarCreate();
-        for (int i = 0; i < list1.size(); i++) {
-            if (id.equals(list1.get(i))) {
-                carCreateS = mapCar.get(list1.get(i));
-                return carCreateS;
-            }
 
-        }
-        return carCreateS;
-    }
-
-
-    @Override
-    public String toString() {
-        return "to String&&&???";
+    public static String carCreateSearch(CarCreate carCreateS) {
+        return "id = " + carCreateS.getId() + ";  type = "
+                + carCreateS.getType() + ";  color = "
+                + carCreateS.getColor() + ";  price = "
+                + carCreateS.getPrice();
     }
 }

@@ -17,13 +17,6 @@
 
     <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/jstl/jstl -->
         <dependency>
             <groupId>jstl</groupId>
@@ -36,7 +29,6 @@
             <version>3.1.0</version>
             <scope>compile</scope>
         </dependency>
-
 
     </dependencies>
 </project>

@@ -9,6 +9,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <title>Add/Search Menu</title>
@@ -41,11 +43,6 @@ Metod Delete
 
 </form>
 
-<form method="post" action="idcarsDelele">
-    <input name="id">
-</form>
-
-<br>
 <br>
 <hr>
 Metod Search
@@ -55,17 +52,13 @@ Metod Search
     <button style="width: 150px">Search</button>
 </form>
 <br>
-<%
-    if (request.getAttribute("carCreateSearch") != null) {
-        CarCreate carCreateSearch = (CarCreate) request.getAttribute("carCreateSearch");
-        out.println("id = " + carCreateSearch.getId() + ";  type = "
-                + carCreateSearch.getType() + ";  color = "
-                + carCreateSearch.getColor() + ";  price = "
-                + carCreateSearch.getPrice() + "<br><hr>");
-    }
 
-%>
+<c:if test="${id == true}">
+    <c:out value="${carCreateSearch}"></c:out>
+</c:if>
+
 <br>
-<button onclick="location.href='../start.jsp'">Back to main</button>
+<br>
+<button onclick="location.href='../start27.jsp'">Back to main</button>
 </body>
 </html>

@@ -16,6 +16,7 @@ public class IdCarsAdd extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         req.setAttribute("mapCar", getMapCar());
         req.getRequestDispatcher("Menu/idcarsAdd.jsp").forward(req, resp);
     }
@@ -35,15 +36,4 @@ public class IdCarsAdd extends HttpServlet {
         System.out.println("Add new Car: " + "id= " + id + "; type= " + type + "; color= " + color + "; price= " + price);
         resp.sendRedirect("/idcarsAdd");
     }
-
-//    private CarCreate carAddNew(String id, String type, String color, String price) {
-//        CarCreate carCreate = new CarCreate();
-//        carCreate.setId(id);
-//        carCreate.setType(type);
-//        carCreate.setColor(color);
-//        carCreate.setPrice(price);
-//        return carCreate;
-//    }
-
-
 }
