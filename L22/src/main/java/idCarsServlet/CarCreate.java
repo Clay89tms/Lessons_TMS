@@ -27,6 +27,4 @@ public class CarCreate {
     public String getPrice() {
         return price;
     }
-
-
 }

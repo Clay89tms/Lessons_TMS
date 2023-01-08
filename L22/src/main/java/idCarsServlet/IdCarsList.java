@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Map;
 
-import static idCarsServlet.IdCarsMap.*;
+import static idCarsServlet.IdCarsMap.getMapCar;
 
 @WebServlet("/idcarsList")
 public class IdCarsList extends HttpServlet {

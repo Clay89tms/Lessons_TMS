@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static idCarsServlet.IdCarsMap.*;
+import static idCarsServlet.IdCarsMap.carCreateSearch;
 
 @WebServlet("/idcarsSearch")
 public class IdCarsSearch extends HttpServlet {
