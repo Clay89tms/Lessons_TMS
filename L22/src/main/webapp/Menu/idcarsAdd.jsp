@@ -41,11 +41,6 @@ Metod Delete
 
 </form>
 
-<form method="post" action="idcarsDelele">
-    <input name="id">
-</form>
-
-<br>
 <br>
 <hr>
 Metod Search
