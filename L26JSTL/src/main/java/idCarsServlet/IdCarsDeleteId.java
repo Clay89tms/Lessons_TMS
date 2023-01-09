@@ -15,7 +15,7 @@ public class IdCarsDeleteId extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("mapCar", getMapCar());
-        req.getRequestDispatcher("Menu/idcarsList.jsp").forward(req, resp);
+        resp.sendRedirect("idcarsList");
     }
 
     @Override

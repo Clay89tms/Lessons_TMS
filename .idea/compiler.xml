@@ -8,7 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="L22" />
         <module name="Servlet" />
-        <module name="L27JSTL" />
+        <module name="L26JSTL" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

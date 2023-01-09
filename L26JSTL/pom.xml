@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>L27JSTL</artifactId>
+    <artifactId>L26JSTL</artifactId>
     <version>1.0_Clay</version>
     <packaging>war</packaging>
 

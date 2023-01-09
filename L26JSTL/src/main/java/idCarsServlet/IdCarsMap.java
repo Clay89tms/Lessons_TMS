@@ -9,14 +9,17 @@ import java.util.Map;
 public class IdCarsMap {
 
     private static Map<String, CarCreate> mapCar = new HashMap<>();
+    private static List<CarCreate> carCreateList = new ArrayList<>();
 
-    private String id;
-
-    public IdCarsMap() {
+    public static List<CarCreate> getCarCreateList() {
+        return carCreateList;
     }
 
-    public IdCarsMap(String id) {
-        this.id = id;
+    public static void add(CarCreate carCreate) {
+        carCreateList.add(carCreate);
+    }
+
+    public IdCarsMap() {
     }
 
     public static Map<String, CarCreate> getMapCar() {
@@ -32,7 +35,7 @@ public class IdCarsMap {
     }
 
 
-    public static String carCreateSearch(CarCreate carCreateS) {
+    public static String carCreateToString(CarCreate carCreateS) {
         return "id = " + carCreateS.getId() + ";  type = "
                 + carCreateS.getType() + ";  color = "
                 + carCreateS.getColor() + ";  price = "
