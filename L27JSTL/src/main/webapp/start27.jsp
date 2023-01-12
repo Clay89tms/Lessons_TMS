@@ -7,7 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="my" uri="/WEB-INF/Loop.tld" %>
 <html>
 <head>
     <title>Title</title>
@@ -21,12 +20,6 @@
         <div class="text-center"><p style="background-color:aquamarine">Menu Cars</p></div>
     </h1>
 </div>
-
-<hr>
-<my:loop count="4">
-    hello world!
-</my:loop>
-<hr>
 <!-- header -->
 
 <div class="row justify-content-md-center">       <!-- content -->

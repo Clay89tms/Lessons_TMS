@@ -2,27 +2,35 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="L27JSTL:war" />
+      <artifact name="L26JSTL:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L26 JSP Repair">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L27 JSTL Com3">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/MyTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/StartUpServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L26JSTL/src/main/webapp/WEB-INF/Loop.tld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/CarCreate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsAdd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsDelete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsDeleteId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/dz27.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/webapp/Menu/idcarsAdd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/webapp/Menu/idcarsAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/webapp/Menu/idcarsList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/webapp/Menu/idcarsList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L27JSTL/src/main/webapp/start27.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L22/src/main/webapp/Menu/idcarsAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/L22/src/main/webapp/Menu/idcarsAdd.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L22/target/Servlet-1.3-clay.war" beforeDir="false" afterPath="$PROJECT_DIR$/L22/target/Servlet-1.3-clay.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L27JSTL/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/L27JSTL/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L27JSTL/src/main/webapp/Menu/idcarsAdd.html" beforeDir="false" afterPath="$PROJECT_DIR$/L27JSTL/src/main/webapp/Menu/idcarsAdd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L27JSTL/src/main/webapp/Menu/idcarsAdd.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/L27JSTL/src/main/webapp/Menu/idcarsAdd.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L27JSTL/src/main/webapp/Menu/idcarsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/L27JSTL/src/main/webapp/Menu/idcarsList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L27JSTL/src/main/webapp/start.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/L27JSTL/src/main/webapp/start27.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L26JSTL/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/L26JSTL/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L26JSTL/src/main/webapp/start27.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/L26JSTL/src/main/webapp/start27.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +108,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/Lessons_TMS/L26JSTL/src/main",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/Lesson21",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -110,17 +118,22 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "build.tools",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL\src\main\java\idCarsServlet" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L27JSTL\src" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL\src" />
       <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL\src\main" />
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL\src\main\java" />
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src\main\java" />
-      <recent name="C:\Users\Clay\IdeaProjects\Lessons_TMS\L22\src" />
-      <recent name="C:\Users\Clay\IdeaProjects\Lessons_TMS\L22\src\main\java\org\example" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src\main\webapp" />
@@ -150,7 +163,7 @@
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
-        <artifact name="L27JSTL:war">
+        <artifact name="L26JSTL:war">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
@@ -231,6 +244,7 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="L27JSTL:war" />
+          <artifact name="L26JSTL:war" />
         </option>
       </method>
     </configuration>
@@ -260,6 +274,7 @@
       <workItem from="1671897764643" duration="2317000" />
       <workItem from="1671903890763" duration="2100000" />
       <workItem from="1671906072254" duration="7691000" />
+      <workItem from="1673280619674" duration="14529000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1671047214017</created>
@@ -359,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673191269277</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="L27 JSTL Com3">
+      <created>1673279918388</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1673279918388</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +428,8 @@
     <MESSAGE value="L26 JSTL init commit" />
     <MESSAGE value="L27 JSTL Start" />
     <MESSAGE value="L26 JSP Repair" />
-    <option name="LAST_COMMIT_MESSAGE" value="L26 JSP Repair" />
+    <MESSAGE value="L27 JSTL Com3" />
+    <option name="LAST_COMMIT_MESSAGE" value="L27 JSTL Com3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -415,6 +438,21 @@
           <url>file://$PROJECT_DIR$/L27JSTL/src/main/java/idCarsServlet/IdCarsList.java</url>
           <line>42</line>
           <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/StartUpServlet.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/StartUpServlet.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/StartUpServlet.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="177" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
