@@ -23,8 +23,8 @@
 <form method="post" action="idcarsDeleleId">
     <li>
         <input type="hidden" name="id" value="${car.id}">
-    ${car.id}; ${car.type}; ${car.color}; ${car.price};
-        <input type="submit" value="Delete"><br>
+    ${car.id}; ${car.type}; ${car.color}; ${car.price}
+        <input type="submit" value="Delete">
     </li>
 </form>
 </c:forEach>

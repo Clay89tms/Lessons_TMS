@@ -22,14 +22,16 @@ public class IdCarsUpdateId extends HttpServlet {
             Connection connection = getConnection();
 
             getConnection().createStatement().execute("drop table if exists cars");
-            getConnection().createStatement().execute("" +
-                    " create table cars (" +
-                    " id int primary key, " +
-                    " type varchar (50)," +
-                    " color varchar (50)," +
-                    " price varchar (50)" +
-                    ")");
-            getConnection().createStatement().close();
+            getConnection().createStatement().execute
+                    ("" +
+                            " create table cars (" +
+                            " id int primary key, " +
+                            " type varchar (50)," +
+                            " color varchar (50)," +
+                            " price varchar (50)" +
+                            ")"
+                    );
+            getConnection().close();
 
         } catch (Exception exc) {
             System.out.println(exc);
@@ -47,24 +49,29 @@ public class IdCarsUpdateId extends HttpServlet {
         }
     }
 
-    public static void addCarFromDataBase (String id, String type, String color, String price){
+    public static void addCarFromDataBase(String id, String type, String color, String price) {
         try {
-            getConnection().createStatement().execute("" +
-                    " insert into cars (id, type, color, price) " +
-                    "values (" + id + ", \'" + type + "\', \'" + color + "\', \'" + price + "\'" +
-                    ")"
-            );
+            getConnection().createStatement().execute
+                    ("" +
+                            " insert into cars (id, type, color, price) " +
+                            " values (" + id + ", \'" + type + "\', \'" + color + "\', \'" + price + "\'" +
+                            ")"
+                    );
+
+            getConnection().close();
         } catch (SQLException e) {
             System.out.println(e);
             throw new RuntimeException(e);
         }
     }
 
-    public static void deleteCarFromDataBase (String id){
+    public static void deleteCarFromDataBase(String id) {
         try {
             getConnection().createStatement().execute("" +
                     " delete from cars where id=" + id
             );
+
+            getConnection().close();
         } catch (SQLException e) {
             System.out.println(e);
             throw new RuntimeException(e);
