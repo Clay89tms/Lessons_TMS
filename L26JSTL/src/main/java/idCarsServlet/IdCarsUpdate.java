@@ -1,6 +1,5 @@
 package idCarsServlet;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,16 +7,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static idCarsServlet.IdCarsMap.addCarCreateToMap;
-import static idCarsServlet.IdCarsMap.getMapCar;
+import static idCarsServlet.IdCarsDataBase.updateCarInDataBase;
+import static idCarsServlet.IdCarsMap.putNewCar;
 
-@WebServlet("/idcarsAdd")
-public class IdCarsAdd extends HttpServlet {
-
+@WebServlet("/idcarsUpdate")
+public class IdCarsUpdate extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("mapCar", getMapCar());
-        req.getRequestDispatcher("Menu/idcarsAdd.jsp").forward(req, resp);
+        resp.sendRedirect("idcarsList");
     }
 
     @Override
@@ -28,10 +25,10 @@ public class IdCarsAdd extends HttpServlet {
         String price = req.getParameter("price");
 
         CarCreate carCreate = new CarCreate(id, type, color, price);
-        addCarCreateToMap(id, carCreate);
+        putNewCar(id, carCreate);
+        updateCarInDataBase(id,type,color,price);
 
-        System.out.println("Add new Car: " + "id= " + id + "; type= " + type + "; color= " + color + "; price= " + price);
-        resp.sendRedirect("/idcarsAdd");
+        System.out.println("update a Car: " + "id= " + id + "; type= " + type + "; color= " + color + "; price= " + price);
+        doGet(req, resp);
     }
-
 }

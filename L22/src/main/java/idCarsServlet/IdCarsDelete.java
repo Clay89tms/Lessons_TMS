@@ -7,7 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static idCarsServlet.IdCarsMap.*;
+import static idCarsServlet.IdCarsMap.deleteCarMap;
+
 @WebServlet("/idcarsDelele")
 public class IdCarsDelete extends HttpServlet {
     @Override

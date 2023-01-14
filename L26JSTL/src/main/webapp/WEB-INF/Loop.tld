@@ -1,0 +1,21 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>${NAME}</short-name>
+
+    <tag>
+        <name>loop</name>
+        <tag-class>idCarsServlet.MyTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>count</name>
+            <description>number of elements</description>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>countL</name>
+            <description>number Long</description>
+            <type>java.lang.Long</type>
+        </attribute>
+    </tag>
+</taglib>

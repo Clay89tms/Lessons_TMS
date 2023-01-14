@@ -7,15 +7,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static idCarsServlet.IdCarsMap.carCreateSearch;
-
-@WebServlet("/idcarsSearch")
-public class IdCarsSearch extends HttpServlet {
+import static idCarsServlet.IdCarsMap.deleteCarMap;
+@WebServlet("/idcarsDelele")
+public class IdCarsDelete extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String id = req.getParameter("id");
-        CarCreate carCreateSearch = carCreateSearch(id);
-        req.setAttribute("carCreateSearch", carCreateSearch);
+        deleteCarMap(id);
         req.getRequestDispatcher("Menu/idcarsAdd.jsp").forward(req, resp);
     }
 }
