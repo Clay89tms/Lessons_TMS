@@ -18,16 +18,23 @@
 
 <p style="background-color:aquamarine">Menu Cars</p>
 
-<c:if test="${mapCar == true}">
-<c:forEach items="${allCarsList}" var="car">
-<form method="post" action="idcarsDeleleId">
-    <li>
-        <input type="hidden" name="id" value="${car.id}">
-    ${car.id}; ${car.type}; ${car.color}; ${car.price}
-        <input type="submit" value="Delete">
-    </li>
-</form>
-</c:forEach>
+<c:if test="${takeAllCar == true}">
+    <c:forEach items="${allCarsList}" var="car">
+        <li>
+            <form method="post" action="idcarsDeleleButton">
+                <input type="hidden" name="id" value="${car.id}">
+                    ${car.id}; ${car.type}; ${car.color}; ${car.price}
+                <input type="submit" value="Delete">
+            </form>
+            <form method="post" action="idcarsUpdate">
+                <input type="hidden" name="id" value="${car.id}">
+                <input type="text" name="type">
+                <input type="text" name="color">
+                <input type="text" name="price">
+                <input type="submit" value="Update">
+            </form>
+        </li>
+    </c:forEach>
 
 </c:if>
 

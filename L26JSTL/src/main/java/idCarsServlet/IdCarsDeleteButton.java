@@ -7,21 +7,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static idCarsServlet.IdCarsMap.deleteCarMap;
-import static idCarsServlet.IdCarsMap.getMapCar;
+import static idCarsServlet.IdCarsMap.deleteCarById;
+import static idCarsServlet.IdCarsMap.takeAllCar;
+import static idCarsServlet.IdCarsDataBase.deleteCarInDataBase;
 
-@WebServlet("/idcarsDeleleId")
-public class IdCarsDeleteId extends HttpServlet {
+@WebServlet("/idcarsDeleleButton")
+public class IdCarsDeleteButton extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("mapCar", getMapCar());
+        req.setAttribute("takeAllCar", takeAllCar());
         resp.sendRedirect("idcarsList");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String id = req.getParameter("id");
-        deleteCarMap(id);
+        deleteCarById(id);
+        deleteCarInDataBase(id);
         doGet(req, resp);
     }
 }

@@ -7,13 +7,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static idCarsServlet.IdCarsMap.deleteCarMap;
+import static idCarsServlet.IdCarsMap.deleteCarById;
+import static idCarsServlet.IdCarsDataBase.deleteCarInDataBase;
+
 @WebServlet("/idcarsDelele")
-public class IdCarsDelete extends HttpServlet {
+public class IdCarsDeleteName extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String id = req.getParameter("id");
-        deleteCarMap(id);
+        deleteCarById(id);
+        deleteCarInDataBase(id);
         req.getRequestDispatcher("Menu/idcarsAdd.jsp").forward(req, resp);
     }
 }

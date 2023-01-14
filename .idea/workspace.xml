@@ -10,11 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L27 JSTL Com4 (MyTag add) (StartUpServlet add).&#10;(90%)">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsUpdate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L26JSTL/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/L26JSTL/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsUpdateId.java" beforeDir="false" afterPath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsUpdateId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsDelete.java" beforeDir="false" afterPath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsDeleteName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsDeleteId.java" beforeDir="false" afterPath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsDeleteButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsList.java" beforeDir="false" afterPath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsUpdateId.java" beforeDir="false" afterPath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/IdCarsDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L26JSTL/src/main/java/idCarsServlet/StartUpServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/L26JSTL/src/main/webapp/Menu/idcarsList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/L26JSTL/src/main/webapp/Menu/idcarsList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L26JSTL/src/main/webapp/start27.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/L26JSTL/src/main/webapp/start27.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +152,7 @@
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/start27.jsp" />
       <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
-      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="L26JSTL:war">
           <settings>
@@ -227,7 +234,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="L27JSTL:war" />
           <artifact name="L26JSTL:war" />
         </option>
       </method>
@@ -259,7 +265,8 @@
       <workItem from="1671903890763" duration="2100000" />
       <workItem from="1671906072254" duration="7691000" />
       <workItem from="1673280619674" duration="16742000" />
-      <workItem from="1673541042326" duration="2534000" />
+      <workItem from="1673541042326" duration="8807000" />
+      <workItem from="1673714955648" duration="7234000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1671047214017</created>
@@ -373,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673538652715</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="L27 JSTL Com4 (MyTag add) (StartUpServlet add).&#10;(90%)">
+      <created>1673625191503</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673625191503</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

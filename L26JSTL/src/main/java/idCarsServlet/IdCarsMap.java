@@ -11,7 +11,7 @@ public class IdCarsMap {
     private static Map<String, CarCreate> mapCar = new HashMap<>();
     private static List<CarCreate> carCreateList = new ArrayList<>();
 
-    public static List<CarCreate> getCarCreateList() {
+    public static List<CarCreate> takeCarList() {
         return carCreateList;
     }
 
@@ -22,15 +22,15 @@ public class IdCarsMap {
     public IdCarsMap() {
     }
 
-    public static Map<String, CarCreate> getMapCar() {
+    public static Map<String, CarCreate> takeAllCar() {
         return mapCar;
     }
 
-    public static void setMapCar(String id, CarCreate carCreate) {
+    public static void putNewCar(String id, CarCreate carCreate) {
         mapCar.put(id, carCreate);
     }
 
-    public static void deleteCarMap(String id) {
+    public static void deleteCarById(String id) {
         mapCar.remove(id);
     }
 

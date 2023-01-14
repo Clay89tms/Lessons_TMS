@@ -4,22 +4,16 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import static idCarsServlet.IdCarsMap.getMapCar;
-
-@WebServlet("/idcarsUpdate")
-public class IdCarsUpdateId extends HttpServlet {
+@WebServlet(value = "/init", loadOnStartup = 1)
+public class IdCarsDataBase extends HttpServlet {
     @Override
     public void init(ServletConfig config) throws ServletException {
         try {
             Class.forName("org.postgresql.Driver");
-            Connection connection = getConnection();
 
             getConnection().createStatement().execute("drop table if exists cars");
             getConnection().createStatement().execute
@@ -40,16 +34,14 @@ public class IdCarsUpdateId extends HttpServlet {
     }
 
     public static Connection getConnection() {
-
-
         try {
-            return DriverManager.getConnection("jdbc:postgresql://localhost:5432/cars", "postgres", "sagarA1");
+            return DriverManager.getConnection("jdbc:postgresql://localhost:5432/cars", "postgres", "postgres");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static void addCarFromDataBase(String id, String type, String color, String price) {
+    public static void addCarInDataBase(String id, String type, String color, String price) {
         try {
             getConnection().createStatement().execute
                     ("" +
@@ -65,7 +57,25 @@ public class IdCarsUpdateId extends HttpServlet {
         }
     }
 
-    public static void deleteCarFromDataBase(String id) {
+    public static void updateCarInDataBase(String id, String type, String color, String price){
+        try {
+            getConnection().createStatement().execute
+                    ("" +
+                            " update cars " +
+                            "set type=\'" + type + "\'," +
+                            " color=\'" + color + "\' ," +
+                            " price=\'" + price + "\' " +
+                            "where id=\'" + id+"\'"
+                    );
+
+            getConnection().close();
+        } catch (SQLException e) {
+            System.out.println(e);
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void deleteCarInDataBase(String id) {
         try {
             getConnection().createStatement().execute("" +
                     " delete from cars where id=" + id

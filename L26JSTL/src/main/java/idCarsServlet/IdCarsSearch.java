@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import static idCarsServlet.IdCarsMap.carCreateToString;
-import static idCarsServlet.IdCarsMap.getMapCar;
+import static idCarsServlet.IdCarsMap.takeAllCar;
 
 @WebServlet("/idcarsSearch")
 public class IdCarsSearch extends HttpServlet {
@@ -20,7 +20,7 @@ public class IdCarsSearch extends HttpServlet {
         String id = req.getParameter("id");
         if (id != null) {
             req.setAttribute("id", true);
-            Map<String, CarCreate> mapCar = getMapCar();
+            Map<String, CarCreate> mapCar = takeAllCar();
             List<String> list1 = new ArrayList<>();
             list1.addAll(mapCar.keySet());
             for (int i = 0; i < list1.size(); i++) {
