@@ -1,6 +1,7 @@
 package org.example;
 
 public class Singleton {
+
     private static Singleton instance = new Singleton();
 
     private Singleton() {
