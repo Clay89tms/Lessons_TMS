@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L27 JSTL Com4 DataBase (OK)&#10;(100%)" />
+    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L27 JSTL Com4 DataBase (OK)&#10;(100%)">
+      <change afterPath="$PROJECT_DIR$/L28_Solid/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L28_Solid/src/main/java/org/example/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
