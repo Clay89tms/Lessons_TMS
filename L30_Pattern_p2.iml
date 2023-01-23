@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/L30_Pattern_p2">
+      <sourceFolder url="file://$MODULE_DIR$/L30_Pattern_p2/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/L30_Pattern_p2/src/main/resources" type="java-resource" />
+    </content>
+  </component>
+</module>
