@@ -21,9 +21,10 @@ class CarsImpl implements CarInterface {
     public CarsImpl() {
     }
 
-    @Override
-    public void save() {
 
+    @Override
+    public CarsImpl save(CarsImpl cars) {
+        return cars;
     }
 
     @Override
