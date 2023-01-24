@@ -9,45 +9,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L29 Pattern part1 complete">
-      <change afterPath="$PROJECT_DIR$/L28_Solid.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/adapter/AdapterClientServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/adapter/ClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/adapter/MainApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/adapter/MainHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/adapter/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/adapter/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/adapter/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/decorator/BufferedReadServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/decorator/LogReadServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/decorator/MainApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/decorator/ReadService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/decorator/SimpleReadServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/dz30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/light/Avatar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/light/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/state/MainState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/state/MathService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/strategy/DevMathServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/strategy/DifMathServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/strategy/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/strategy/MathService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/strategy/MulMathServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/strategy/SumMathServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/template/AdminSaveService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/template/MainApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/template/SaveService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/template/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/template/UserHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/template/UserSaveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L30 Pattern part2 (work)">
+      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/dz30/CarInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/dz30/CarsCacheImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/dz30/CarsDataBaseImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/dz30/CarsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/dz30/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/proxy/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/proxy/MyInvocationHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/proxy/ProxyInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,8 +32,8 @@
         <option value="CSS File" />
         <option value="HTML File" />
         <option value="module-info" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -133,7 +103,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/L2626",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/Lessons_TMS/L30_Pattern_p2/src/main/java/org/example/proxy",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -161,11 +131,11 @@
       <recent name="org.example.command" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L30_Pattern_p2\src\main\java\org\example\proxy" />
       <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL\src\main\java\org\example" />
       <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL\src\main\java\idCarsServlet" />
       <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L27JSTL\src" />
       <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL" />
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src\main\webapp" />
@@ -375,7 +345,7 @@
       <workItem from="1673280619674" duration="16742000" />
       <workItem from="1673541042326" duration="8807000" />
       <workItem from="1673714955648" duration="7865000" />
-      <workItem from="1673933671950" duration="80353000" />
+      <workItem from="1673933671950" duration="87343000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1671047214017</created>
@@ -538,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674328706102</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="L30 Pattern part2 (work)">
+      <created>1674507445722</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1674507445722</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +569,8 @@
     <MESSAGE value="L28 Realization Singleton v1.1 v1.2" />
     <MESSAGE value="L29 Pattern part1 Initial commit" />
     <MESSAGE value="L29 Pattern part1 complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="L29 Pattern part1 complete" />
+    <MESSAGE value="L30 Pattern part2 (work)" />
+    <option name="LAST_COMMIT_MESSAGE" value="L30 Pattern part2 (work)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
