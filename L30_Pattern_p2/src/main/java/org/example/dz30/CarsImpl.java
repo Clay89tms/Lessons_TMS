@@ -2,8 +2,13 @@ package org.example.dz30;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
+@ToString
 class CarsImpl implements CarInterface {
 
     public CarsImpl(String id, String type, String color, String price) {
@@ -23,8 +28,8 @@ class CarsImpl implements CarInterface {
 
 
     @Override
-    public CarsImpl save(CarsImpl cars) {
-        return cars;
+    public CarsImpl save(CarsImpl car) {
+        return car;
     }
 
     @Override

@@ -1,21 +1,43 @@
 package org.example.dz30;
 
- class CarsDataBaseImpl implements CarInterface {
+import java.util.ArrayList;
+import java.util.List;
 
-  private CarInterface carInterface;
+class CarsDataBaseImpl implements CarInterface {
 
-  public CarsDataBaseImpl(CarInterface carInterface) {
-   this.carInterface = carInterface;
-  }
+    private List<CarsImpl> carsDataBase = new ArrayList<>();
 
-  @Override
-  public CarsImpl save(CarsImpl cars) {
-   carInterface.save(cars);
-   return cars;
-  }
+    private CarInterface carInterface;
 
-  @Override
-  public void load() {
+    public CarsDataBaseImpl(CarInterface carInterface) {
+        this.carInterface = carInterface;
+    }
 
-  }
- }
+    @Override
+    public CarsImpl save(CarsImpl car) {
+        carInterface.save(car);
+
+        if (carsDataBase.isEmpty()) {
+            carsDataBase.add(car);
+            System.out.println("Car add to DataBase with id = " + car.getId());
+        } else {
+            for (int i = 0; i < carsDataBase.size(); i++) {
+                if (carsDataBase.get(i).getId().equals(car.getId())) {
+                    System.out.println("this car is already in the DataBase!");
+                    break;
+                } else {
+                    carsDataBase.add(car);
+                    System.out.println("Car add to DataBase with id = " + car.getId());
+                    break;
+                }
+            }
+        }
+
+        return car;
+    }
+
+    @Override
+    public void load() {
+
+    }
+}
