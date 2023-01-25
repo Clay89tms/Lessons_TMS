@@ -16,28 +16,39 @@ class CarsDataBaseImpl implements CarInterface {
     @Override
     public CarsImpl save(CarsImpl car) {
         carInterface.save(car);
-
         if (carsDataBase.isEmpty()) {
             carsDataBase.add(car);
             System.out.println("Car add to DataBase with id = " + car.getId());
         } else {
+            boolean b = true;
             for (int i = 0; i < carsDataBase.size(); i++) {
                 if (carsDataBase.get(i).getId().equals(car.getId())) {
                     System.out.println("this car is already in the DataBase!");
-                    break;
-                } else {
-                    carsDataBase.add(car);
-                    System.out.println("Car add to DataBase with id = " + car.getId());
+                    b = false;
                     break;
                 }
             }
+            if (b) {
+                carsDataBase.add(car);
+                System.out.println("Car add to DataBase with id = " + car.getId());
+            }
         }
-
         return car;
     }
 
     @Override
-    public void load() {
-
+    public CarsImpl load(String id) {
+        CarsImpl cars = null;
+        for (int i = 0; i < carsDataBase.size(); i++) {
+            if(carsDataBase.get(i).getId().equals(id)){
+                System.out.println("load car DB; id = " + id);
+                cars = carsDataBase.get(i);
+                break;
+            }
+        }
+        if (cars == null) {
+            System.out.println("don't find car in DB");
+        }
+        return cars;
     }
 }

@@ -33,7 +33,7 @@ class CarsImpl implements CarInterface {
     }
 
     @Override
-    public void load() {
-
+    public CarsImpl load(String id) {
+        return null;
     }
 }
