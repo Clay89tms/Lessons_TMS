@@ -4,4 +4,8 @@ package org.example.dz30;
     public CarsImpl save(CarsImpl car);
 
     public CarsImpl load(String id);
+
+    public void delete(String id);
+
+    public CarsImpl update(CarsImpl car);
 }

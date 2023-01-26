@@ -26,6 +26,10 @@ class CarsImpl implements CarInterface {
     public CarsImpl() {
     }
 
+    public CarsImpl(String id){
+        this.id = id;
+    }
+
 
     @Override
     public CarsImpl save(CarsImpl car) {
@@ -34,6 +38,15 @@ class CarsImpl implements CarInterface {
 
     @Override
     public CarsImpl load(String id) {
+        return null;
+    }
+
+    @Override
+    public void delete(String id) {
+    }
+
+    @Override
+    public CarsImpl update(CarsImpl car) {
         return null;
     }
 }

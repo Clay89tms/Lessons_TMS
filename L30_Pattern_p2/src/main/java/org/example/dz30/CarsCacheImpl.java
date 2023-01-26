@@ -52,14 +52,68 @@ class CarsCacheImpl implements CarInterface {
         if (car == null) {
             System.out.println("don't find car in Cache");
             car = carInterface.load(id);
-
-            if (carsCache.size() >= 2) {
-                System.out.println("remove car in Cache with id = " + carsCache.get(0).getId());
-                carsCache.remove(0);
+            if (car != null) {
+                if (carsCache.size() >= 2) {
+                    System.out.println("remove car in Cache with id = " + carsCache.get(0).getId());
+                    carsCache.remove(0);
+                }
+                carsCache.add(car);
             }
-            carsCache.add(car);
         }
         System.out.println();
         return car;
+    }
+
+    @Override
+    public void delete(String id) {
+        try {
+            carInterface.delete(id);
+
+            boolean b = true;
+            for (int i = 0; i < carsCache.size(); i++) {
+                if (id.equals(carsCache.get(i).getId())) {
+                    System.out.println("delete car in Cache");
+                    carsCache.remove(i);
+                    b = false;
+                    break;
+                }
+            }
+            if (b) {
+                System.out.println("don't find car in Cache");
+            }
+        } catch (RuntimeException runtimeException) {
+            System.out.println("go out in Cache");
+        }
+        System.out.println();
+    }
+
+    @Override
+    public CarsImpl update(CarsImpl car) {
+        CarsImpl update = carInterface.update(car);
+        if (update != null){
+            boolean b = true;
+
+            for (int i = 0; i < carsCache.size(); i++) {
+                if (carsCache.get(i).getId().equals(car.getId())) {
+                    if (carsCache.size() >= 2) {
+                        System.out.println("remove car in Cache with id = " + carsCache.get(0).getId());
+                        carsCache.remove(0);
+                    } else {
+                        System.out.println("remove car in Cache with id = " + carsCache.get(i).getId());
+                        carsCache.remove(i);
+                    }
+                    System.out.println("add car in Cache with id = " + car.getId());
+                    carsCache.add(car);
+                    b = false;
+                    break;
+                }
+            }
+
+            if (b) {
+                System.out.println("car don't find in Cache to id = " + car.getId());
+            }
+        }
+
+        return update;
     }
 }
