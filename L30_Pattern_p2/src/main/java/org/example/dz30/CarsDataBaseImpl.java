@@ -61,7 +61,7 @@ class CarsDataBaseImpl implements CarInterface {
                 break;
             }
         }
-        if (b){
+        if (b) {
             System.out.println("don't find car in DB");
             throw new RuntimeException();
         }
@@ -69,24 +69,27 @@ class CarsDataBaseImpl implements CarInterface {
 
     @Override
     public CarsImpl update(CarsImpl car) {
-        if (carsDataBase.isEmpty()) {
-            System.out.println("Data base is Empty. update CANCEL");
-            car = null;
-        } else {
-            boolean b = true;
-            for (int i = 0; i < carsDataBase.size(); i++) {
-                if (carsDataBase.get(i).getId().equals(car.getId())) {
+        CarsImpl update = null;
+        for (int i = 0; i < carsDataBase.size(); i++) {
+            if (carsDataBase.get(i).getId().equals(car.getId())) {
+                if (car.getType().equals(carsDataBase.get(i).getType()) &&
+                        car.getColor().equals(carsDataBase.get(i).getColor()) &&
+                        car.getPrice().equals(carsDataBase.get(i).getPrice())) {
+                    System.out.println("This car already in DB. return (car)");
+                    update = car;
+                    return update;
+                } else {
                     System.out.println("update car in DB to id = " + car.getId());
+                    carsDataBase.remove(i);
                     carsDataBase.add(car);
-                    b = false;
-                    break;
+                   update = car;
+                   return update;
                 }
-            }
-            if (b) {
+            } else {
                 System.out.println("car don't find in DB to id = " + car.getId());
-                car = null;
+                break;
             }
         }
-        return car;
+        return update;
     }
 }

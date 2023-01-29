@@ -46,8 +46,12 @@ class MainApp {
         System.out.println("delete car id = " + id);
         carService.delete(id);
 
-        car = new CarsImpl("1", "1", "1", "1");
+        car = new CarsImpl("10", "1", "1", "1");
         update = carService.update(car);
-        System.out.println(update);
+        if(update != null) {
+            System.out.println(update);
+        } else{
+            System.out.println("don't have a car");
+        }
     }
 }

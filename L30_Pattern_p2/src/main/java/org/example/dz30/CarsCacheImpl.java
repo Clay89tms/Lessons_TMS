@@ -89,31 +89,57 @@ class CarsCacheImpl implements CarInterface {
 
     @Override
     public CarsImpl update(CarsImpl car) {
-        CarsImpl update = carInterface.update(car);
-        if (update != null){
-            boolean b = true;
-
-            for (int i = 0; i < carsCache.size(); i++) {
-                if (carsCache.get(i).getId().equals(car.getId())) {
-                    if (carsCache.size() >= 2) {
-                        System.out.println("remove car in Cache with id = " + carsCache.get(0).getId());
-                        carsCache.remove(0);
-                    } else {
-                        System.out.println("remove car in Cache with id = " + carsCache.get(i).getId());
-                        carsCache.remove(i);
-                    }
-                    System.out.println("add car in Cache with id = " + car.getId());
-                    carsCache.add(car);
-                    b = false;
-                    break;
+        CarsImpl update = null;
+        for (int i = 0; i < carsCache.size(); i++) {
+            if (car.getId().equals(carsCache.get(i).getId())) {
+                if (carsCache.get(i).getType().equals(car.getType())
+                        && carsCache.get(i).getColor().equals(car.getColor())
+                        && carsCache.get(i).getPrice().equals(car.getPrice())) {
+                    System.out.println("This car already in Cache. return (car)");
+                    update = car;
+                    return update;
+                } else {
+                   update = carInterface.update(car);
+                    System.out.println("remove car in Cache with id = " + carsCache.get(i).getId());
+                    carsCache.remove(i);
+                    carsCache.add(update);
+                    return update;
                 }
-            }
-
-            if (b) {
+            } else {
                 System.out.println("car don't find in Cache to id = " + car.getId());
+                update = carInterface.update(car);
+                break;
             }
         }
-
+//        CarsImpl update = carInterface.update(car);
+//        if (update != null) {
+//            boolean b = true;
+//
+//            for (int i = 0; i < carsCache.size(); i++) {
+//                if (carsCache.get(i).getId().equals(car.getId())) {
+//                    if (carsCache.get(i).getType().equals(car.getType())
+//                            && carsCache.get(i).getColor().equals(car.getColor())
+//                            && carsCache.get(i).getPrice().equals(car.getPrice())) {
+//                        break;
+//                    } else {
+//                        if (carsCache.size() >= 2) {
+//
+//                        } else {
+//                            System.out.println("remove car in Cache with id = " + carsCache.get(i).getId());
+//                            carsCache.remove(i);
+//                        }
+//                    }
+//                    System.out.println("add car in Cache with id = " + car.getId());
+//                    carsCache.add(car);
+//                    b = false;
+//                    break;
+//                }
+//            }
+//
+//            if (b) {
+//                System.out.println("car don't find in Cache to id = " + car.getId());
+//            }
+//        }
         return update;
     }
 }
