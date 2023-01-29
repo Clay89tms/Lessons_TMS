@@ -108,38 +108,15 @@ class CarsCacheImpl implements CarInterface {
             } else {
                 System.out.println("car don't find in Cache to id = " + car.getId());
                 update = carInterface.update(car);
+                if(update != null){
+                    System.out.println("remove car in Cache; id = " + carsCache.get(0).getId());
+                    carsCache.remove(0);
+                    System.out.println("Car add in Cache; id = " + update.getId());
+                    carsCache.add(update);
+                }
                 break;
             }
         }
-//        CarsImpl update = carInterface.update(car);
-//        if (update != null) {
-//            boolean b = true;
-//
-//            for (int i = 0; i < carsCache.size(); i++) {
-//                if (carsCache.get(i).getId().equals(car.getId())) {
-//                    if (carsCache.get(i).getType().equals(car.getType())
-//                            && carsCache.get(i).getColor().equals(car.getColor())
-//                            && carsCache.get(i).getPrice().equals(car.getPrice())) {
-//                        break;
-//                    } else {
-//                        if (carsCache.size() >= 2) {
-//
-//                        } else {
-//                            System.out.println("remove car in Cache with id = " + carsCache.get(i).getId());
-//                            carsCache.remove(i);
-//                        }
-//                    }
-//                    System.out.println("add car in Cache with id = " + car.getId());
-//                    carsCache.add(car);
-//                    b = false;
-//                    break;
-//                }
-//            }
-//
-//            if (b) {
-//                System.out.println("car don't find in Cache to id = " + car.getId());
-//            }
-//        }
         return update;
     }
 }
