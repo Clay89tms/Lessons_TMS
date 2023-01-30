@@ -5,8 +5,5 @@ public class WorkerEmployeeImpl extends Employee {
         super(firstName, secondName, experience, position);
     }
 
-    @Override
-    public Double salary(Integer baseRate) {
-        return super.salary(900);
-    }
+
 }
