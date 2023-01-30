@@ -5,5 +5,15 @@ public class WorkerEmployeeImpl extends Employee {
         super(firstName, secondName, experience, position);
     }
 
+    @Override
+    Double salary(Integer baseRate) {
+        setSalary((double)baseRate);
+        return (double) baseRate;
+    }
 
+    @Override
+    Employee hire(String firstName, String secondName, Integer experience, Position position) {
+        System.out.println("!!!--worker can't add personal--!!!");
+        return null;
+    }
 }

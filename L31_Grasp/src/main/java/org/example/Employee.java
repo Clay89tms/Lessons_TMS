@@ -1,27 +1,39 @@
 package org.example;
 
+import lombok.ToString;
+
+
 abstract class Employee {
 
-    Employee employee;
+    private Employee employee;
+
     private String firstName;
     private String secondName;
     private Integer experience;
     private Position position;
+    private Double salary;
 
     public Employee(String firstName, String secondName, Integer experience, Position position) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.experience = experience;
         this.position = position;
+        this.salary = salary(900);
     }
 
     Double salary(Integer baseRate) {
-        return baseRate * this.position.koef * this.experience;
+        return salary;
     }
 
 
-    private Employee hire(String firstName, String secondName, Integer experience, Position position) {
-        return hire(firstName, secondName, experience, position);
+    Employee hire(String firstName, String secondName, Integer experience, Position position) {
+        if(position == Position.DIRECTOR) {
+            employee = new DirectorEmployeeImpl(firstName, secondName, experience, position);
+        } else if (position == Position.WORKER){
+            employee = new WorkerEmployeeImpl(firstName, secondName, experience, position);
+            DirectorEmployeeImpl.personalOnDirector.add(employee);
+        }
+        return employee;
     }
 
     public String getFirstName() {
@@ -42,5 +54,18 @@ abstract class Employee {
 
     public Integer getExperience() {
         return experience;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstName = '" + firstName + '\'' +
+                ", secondName = '" + secondName + '\'' +
+                ", salary = " + salary +
+                '}';
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
     }
 }
