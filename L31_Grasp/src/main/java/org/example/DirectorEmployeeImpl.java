@@ -6,19 +6,19 @@ import java.util.List;
 public class DirectorEmployeeImpl extends Employee {
     private Double salary;
 
-
     static final List<Employee> personalOnDirector = new ArrayList<>();
 
-    @Override
-    Double salary(Integer baseRate) {
-        setSalary((double)baseRate);
-        baseRate += baseRate*(personalOnDirector.size()/(10));
-        return (double) (baseRate);
+    public DirectorEmployeeImpl(String firstName, String secondName, Integer experience) {
+        super(firstName, secondName, experience, Position.DIRECTOR);
     }
 
-    Employee employee;
+    Employee hire(Employee employee) {
+        personalOnDirector.add(employee);
+        this.salary = salary();
+        return employee;
+    }
 
-    public DirectorEmployeeImpl(String firstName, String secondName, Integer experience, Position position) {
-        super(firstName, secondName, experience, position);
+    public Double getSalary() {
+        return salary;
     }
 }

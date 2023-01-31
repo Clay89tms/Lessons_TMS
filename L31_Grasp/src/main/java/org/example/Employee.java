@@ -1,39 +1,34 @@
 package org.example;
 
-import lombok.ToString;
+import static org.example.DirectorEmployeeImpl.personalOnDirector;
 
 
 abstract class Employee {
-
-    private Employee employee;
 
     private String firstName;
     private String secondName;
     private Integer experience;
     private Position position;
-    private Double salary;
+
+    private static final Integer baseRate = 900;
 
     public Employee(String firstName, String secondName, Integer experience, Position position) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.experience = experience;
         this.position = position;
-        this.salary = salary(900);
     }
 
-    Double salary(Integer baseRate) {
+    public Double salary() {
+        Double salary = (double) baseRate;
+        if(position == Position.DIRECTOR && personalOnDirector.size() > 0){
+            salary = position.koef * baseRate * personalOnDirector.size();
+        }
         return salary;
     }
 
-
-    Employee hire(String firstName, String secondName, Integer experience, Position position) {
-        if(position == Position.DIRECTOR) {
-            employee = new DirectorEmployeeImpl(firstName, secondName, experience, position);
-        } else if (position == Position.WORKER){
-            employee = new WorkerEmployeeImpl(firstName, secondName, experience, position);
-            DirectorEmployeeImpl.personalOnDirector.add(employee);
-        }
-        return employee;
+    public Integer getBaseRate() {
+        return baseRate;
     }
 
     public String getFirstName() {
@@ -48,9 +43,6 @@ abstract class Employee {
         return position;
     }
 
-    public Employee getEmployee() {
-        return employee;
-    }
 
     public Integer getExperience() {
         return experience;
@@ -61,11 +53,8 @@ abstract class Employee {
         return "Employee{" +
                 "firstName = '" + firstName + '\'' +
                 ", secondName = '" + secondName + '\'' +
-                ", salary = " + salary +
+                ", salary = " + salary() +
                 '}';
     }
 
-    public void setSalary(Double salary) {
-        this.salary = salary;
-    }
 }
