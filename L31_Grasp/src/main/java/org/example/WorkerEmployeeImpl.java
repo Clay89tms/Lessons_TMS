@@ -2,7 +2,7 @@ package org.example;
 
 public class WorkerEmployeeImpl extends Employee {
 
-    private Double salary = salary();
+//    private Double salary = salary();
     public WorkerEmployeeImpl(String firstName, String secondName, Integer experience) {
         super(firstName, secondName, experience, Position.WORKER);
     }

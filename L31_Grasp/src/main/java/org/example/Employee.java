@@ -50,7 +50,6 @@ abstract class Employee {
         return "Employee\t{" +
                 "firstName = '" + firstName + '\'' +
                 ", secondName = '" + secondName + '\'' +
-                ", salary = " + salary() +
                 '}';
     }
 
