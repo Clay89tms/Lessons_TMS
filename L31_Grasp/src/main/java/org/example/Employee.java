@@ -20,10 +20,7 @@ abstract class Employee {
     }
 
     public Double salary() {
-        Double salary = (double) baseRate;
-        if(position == Position.DIRECTOR && personalOnDirector.size() > 0){
-            salary = position.koef * baseRate * personalOnDirector.size();
-        }
+        Double salary = position.koef * baseRate * experience;
         return salary;
     }
 
@@ -50,7 +47,7 @@ abstract class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "Employee\t{" +
                 "firstName = '" + firstName + '\'' +
                 ", secondName = '" + secondName + '\'' +
                 ", salary = " + salary() +
