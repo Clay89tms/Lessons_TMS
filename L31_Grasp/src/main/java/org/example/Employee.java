@@ -1,8 +1,5 @@
 package org.example;
 
-import static org.example.DirectorEmployeeImpl.personalOnDirector;
-
-
 abstract class Employee {
 
     private String firstName;
@@ -50,6 +47,7 @@ abstract class Employee {
         return "Employee\t{" +
                 "firstName = '" + firstName + '\'' +
                 ", secondName = '" + secondName + '\'' +
+                ", salary = '" + salary() + '\'' +
                 '}';
     }
 
