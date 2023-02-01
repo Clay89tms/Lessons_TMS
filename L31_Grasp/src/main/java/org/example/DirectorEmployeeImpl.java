@@ -13,16 +13,25 @@ public class DirectorEmployeeImpl extends Employee {
 
     @Override
     public Double salary() {
-        if (personalOnDirector.size() == 0) {
-            return super.salary();
-        } else {
-            return super.salary() * personalOnDirector.size();
-        }
+        return super.salary() * (personalOnDirector.size() + 1);
     }
 
     Employee hire(Employee employee) {
         personalOnDirector.add(employee);
         return employee;
+    }
+
+    boolean findInTo(DirectorEmployeeImpl employee, String name) {
+        boolean response = false;
+        List<Employee> personalOnDirector1 = employee.getPersonalOnDirector();
+        for (int i = 0; i < personalOnDirector1.size(); i++) {
+            String find = personalOnDirector1.get(i).getFirstName();
+            System.out.println(find);
+            if (name.equals(find)){
+                response = true;
+            }
+        }
+        return response;
     }
 
     @Override
@@ -32,5 +41,9 @@ public class DirectorEmployeeImpl extends Employee {
                 ", secondName = '" + super.getSecondName() + '\'' +
                 ", salary = '" + salary() + '\'' +
                 "}\n" + personalOnDirector;
+    }
+
+    public List<Employee> getPersonalOnDirector() {
+        return personalOnDirector;
     }
 }

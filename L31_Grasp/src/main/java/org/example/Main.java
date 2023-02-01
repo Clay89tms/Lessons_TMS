@@ -33,5 +33,8 @@ public class Main {
         System.out.println(director1 + "\n");
 
 //5)
+        if(director1.findInTo(director1, "Max")){
+            System.out.println("est");
+        }
     }
 }
