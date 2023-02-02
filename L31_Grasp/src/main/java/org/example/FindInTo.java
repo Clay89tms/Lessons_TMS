@@ -12,7 +12,7 @@ public class FindInTo {
                 if (personalOnDirector1.get(counter).getPosition() == Position.DIRECTOR) {
                     DirectorEmployeeImpl directorInTo = (DirectorEmployeeImpl) personalOnDirector1.get(counter);
                     if (!directorInTo.getPersonalOnDirector().isEmpty()) {
-                        find(directorInTo, name);
+                        select = find(directorInTo, name);
                     }
                 } else {
                     System.out.print(name + " ?= " + personalOnDirector1.get(counter).getFirstName());
