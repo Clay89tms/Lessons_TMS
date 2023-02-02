@@ -21,38 +21,6 @@ public class DirectorEmployeeImpl extends Employee {
         return employee;
     }
 
-    boolean findInTo(DirectorEmployeeImpl employee, String name) {
-        int count = 0;
-
-        if (!employee.getPersonalOnDirector().isEmpty()) {
-            List<Employee> personalOnDirector1 = employee.getPersonalOnDirector();
-            if (personalOnDirector1.get(count).getPosition() == Position.WORKER) {
-                System.out.println(name + " ?= " + personalOnDirector1.get(count).getFirstName());
-                if (name.equals(personalOnDirector1.get(count).getFirstName())) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }else {
-                System.out.println(name + " ?= " + personalOnDirector1.get(count).getFirstName());
-                if (name.equals(personalOnDirector1.get(count).getFirstName())) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-        }
-        boolean response = false;
-        List<Employee> personalOnDirector1 = employee.getPersonalOnDirector();
-        for (int i = 0; i < personalOnDirector1.size(); i++) {
-            String find = personalOnDirector1.get(i).getFirstName();
-            System.out.println(find);
-            if (name.equals(find)) {
-                response = true;
-            }
-        }
-        return response;
-    }
 
     @Override
     public String toString() {
