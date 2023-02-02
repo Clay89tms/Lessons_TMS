@@ -32,8 +32,7 @@ public class Main {
         System.out.println("4)");
         System.out.println(director1 + "\n");
 
-//5)
-
+//5)Проверям подчиненных (ПОИСК В ГЛУБЬ)
         if(FindInTo.find(director1, "Max")){
             System.out.println("\t(YES)");
         }
