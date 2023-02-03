@@ -14,6 +14,7 @@ public class FindInTo {
                 System.out.print(name + " ?= " + personalOnDirector1.get(counter).getFirstName());
                 if (name.equals(personalOnDirector1.get(counter).getFirstName())) {
                     select = true;
+                    break;
                 } else {
                     System.out.println("\t(NO)");
                     if (personalOnDirector1.get(counter).getPosition() == Position.DIRECTOR) {
