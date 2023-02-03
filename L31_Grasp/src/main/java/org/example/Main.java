@@ -28,18 +28,40 @@ public class Main {
 
         director1.hire(director2);
 
-        DirectorEmployeeImpl dir3 = new DirectorEmployeeImpl("dir3", "dirov3", 2);
+        DirectorEmployeeImpl director3 = new DirectorEmployeeImpl("dir3", "dirov3", 2);
         WorkerEmployeeImpl wor22 = new WorkerEmployeeImpl("wor22", "worov22", 3);
 
         director2.hire(wor22);
-        director2.hire(dir3);
+        director2.hire(director3);
 
 //4)Проверяем цепочку подчиненных
         System.out.println("4)");
         System.out.println(director1 + "\n");
 
 //5)Проверям подчиненных (ПОИСК В ГЛУБЬ)
-        if(FindInTo.find(director1, "Ivan1")){
+        if (FindInTo.find(director1, "Ivan1")) {
+            System.out.println("\t(YES)");
+        }
+
+//Дополнительная проверка
+        DirectorEmployeeImpl dir1 = new DirectorEmployeeImpl("Dir1", "Dorov1", 5);
+        DirectorEmployeeImpl dir2 = new DirectorEmployeeImpl("Dir2", "Dorov2", 5);
+        DirectorEmployeeImpl dir3 = new DirectorEmployeeImpl("Dir3", "Dorov3", 5);
+
+        WorkerEmployeeImpl wor1 = new WorkerEmployeeImpl("wor1", "worov1", 2);
+        WorkerEmployeeImpl wor2 = new WorkerEmployeeImpl("wor2", "worov2", 2);
+        WorkerEmployeeImpl wor3 = new WorkerEmployeeImpl("wor3", "worov3", 2);
+        WorkerEmployeeImpl wor4 = new WorkerEmployeeImpl("wor4", "worov4", 2);
+
+        dir2.hire(wor1);
+        dir2.hire(wor2);
+        dir3.hire(wor3);
+        dir3.hire(wor4);
+
+        dir1.hire(dir2);
+        dir1.hire(dir3);
+
+        if (FindInTo.find(dir1, "wor1")) {
             System.out.println("\t(YES)");
         }
     }
