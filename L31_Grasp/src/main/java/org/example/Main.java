@@ -28,12 +28,18 @@ public class Main {
 
         director1.hire(director2);
 
+        DirectorEmployeeImpl dir3 = new DirectorEmployeeImpl("dir3", "dirov3", 2);
+        WorkerEmployeeImpl wor22 = new WorkerEmployeeImpl("wor22", "worov22", 3);
+
+        director2.hire(wor22);
+        director2.hire(dir3);
+
 //4)Проверяем цепочку подчиненных
         System.out.println("4)");
         System.out.println(director1 + "\n");
 
 //5)Проверям подчиненных (ПОИСК В ГЛУБЬ)
-        if(FindInTo.find(director1, "Max")){
+        if(FindInTo.find(director1, "Ivan1")){
             System.out.println("\t(YES)");
         }
     }
