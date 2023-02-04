@@ -42,6 +42,7 @@ public class Main {
         if (FindInTo.find(director1, "Ivan1")) {
             System.out.println("\t(YES)");
         }
+        System.out.println();
 
 //Дополнительная проверка
         DirectorEmployeeImpl dir1 = new DirectorEmployeeImpl("Dir1", "Dorov1", 5);
