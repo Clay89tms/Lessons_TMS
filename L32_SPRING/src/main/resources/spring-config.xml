@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    <bean class="org.example.TelegramMessengerImpl" name="TelegramMessenger" primary="true"></bean>-->
+    <!--    <bean class="org.example.MailMessengerImpl" name="mailMessenger"></bean>-->
+
+    <bean class="org.example.MailMessengerImpl" name="messenger"></bean>
+    <bean class="org.example.UserFileServiceImpl" name="service"></bean>
+
+    <bean class="org.example.UserHandlerImpl" name="handler" init-method="setup" scope="prototype" destroy-method="cleanCache">
+
+        <constructor-arg name="service" ref="service"></constructor-arg>
+        <constructor-arg name="messenger" ref="messenger"></constructor-arg>
+        <constructor-arg name="text" value="hello!"></constructor-arg>
+
+    </bean>
+
+</beans>
