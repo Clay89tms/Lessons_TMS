@@ -11,7 +11,7 @@
     <bean class="org.tms.dz32.Rider" name="rider2"></bean>
     <bean class="org.tms.dz32.Rider" name="rider3"></bean>
 
-    <bean class="org.tms.dz32.Pair" name="pair1" autowire="byType"></bean>
+    <bean class="org.tms.dz32.Pair" name="pair1" autowire="byType" init-method="createPairs"></bean>
 
 
 </beans>

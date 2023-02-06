@@ -8,30 +8,29 @@ public class Pair {
     private List<Horse> horse;
     private List<Rider> rider;
 
-    public static final List<Pair> pairs = new ArrayList<>();
+    public static final List<Integer> pairs = new ArrayList<>();
 
-    private int overallSpeed;
 
     public Pair() {
     }
 
 
-    public void savePairs() {
-        if (horse.size() == rider.size()){
-            System.out.println("How match pair: " +  horse.size());
+    public void createPairs() {
+        if (horse.size() == rider.size()) {
+            System.out.println("How match pair: " + horse.size());
 
             for (int i = 0; i < (horse.size()); i++) {
+                int riderLevel = rider.get(i).takeRider();
+                int horseSpeed = horse.get(i).takeHorse();
 
+                int overallSpeed = horseSpeed * ((int) (1 + Math.random() * riderLevel));
+                System.out.println("horse speed = " + horseSpeed +
+                        "; rider level = " + riderLevel +
+                        "; overall speed pair# " + (i + 1) +
+                        " = " + overallSpeed);
+                pairs.add(overallSpeed);
             }
-
         }
-
-
-        horse.forEach(horse1 -> horse1.takeHorse());
-        rider.forEach(rider1 -> rider1.takeRider());
-        horse.get(0).getSpeed();
-        System.out.println();
-
     }
 
     public List<Horse> getHorse() {
@@ -50,12 +49,5 @@ public class Pair {
         this.rider = rider;
     }
 
-    public int getOverallSpeed() {
-        return overallSpeed;
-    }
-
-    public void setOverallSpeed(int overallSpeed) {
-        this.overallSpeed = overallSpeed;
-    }
 }
 

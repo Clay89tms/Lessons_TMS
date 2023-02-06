@@ -10,9 +10,9 @@ public class Horse {
     public Horse() {
     }
 
-    public void takeHorse() {
+    public int takeHorse() {
         //задаем рандом скорость от 1 до 10
-        this.speed = (int) (1 + Math.random() * 10);
-        System.out.println("Speed horse: " + this.speed + " m/s");
+        return this.speed = (int) (1 + Math.random() * 10);
+//        System.out.println("Speed horse: " + this.speed + " m/s");
     }
 }

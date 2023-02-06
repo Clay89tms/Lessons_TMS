@@ -7,8 +7,12 @@ public class Rider {
     public Rider() {
     }
 
-    public void takeRider() {
-        this.level = (int) (1 + Math.random() * 10);
-        System.out.println("Level Rider: " + level);
+    public int takeRider() {
+        return this.level = (int) (1 + Math.random() * 10);
+//        System.out.println("Level Rider: " + level);
+    }
+
+    public int getLevel() {
+        return level;
     }
 }
