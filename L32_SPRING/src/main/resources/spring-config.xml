@@ -6,15 +6,21 @@
     <!--    <bean class="org.example.TelegramMessengerImpl" name="TelegramMessenger" primary="true"></bean>-->
     <!--    <bean class="org.example.MailMessengerImpl" name="mailMessenger"></bean>-->
 
-    <bean class="org.example.MailMessengerImpl" name="messenger"></bean>
-    <bean class="org.example.UserFileServiceImpl" name="service"></bean>
+    <bean class="org.example.MailMessengerImpl" name="messenger1" depends-on="service1"></bean>
+    <bean class="org.example.TelegramMessengerImpl" name="messenger2" depends-on="service1"></bean>
 
-    <bean class="org.example.UserHandlerImpl" name="handler" init-method="setup" scope="prototype" destroy-method="cleanCache">
+    <bean class="org.example.UserDBServiceImpl" name="service2"></bean>
+    <bean class="org.example.UserFileServiceImpl" name="service1" depends-on="service2"></bean>
 
-        <constructor-arg name="service" ref="service"></constructor-arg>
-        <constructor-arg name="messenger" ref="messenger"></constructor-arg>
-        <constructor-arg name="text" value="hello!"></constructor-arg>
+    <bean class="org.example.UserHandlerImpl" name="handler" init-method="setup" scope="singleton"
+          destroy-method="cleanCache" autowire="byType" >
 
+        <!--        <constructor-arg name="service" ref="service"></constructor-arg>-->
+        <!--        <constructor-arg name="messenger" ref="messenger"></constructor-arg>-->
+        <!--        <constructor-arg name="text" value="hello!"></constructor-arg>-->
+
+        <!--        <property name="messenger" ref="messenger"></property>-->
+        <!--        <property name="service" ref="service"></property>-->
     </bean>
 
 </beans>
