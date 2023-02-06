@@ -4,14 +4,18 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean class="org.tms.dz32.Horse" name="horse1"></bean>
-    <bean class="org.tms.dz32.Horse" name="horse2"></bean>
-    <bean class="org.tms.dz32.Horse" name="horse3"></bean>
-
     <bean class="org.tms.dz32.Rider" name="rider1"></bean>
+
+    <bean class="org.tms.dz32.Horse" name="horse2"></bean>
     <bean class="org.tms.dz32.Rider" name="rider2"></bean>
+
+    <bean class="org.tms.dz32.Horse" name="horse3"></bean>
     <bean class="org.tms.dz32.Rider" name="rider3"></bean>
 
-    <bean class="org.tms.dz32.Pair" name="pair1" autowire="byType" init-method="createPairs"></bean>
+
+    <bean class="org.tms.dz32.Pair" name="pair" autowire="byType" init-method="createPartner"></bean>
+    <bean class="org.tms.dz32.ControlService" name="controlService"></bean>
+    <bean class="org.tms.dz32.PrintService" name="printService" autowire="byType"></bean>
 
 
 </beans>
