@@ -8,8 +8,6 @@ public class MainBetting {
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring-betting.xml");
 
         Pair bean = context.getBean(Pair.class);
-        bean.savePair(1);
-        bean.savePair(2);
-        bean.savePair(3);
+        bean.savePairs();
     }
 }

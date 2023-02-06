@@ -1,9 +1,14 @@
 package org.tms.dz32;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pair {
 
-    private Horse horse;
-    private Rider rider;
+    private List<Horse> horse;
+    private List<Rider> rider;
+
+    public static final List<Pair> pairs = new ArrayList<>();
 
     private int overallSpeed;
 
@@ -11,26 +16,37 @@ public class Pair {
     }
 
 
-    public void savePair(int nomberPair) {
-        System.out.println("This is Pair# " + nomberPair);
-        horse.takeHorse();
-        rider.takeRider();
+    public void savePairs() {
+        if (horse.size() == rider.size()){
+            System.out.println("How match pair: " +  horse.size());
+
+            for (int i = 0; i < (horse.size()); i++) {
+
+            }
+
+        }
+
+
+        horse.forEach(horse1 -> horse1.takeHorse());
+        rider.forEach(rider1 -> rider1.takeRider());
+        horse.get(0).getSpeed();
+        System.out.println();
 
     }
 
-    public Horse getHorse() {
+    public List<Horse> getHorse() {
         return horse;
     }
 
-    public void setHorse(Horse horse) {
+    public void setHorse(List<Horse> horse) {
         this.horse = horse;
     }
 
-    public Rider getRider() {
+    public List<Rider> getRider() {
         return rider;
     }
 
-    public void setRider(Rider rider) {
+    public void setRider(List<Rider> rider) {
         this.rider = rider;
     }
 

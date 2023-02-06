@@ -3,6 +3,10 @@ package org.tms.dz32;
 public class Horse {
     private int speed;
 
+    public int getSpeed() {
+        return speed;
+    }
+
     public Horse() {
     }
 
