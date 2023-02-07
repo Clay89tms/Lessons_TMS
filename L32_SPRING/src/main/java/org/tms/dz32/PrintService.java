@@ -1,28 +1,34 @@
 package org.tms.dz32;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PrintService {
-    private Pair pair;
-    private int i = 1;
+    private List<Pair> pair;
 
-
-    public PrintService(Pair pair) {
-        this.pair = pair;
+    public PrintService() {
     }
-
 
     public void announcePartners() {
-        System.out.println("horse speed = " + pair.getHorse().getSpeed() +
-                "; rider level = " + pair.getRider().getLevel() +
-                "; overall speed pair# " + i++);
+        for (int i = 0; i < pair.size(); i++) {
+            System.out.println("pair# " + (i + 1) + "| horse speed = " + pair.get(i).getHorse().getSpeed() +
+                    "; rider level = " + pair.get(i).getRider().getLevel() +
+                    "; overall speed in this circle = " +
+                    overallSpeedRandomCircle(pair.get(i).getHorse(), pair.get(i).getRider()));
+
+        }
     }
 
-    public Pair getPair() {
+    private int overallSpeedRandomCircle(Horse horse, Rider rider) {
+        int i = ((horse.getSpeed()) * (int) (1 + (Math.random() * (rider.getLevel()))));
+        return i;
+    }
+
+    public List<Pair> getPair() {
         return pair;
     }
 
-    public void setPair(Pair pair) {
+    public void setPair(List<Pair> pair) {
         this.pair = pair;
     }
 }

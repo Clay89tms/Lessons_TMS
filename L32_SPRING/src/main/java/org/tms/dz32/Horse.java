@@ -3,10 +3,6 @@ package org.tms.dz32;
 public class Horse {
     private int speed;
 
-    public int getSpeed() {
-        return speed;
-    }
-
     public Horse() {
         System.out.println("horse const");
     }
@@ -16,5 +12,14 @@ public class Horse {
         this.speed = (int) (1 + Math.random() * 10);
 //        System.out.println("Speed horse: " + this.speed + " m/s");
     }
+    public int getSpeed() {
+        return speed;
+    }
 
+    @Override
+    public String toString() {
+        return "Horse{" +
+                "speed=" + speed +
+                '}';
+    }
 }

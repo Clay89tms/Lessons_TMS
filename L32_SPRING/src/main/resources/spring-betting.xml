@@ -3,6 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean class="org.tms.dz32.PrintService" name="printService" autowire="byType"></bean>
+
     <bean class="org.tms.dz32.Horse" name="horse1"></bean>
     <bean class="org.tms.dz32.Rider" name="rider1"></bean>
     <bean class="org.tms.dz32.Pair" name="pair1" init-method="createPartner">
@@ -26,17 +28,6 @@
     </bean>
 
 
-<!--    <bean class="org.tms.dz32.ControlService" name="controlService"></bean>-->
-
-    <bean class="org.tms.dz32.PrintService" name="printService1">
-        <constructor-arg name="pair" ref="pair1"></constructor-arg>
-    </bean>
-    <bean class="org.tms.dz32.PrintService" name="printService2">
-        <constructor-arg name="pair" ref="pair2"></constructor-arg>
-    </bean>
-    <bean class="org.tms.dz32.PrintService" name="printService3">
-        <constructor-arg name="pair" ref="pair3"></constructor-arg>
-    </bean>
-
+    <bean class="org.tms.dz32.ControlService" name="controlService" init-method="choice"></bean>
 
 </beans>

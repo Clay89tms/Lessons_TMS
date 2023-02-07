@@ -16,4 +16,11 @@ public class Rider {
     public int getLevel() {
         return level;
     }
+
+    @Override
+    public String toString() {
+        return "Rider{" +
+                "level=" + level +
+                '}';
+    }
 }

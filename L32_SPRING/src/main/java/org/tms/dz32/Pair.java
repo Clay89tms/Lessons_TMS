@@ -1,5 +1,6 @@
 package org.tms.dz32;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pair {
@@ -33,6 +34,14 @@ public class Pair {
 
     public void setRider(Rider rider) {
         this.rider = rider;
+    }
+
+    @Override
+    public String toString() {
+        return "Pair{" +
+                "horse=" + horse +
+                ", rider=" + rider +
+                '}';
     }
 }
 
