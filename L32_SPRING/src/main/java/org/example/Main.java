@@ -16,12 +16,12 @@ public class Main {
 //        Map<String, Messenger> beansOfType = context.getBeansOfType(Messenger.class);
 //        beansOfType.forEach((s, messanger) -> messanger.sendMessage("mess"));
         UserHandler bean = context.getBean(UserHandler.class);
-        bean.saveUser();
-
-        UserHandlerImpl bean1 = context.getBean(UserHandlerImpl.class);
-        bean1.saveUser();
-
-        context.close();
+//        bean.saveUser();
+//
+//        UserHandlerImpl bean1 = context.getBean(UserHandlerImpl.class);
+//        bean1.saveUser();
+//
+//        context.close();
 
     }
 }

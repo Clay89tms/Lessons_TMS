@@ -3,7 +3,7 @@ package org.example;
 public class TelegramMessengerImpl implements Messenger {
 
     public TelegramMessengerImpl() {
-        System.out.println("create telegram.");
+        System.out.println("telegram const");
     }
 
     @Override

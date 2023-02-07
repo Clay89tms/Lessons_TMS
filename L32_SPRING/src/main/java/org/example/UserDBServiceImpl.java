@@ -3,7 +3,7 @@ package org.example;
 public class UserDBServiceImpl implements UserService {
 
     public UserDBServiceImpl() {
-        System.out.println("create user DB");
+        System.out.println("DB const");
     }
 
     @Override

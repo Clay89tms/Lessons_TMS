@@ -8,6 +8,7 @@ public class UserHandlerImpl implements UserHandler {
     private List<Messenger> messenger;
 
     public UserHandlerImpl() {
+        System.out.println("handler const");
     }
 
     //    public UserHandlerImpl(UserService service, Messenger messenger) {

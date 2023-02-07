@@ -3,7 +3,7 @@ package org.example;
 public class MailMessengerImpl implements Messenger {
 
     public MailMessengerImpl() {
-        System.out.println("create email.");
+        System.out.println("mail const");
     }
 
     @Override
