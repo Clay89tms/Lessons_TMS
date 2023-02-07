@@ -8,12 +8,13 @@ public class Horse {
     }
 
     public Horse() {
+        System.out.println("horse const");
     }
 
     public void takeHorse() {
         //задаем рандом скорость от 1 до 10
         this.speed = (int) (1 + Math.random() * 10);
-        System.out.println("Speed horse: " + this.speed + " m/s");
+//        System.out.println("Speed horse: " + this.speed + " m/s");
     }
 
 }
