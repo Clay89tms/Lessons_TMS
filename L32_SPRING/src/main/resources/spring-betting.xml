@@ -27,6 +27,6 @@
         <constructor-arg name="rider" ref="rider3"></constructor-arg>
     </bean>
 
-    <bean class="org.tms.dz32.ControlService" name="controlService" init-method="question"></bean>
+    <bean class="org.tms.dz32.ControlService" name="controlService"></bean>
 
 </beans>
