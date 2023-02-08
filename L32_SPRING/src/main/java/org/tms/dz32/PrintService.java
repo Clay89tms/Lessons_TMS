@@ -18,10 +18,12 @@ public class PrintService {
 
         }
     }
+    public int getSizePair(){
+        return pair.size();
+    }
 
     private int overallSpeedRandomCircle(Horse horse, Rider rider) {
-        int i = ((horse.getSpeed()) * (int) (1 + (Math.random() * (rider.getLevel()))));
-        return i;
+        return ((horse.getSpeed()) * (int) (1 + (Math.random() * (rider.getLevel()))));
     }
 
     public List<Pair> getPair() {
@@ -31,4 +33,5 @@ public class PrintService {
     public void setPair(List<Pair> pair) {
         this.pair = pair;
     }
+
 }

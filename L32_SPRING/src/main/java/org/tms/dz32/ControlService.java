@@ -10,17 +10,13 @@ public class ControlService {
         System.out.println("controlService const");
     }
 
+private void question(){
+    System.out.print("make you're choice pair (1-3): ");
+}
 
+    public void choice(int scannerChoice) {
+        System.out.println("you're choice is: " + scannerChoice);
 
-    public void choice() {
-        System.out.print("make you're choice pair (1-3): ");
-        int theChoice = 3;
-        System.out.println(theChoice);
-//        Scanner scanner = new Scanner(System.in);
-//        if(scanner.hasNextInt()){
-//            int youChoice = scanner.nextInt();
-//
-//        }
     }
 
 }

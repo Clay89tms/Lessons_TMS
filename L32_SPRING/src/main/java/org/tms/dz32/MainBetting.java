@@ -3,7 +3,7 @@ package org.tms.dz32;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.List;
+import java.util.Scanner;
 
 public class MainBetting {
     public static void main(String[] args) {
@@ -26,13 +26,33 @@ public class MainBetting {
 //        System.out.println(PrintService.getPair());
 
 
-
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring-betting.xml");
+
         PrintService beanPrint = context.getBean(PrintService.class);
+
+        ControlService beenControl = context.getBean(ControlService.class);
+        beenControl.choice(scannerChoice(beanPrint.getSizePair()));
+
+
         beanPrint.announcePartners();
-//        Pair bean = context.getBean(Pair.class);
-//        bean.createPartner();
-//        PrintService bean1 = context.getBean(PrintService.class);
-//        bean1.announcePartners();
+    }
+
+    private static int scannerChoice(int sizePair) {
+        int scannerNext = 0;
+        try (Scanner scanner = new Scanner(System.in)) {
+
+            if (scanner.hasNextInt()) {
+//                if (scanner.hasNextInt() < sizePair) {
+                    scannerNext = scanner.nextInt();
+                    return scannerNext;
+//                }
+            } else {
+                System.out.println("do not correct! please try next!");
+                return scannerChoice(sizePair);
+            }
+        } catch (Exception exception) {
+            System.out.println("exep" + exception);
+        }
+        return scannerNext;
     }
 }
