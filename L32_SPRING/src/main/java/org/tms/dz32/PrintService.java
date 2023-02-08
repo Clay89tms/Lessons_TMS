@@ -18,7 +18,8 @@ public class PrintService {
 
         }
     }
-    public int getSizePair(){
+
+    public int getSizePair() {
         return pair.size();
     }
 

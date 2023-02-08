@@ -31,7 +31,7 @@ public class MainBetting {
         PrintService beanPrint = context.getBean(PrintService.class);
 
         ControlService beenControl = context.getBean(ControlService.class);
-        beenControl.choice(scannerChoice(beanPrint.getSizePair()));
+        beenControl.youReChoice(scannerChoice(beanPrint.getSizePair()));
 
 
         beanPrint.announcePartners();
@@ -42,10 +42,11 @@ public class MainBetting {
         try (Scanner scanner = new Scanner(System.in)) {
 
             if (scanner.hasNextInt()) {
-//                if (scanner.hasNextInt() < sizePair) {
                     scannerNext = scanner.nextInt();
-                    return scannerNext;
-//                }
+                if (scannerNext <= sizePair) {
+
+                return scannerNext;
+                }
             } else {
                 System.out.println("do not correct! please try next!");
                 return scannerChoice(sizePair);
