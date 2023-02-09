@@ -8,20 +8,16 @@ public class ControlService {
         System.out.println("controlService const");
     }
 
-    private void question() {
-        System.out.print("make you're choice pair (1-3): ");
-    }
-
-    public int youReChoice(int scannerChoice) {
-        System.out.println("you're choice is: " + scannerChoice);
-        System.out.println("bet is = 10$; you're money = " + this.money);
-        return scannerChoice;
+    public void question() {
+        System.out.print("\nbet is = 10$; \nmake you're choice pair (1-3): ");
     }
 
     public int result(boolean result) {
         if(result){
+            System.out.println("you win! Congratulations!!!");
             return 30;
         }
+        System.out.println("you louse... don't worry!");
         return (-10);
     }
 

@@ -15,11 +15,4 @@ public class Horse {
     public int getSpeed() {
         return speed;
     }
-
-    @Override
-    public String toString() {
-        return "Horse{" +
-                "speed=" + speed +
-                '}';
-    }
 }

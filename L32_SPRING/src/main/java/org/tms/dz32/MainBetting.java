@@ -14,7 +14,7 @@ public class MainBetting {
         ControlService beanControlService = context.getBean(ControlService.class);
 
         try (Scanner scanner = new Scanner(System.in)) {
-
+            System.out.println("Welcome to bet of sports!");
             startRaice(beanPrint, beanControlService, scanner);
 
         } catch (Exception exception) {
@@ -24,6 +24,7 @@ public class MainBetting {
     }
 
     private static void startRaice(PrintService beanPrint, ControlService beanControlService, Scanner scanner) {
+        beanControlService.question();
         if (beanControlService.menuMoneyControlService(beanControlService
                 .result(beanPrint.startCircle(scannerChoice(beanPrint.getSizePair(), scanner))))) {
             startRaice(beanPrint, beanControlService, scanner);
@@ -38,11 +39,16 @@ public class MainBetting {
             if (scannerNext <= sizePair) {
                 return scannerNext;
             } else {
-                System.out.println("we don't have this Pair");
+                System.out.println("\n\tWe DON'T have this Pair");
+                System.out.print("bet is = 10$; \nmake you're choice pair (1-3): ");
             }
-        } else {
-            System.out.println("do not correct! please try next!");
         }
-        return scanner.nextInt();
+        else{
+            System.out.println("do not correct! please try next!");
+            scanner = new Scanner(System.in);
+            System.out.print("\nbet is = 10$; \nmake you're choice pair (1-3): ");
+            return scannerChoice(sizePair, scanner);
+        }
+        return scannerChoice(sizePair, scanner);
     }
 }

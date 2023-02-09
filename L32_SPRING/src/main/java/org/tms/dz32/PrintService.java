@@ -1,6 +1,5 @@
 package org.tms.dz32;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PrintService {
@@ -10,13 +9,9 @@ public class PrintService {
     public PrintService() {
     }
 
-    public void announcePartners() {
+    public void takeNewPair() {
         for (int i = 0; i < pair.size(); i++) {
-            System.out.println("pair# " + (i + 1) + "| horse speed = " + pair.get(i).getHorse().getSpeed() +
-                    "; rider level = " + pair.get(i).getRider().getLevel() +
-                    "; overall speed in this circle = " +
-                    overallSpeedRandomCircle(pair.get(i).getHorse(), pair.get(i).getRider()));
-
+            pair.get(i).createPartner();
         }
     }
 
@@ -24,12 +19,14 @@ public class PrintService {
         int over1 = 0;
         int over2 = 0;
         int over3 = 0;
+        takeNewPair();
+
         for (int j = 1; j <= 5; j++) {
-
-
             System.out.println("Circle# " + j);
+
             for (int i = 0; i < pair.size(); i++) {
                 int over;
+
                 System.out.print("pair# " + (i + 1) + "| horse speed = " + pair.get(i).getHorse().getSpeed() +
                         "; rider level = " + pair.get(i).getRider().getLevel() +
                         "; overall speed in this circle = ");
@@ -51,10 +48,11 @@ public class PrintService {
                         break;
                 }
             }
+            waitOfCircle();
         }
-        System.out.println("Overal1 = " + over1 + "\nOveral2 = " + over2 + "\nOveral3 = " + over3);
+        System.out.println("Overall1 = " + over1 + "\nOverall2 = " + over2 + "\nOverall3 = " + over3);
         int bestResult;
-        if(over1 > Math.max(over2, over3)){
+        if (over1 > Math.max(over2, over3)) {
             bestResult = 1;
         } else if (over2 > Math.max(over1, over3)) {
             bestResult = 2;
@@ -66,6 +64,14 @@ public class PrintService {
 
     public int getSizePair() {
         return pair.size();
+    }
+
+    public void waitOfCircle() {
+        try {
+            Thread.sleep(600);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private int overallSpeedRandomCircle(Horse horse, Rider rider) {
