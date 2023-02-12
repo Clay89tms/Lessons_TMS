@@ -9,11 +9,76 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L28 SOLID initial commit">
-      <change afterPath="$PROJECT_DIR$/L28_Solid/src/main/java/org/example/Singleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L28_Solid/src/main/java/org/example/Singleton2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L28_Solid/src/main/java/org/example/Sinletone_INFO.txt" afterDir="false" />
+    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L29 Pattern part1 Initial commit">
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/AbstractFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/AcuraAbstractFactoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/AcuraBodyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/AcuraEngineServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/AcuraWheelServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/Body.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/BodyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/Engine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/EngineService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/InfinityAbstractFactoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/InfinityBodyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/InfinityEngineServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/LexusAbstractFactoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/LexusEngineServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/LexusWheelServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/MainService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/MersAbstractFactoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/MersBodyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/MersEngineServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/MersWheelServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/Wheel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/abstract_factory/WheelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/builder_lombok/Book_Lombok.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/builder_lombok/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/builder_lombok/MainAppBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/builder_lombok/MainCarRepair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/builder_lombok/STO_Garaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/builder_standart/Book_Stardart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/builder_standart/MainAppBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/chain_of_responsibility/MyChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/chain_of_responsibility/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/command/Button.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/command/ButtonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/command/CancelButtonImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/command/CopyButtonImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/command/MainButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/command/OkButtonImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/command/PasteButtonImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/command/PrintButtonImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/dz29_Pattern_p1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/factory_method/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/factory_method/CarRepairFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/factory_method/CarRepairFactoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/factory_method/Factory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/factory_method/MainCarRepairFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/factory_method/RepairService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/factory_method/STO_Garaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/iterator/MyPersonIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/iterator/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/mediator/MainMediator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/mediator/Service1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/mediator/Service2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/mediator/Service3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/mediator/ServiceHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/memento/MainMomento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/memento/PlayerMomento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/observer/AdminObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/observer/CreateServiceObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/observer/DeleteServiceObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/observer/MainObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/observer/SalaryObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/observer/SecurityObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/observer/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L29_Pattern_p1/src/main/java/org/example/observer/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L29_Pattern_p1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/L29_Pattern_p1/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,13 +92,14 @@
         <option value="CSS File" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lesson26_JSTL" />
+        <entry key="$PROJECT_DIR$" value="Lesson_28_Solid" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,43 +139,51 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2Iv15a7wEo2ue9ZkuvVRKVKxuxK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/Lessons_TMS/L26JSTL/src/main/java/org/example",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Lessons_TMS/L26JSTL/src/main/java/org/example&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.command" />
+      <recent name="org.example.abstract_factory" />
+      <recent name="org.example.factory_method" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL\src\main\java\org\example" />
       <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL\src\main\java\idCarsServlet" />
@@ -124,14 +198,73 @@
       <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src\test" />
       <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src" />
     </key>
+    <key name="CreateBuilderDialog.RecentsKey">
+      <recent name="org.example.builder" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.observer" />
+      <recent name="org.example.factory_method" />
+    </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.70">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.MainObserver">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="Servlet" />
+      <module name="L29_Pattern_p1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainButton" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.command.MainButton" />
+      <module name="L29_Pattern_p1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.command.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainMediator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.mediator.MainMediator" />
+      <module name="L29_Pattern_p1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.mediator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainMomento" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.memento.MainMomento" />
+      <module name="L29_Pattern_p1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.memento.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainObserver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.observer.MainObserver" />
+      <module name="L29_Pattern_p1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.observer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -230,13 +363,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.MainButton" />
+      <item itemvalue="Application.MainMediator" />
+      <item itemvalue="Application.MainMomento" />
+      <item itemvalue="Application.MainObserver" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.70" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MainObserver" />
+        <item itemvalue="Application.MainMomento" />
+        <item itemvalue="Application.MainMediator" />
+        <item itemvalue="Application.MainButton" />
+        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -258,6 +398,7 @@
       <workItem from="1673280619674" duration="16742000" />
       <workItem from="1673541042326" duration="8807000" />
       <workItem from="1673714955648" duration="7865000" />
+      <workItem from="1673933671950" duration="49612000" />
     </task>
     <task id="LOCAL-00001" summary="initial Commit">
       <created>1671047214017</created>
@@ -392,7 +533,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673931576137</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="L28 SOLID initial commit">
+      <created>1673933005633</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1673933005633</updated>
+    </task>
+    <task id="LOCAL-00021" summary="L28 Realization Singleton v1.1 v1.2">
+      <created>1673933098181</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1673933098181</updated>
+    </task>
+    <task id="LOCAL-00022" summary="L29 Pattern part1 Initial commit">
+      <created>1673933512701</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1673933512701</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +576,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Lesson27_JSTL" />
+                        <option value="Lesson_29_Pattern1" />
                       </list>
                     </value>
                   </entry>
@@ -443,7 +605,9 @@
     <MESSAGE value="L27 JSTL Com4 (MyTag add) (StartUpServlet add).&#10;(90%)" />
     <MESSAGE value="L27 JSTL Com4 DataBase (OK)&#10;(100%)" />
     <MESSAGE value="L28 SOLID initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="L28 SOLID initial commit" />
+    <MESSAGE value="L28 Realization Singleton v1.1 v1.2" />
+    <MESSAGE value="L29 Pattern part1 Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="L29 Pattern part1 Initial commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -455,6 +619,11 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="deleteServiceObserver.obs.get(0)" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
