@@ -1,5 +1,8 @@
-package org.tms.dz33;
+package org.tms.dz33.service;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class ControlService {
 
     private int money = 500;

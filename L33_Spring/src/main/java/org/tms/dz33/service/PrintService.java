@@ -1,12 +1,22 @@
-package org.tms.dz33;
+package org.tms.dz33.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
+import org.tms.dz33.component.Horse;
+import org.tms.dz33.component.Pair;
+import org.tms.dz33.component.Rider;
 
 import java.util.List;
 
+@Service
 public class PrintService {
+
     private List<Pair> pair;
 
 
-    public PrintService() {
+    public PrintService(List<Pair> pair) {
+        this.pair = pair;
     }
 
     public void takeNewPair() {

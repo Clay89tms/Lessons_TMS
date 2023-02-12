@@ -1,5 +1,10 @@
-package org.tms.dz33;
+package org.tms.dz33.component;
 
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Pair {
 
     private Horse horse;
@@ -13,6 +18,7 @@ public class Pair {
     }
 
     public void createPartner() {
+        System.out.println("create partner");
         rider.takeRider();
         horse.takeHorse();
     }
