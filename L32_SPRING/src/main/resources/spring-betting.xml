@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="org.tms.dz32.PrintService" name="printService" autowire="byType"></bean>
+    <bean class="org.tms.dz32.PrintService" name="printService"></bean>
 
     <bean class="org.tms.dz32.Horse" name="horse1" scope="prototype"></bean>
     <bean class="org.tms.dz32.Rider" name="rider1" scope="prototype"></bean>
@@ -26,6 +26,7 @@
         <constructor-arg name="rider" ref="rider3"></constructor-arg>
     </bean>
 
-    <bean class="org.tms.dz32.ControlService" name="controlService"></bean>
+    <bean class="org.tms.dz32.ControlService" name="controlService" autowire="byType"></bean>
+
 
 </beans>
