@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 import static org.tms.dz32.ScannerChoice.scannerChoice;
 
-public class StartRace {
+public class StartRaceXML {
     public static void start(){
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring-betting.xml");
         ControlService beanControlService = context.getBean(ControlService.class);
