@@ -1,6 +1,5 @@
 package org.tms.dz33.component;
 
-
 public class Rider {
 
     private int level;

@@ -8,12 +8,12 @@
 Выучить жизненные циклы контейнера и бинов
 выучить следующие аннотации
 	
-	Component Service Repository
-	Autowired
-	Qualifier
-	Scope
-	Configuration
-	Bean
-	ComponentScan
-	Primary
-	DependsOn
+	Component Service Repository    - обозначение (Компонент или Сервис одно и то же)
+	Autowired                           - автозаполнение полей
+	Qualifier                       - обозначение конкретного типа (имя класса только с маленькой буквы)
+	Scope                               - singleton / prototype
+	Configuration                   - обозначение конфиругатора для бинов
+	Bean                                - обозначение бина
+	ComponentScan                   - доп поиск бинов
+	Primary                             - индивидуальный (уникальный) / возьмет помеченный этим в первую очередь
+	DependsOn                       - зависит от / создается после (указанного)

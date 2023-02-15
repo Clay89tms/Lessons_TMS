@@ -1,14 +1,18 @@
 package org.tms.dz33.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.tms.dz33.component.Pair;
 
 import java.util.List;
 import java.util.Scanner;
 
+@Service
 
 public class ControlService {
 
     private static int money = 50;
+    @Autowired
     private List<Pair> pair;
 
     public ControlService() {

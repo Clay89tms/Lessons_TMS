@@ -1,8 +1,5 @@
 package org.tms.dz33.component;
 
-
-
-
 public class Horse {
     private int speed;
 
