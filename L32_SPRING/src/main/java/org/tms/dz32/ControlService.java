@@ -18,57 +18,29 @@ public class ControlService {
     }
 
     public boolean startCircle(int scannerChoice) {
-        int over1 = 0;
-        int over2 = 0;
-        int over3 = 0;
+        boolean result = true;
         takeNewPair();
-
-        System.out.println("na4");
-        for (Pair perem : pair) {
-
-            System.out.println("Pair# " + perem);
-        }
-        System.out.println("kon");
 
         for (int j = 1; j <= 5; j++) {
             System.out.println("Circle# " + j);
 
-            for (int i = 0; i < pair.size(); i++) {
-                int over;
-
-                System.out.print("pair# " + (i + 1) + "| horse speed = " + pair.get(i).getHorse().getSpeed() +
-                        "; rider level = " + pair.get(i).getRider().getLevel() +
-                        "; overall speed in this circle = ");
-                switch (i) {
-                    case 0:
-                        over = overallSpeedRandomCircle(pair.get(i).getHorse(), pair.get(i).getRider());
-                        over1 += over;
-                        System.out.println(over);
-                        break;
-                    case 1:
-                        over = overallSpeedRandomCircle(pair.get(i).getHorse(), pair.get(i).getRider());
-                        over2 += over;
-                        System.out.println(over);
-                        break;
-                    case 2:
-                        over = overallSpeedRandomCircle(pair.get(i).getHorse(), pair.get(i).getRider());
-                        over3 += over;
-                        System.out.println(over);
-                        break;
-                }
+            for (Pair pair1 : pair) {
+                System.out.println(pair1 + "; overal speed = " + overallSpeedRandomCircle(pair1.getHorse(), pair1.getRider(), (pair1.getNumberPair() - 1)));
             }
             waitOfCircle();
         }
-        System.out.println("Overall1 = " + over1 + "\nOverall2 = " + over2 + "\nOverall3 = " + over3);
-        int bestResult;
-        if (over1 > Math.max(over2, over3)) {
-            bestResult = 1;
-        } else if (over2 > Math.max(over1, over3)) {
-            bestResult = 2;
-        } else {
-            bestResult = 3;
+        for (Pair pair1 : pair) {
+            if (!(pair.get(scannerChoice - 1).getNumberPair() == pair1.getNumberPair())) {
+                result = (result && (pair.get(scannerChoice - 1).getOverSpeed() > pair1.getOverSpeed()));
+            }
         }
-        return (scannerChoice == bestResult);
+        return (result);
+    }
+
+    private int overallSpeedRandomCircle(Horse horse, Rider rider, int numberPair) {
+        int randomSpeed = ((horse.getSpeed()) * (int) (1 + (Math.random() * (rider.getLevel()))));
+        pair.get(numberPair).setOverSpeed(pair.get(numberPair).getOverSpeed() + randomSpeed);
+        return randomSpeed;
     }
 
     public void waitOfCircle() {
@@ -79,9 +51,6 @@ public class ControlService {
         }
     }
 
-    private int overallSpeedRandomCircle(Horse horse, Rider rider) {
-        return ((horse.getSpeed()) * (int) (1 + (Math.random() * (rider.getLevel()))));
-    }
 
     public boolean menuControlService(boolean result) {
         if (result) {
