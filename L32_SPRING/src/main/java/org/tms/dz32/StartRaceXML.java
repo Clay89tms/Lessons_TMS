@@ -5,14 +5,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Scanner;
 
-import static org.tms.dz32.ScannerChoice.scannerChoice;
-
 public class StartRaceXML {
     public static void start(){
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring-betting.xml");
         ControlService beanControlService = context.getBean(ControlService.class);
         try (Scanner scanner = new Scanner(System.in)) {
-            System.out.println("Welcome to bet of sports!");
+            System.out.println("Welcome to bet of sports!\n");
             startRace(beanControlService, scanner);
         } catch (Exception exception) {
             System.out.println("exep" + exception);
@@ -20,9 +18,7 @@ public class StartRaceXML {
     }
 
     private static void startRace(ControlService beanControlService, Scanner scanner) {
-        PrintService.question();
-        if (beanControlService.menuControlService(
-                beanControlService.startCircle(scannerChoice(beanControlService.getPair().size(), scanner)))) {
+        if (beanControlService.menuControlService(scanner)) {
             startRace(beanControlService, scanner);
         }
     }

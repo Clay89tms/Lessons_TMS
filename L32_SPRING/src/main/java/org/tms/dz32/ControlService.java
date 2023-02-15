@@ -1,6 +1,7 @@
 package org.tms.dz32;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class ControlService {
 
@@ -19,27 +20,26 @@ public class ControlService {
 
     public boolean startCircle(int scannerChoice) {
         boolean result = true;
-        takeNewPair();
 
         for (int j = 1; j <= 5; j++) {
             System.out.println("Circle# " + j);
 
-            for (Pair pair1 : pair) {
-                System.out.println(pair1 + "; overal speed = " + overallSpeedRandomCircle(pair1.getHorse(), pair1.getRider(), (pair1.getNumberPair() - 1)));
+            for (int i = 0; i < pair.size(); i++) {
+                System.out.println("Pair# " + (i + 1) + "; overal speed = " + overallSpeedRandomCircle((pair.get(i))));
             }
             waitOfCircle();
         }
-        for (Pair pair1 : pair) {
-            if (!(pair.get(scannerChoice - 1).getNumberPair() == pair1.getNumberPair())) {
-                result = (result && (pair.get(scannerChoice - 1).getOverSpeed() > pair1.getOverSpeed()));
+        for (Pair pair : pair) {
+            if (!(this.pair.get(scannerChoice - 1).getOverSpeed() == pair.getOverSpeed())) {
+                result = (result && (this.pair.get(scannerChoice - 1).getOverSpeed() > pair.getOverSpeed()));
             }
         }
         return (result);
     }
 
-    private int overallSpeedRandomCircle(Horse horse, Rider rider, int numberPair) {
-        int randomSpeed = ((horse.getSpeed()) * (int) (1 + (Math.random() * (rider.getLevel()))));
-        pair.get(numberPair).setOverSpeed(pair.get(numberPair).getOverSpeed() + randomSpeed);
+    private int overallSpeedRandomCircle(Pair pair) {
+        int randomSpeed = ((pair.getHorse().getSpeed()) * (int) (1 + (Math.random() * (pair.getRider().getLevel()))));
+        pair.setOverSpeed(pair.getOverSpeed() + randomSpeed);
         return randomSpeed;
     }
 
@@ -51,8 +51,15 @@ public class ControlService {
         }
     }
 
+    public boolean menuControlService(Scanner scanner) {
+        PrintService.question();
+        int scannerChoice = PrintService.scannerChoice(pair.size(), scanner);
+        takeNewPair();
 
-    public boolean menuControlService(boolean result) {
+        System.out.println();
+        PrintService.printTablePair(getPair());
+        boolean result = startCircle(scannerChoice);
+
         if (result) {
             System.out.println("you win! Congratulations!!!");
             money += 30;

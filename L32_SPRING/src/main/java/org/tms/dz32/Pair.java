@@ -5,12 +5,10 @@ public class Pair {
     private Horse horse;
     private Rider rider;
     private int overSpeed = 0;
-    private int numberPair;
 
 
-    public Pair(Horse horse, Rider rider, int numberPair) {
+    public Pair(Horse horse, Rider rider) {
         System.out.println("pair const");
-        this.numberPair = numberPair;
         this.horse = horse;
         this.rider = rider;
         this.overSpeed = 0;
@@ -46,17 +44,11 @@ public class Pair {
         this.overSpeed = overSpeed;
     }
 
-    public int getNumberPair() {
-        return numberPair;
-    }
 
-    public void setNumberPair(int numberPair) {
-        this.numberPair = numberPair;
-    }
 
     @Override
     public String toString() {
-        return "Pair# " + numberPair + " | horse=" + horse.getSpeed() +
+        return " | horse=" + horse.getSpeed() +
                 ", rider=" + rider.getLevel();
     }
 }
