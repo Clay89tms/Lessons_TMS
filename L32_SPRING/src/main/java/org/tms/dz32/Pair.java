@@ -4,7 +4,7 @@ public class Pair {
 
     private Horse horse;
     private Rider rider;
-    private int overSpeed=0;
+    private int overSpeed = 0;
 
 
     public Pair(Horse horse, Rider rider) {
@@ -36,13 +36,20 @@ public class Pair {
         this.rider = rider;
     }
 
+    public int getOverSpeed() {
+        return overSpeed;
+    }
+
+    public void setOverSpeed(int overSpeed) {
+        this.overSpeed = overSpeed;
+    }
+
+
+
     @Override
     public String toString() {
-        return "Pair{" +
-                "horse=" + horse +
-                ", rider=" + rider +
-                ", overSpeed=" + overSpeed +
-                '}';
+        return " | horse=" + horse.getSpeed() +
+                ", rider=" + rider.getLevel();
     }
 }
 
