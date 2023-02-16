@@ -1,10 +1,6 @@
 package org.tms.dz33.component;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
-@Component
-@Scope("prototype")
 public class Rider {
 
     private int level;
