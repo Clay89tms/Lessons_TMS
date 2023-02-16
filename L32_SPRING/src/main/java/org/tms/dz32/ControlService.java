@@ -27,7 +27,7 @@ public class ControlService {
             for (int i = 0; i < pair.size(); i++) {
                 System.out.println("Pair# " + (i + 1) + "; overal speed = " + overallSpeedRandomCircle((pair.get(i))));
             }
-            waitOfCircle();
+            PrintService.waitOfCircle();
         }
         for (Pair pair : pair) {
             if (!(this.pair.get(scannerChoice - 1).getOverSpeed() == pair.getOverSpeed())) {
@@ -43,13 +43,7 @@ public class ControlService {
         return randomSpeed;
     }
 
-    public void waitOfCircle() {
-        try {
-            Thread.sleep(600);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
+
 
     public boolean menuControlService(Scanner scanner) {
         PrintService.question();
