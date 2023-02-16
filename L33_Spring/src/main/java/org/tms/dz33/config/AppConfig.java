@@ -1,8 +1,6 @@
 package org.tms.dz33.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 import org.tms.dz33.component.Horse;
 import org.tms.dz33.component.Pair;
 import org.tms.dz33.component.Rider;
@@ -11,6 +9,7 @@ import org.tms.dz33.service.PrintService;
 
 
 @Configuration
+@EnableAspectJAutoProxy
 public class AppConfig {
 
     @Bean

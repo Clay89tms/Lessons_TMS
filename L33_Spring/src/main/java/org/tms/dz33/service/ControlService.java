@@ -2,13 +2,13 @@ package org.tms.dz33.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.tms.dz33.aop.MyBenchmark;
 import org.tms.dz33.component.Pair;
 
 import java.util.List;
 import java.util.Scanner;
 
 @Service
-
 public class ControlService {
 
     private static int money = 50;
@@ -19,12 +19,14 @@ public class ControlService {
         System.out.println("controlService const");
     }
 
+
     private void takeNewPair() {
         for (int i = 0; i < pair.size(); i++) {
             pair.get(i).createPartner();
         }
     }
 
+    @MyBenchmark
     public boolean startCircle(int scannerChoice) {
         boolean result = true;
 
@@ -44,11 +46,13 @@ public class ControlService {
         return (result);
     }
 
+
     private int overallSpeedRandomCircle(Pair pair) {
         int randomSpeed = ((pair.getHorse().getSpeed()) * (int) (1 + (Math.random() * (pair.getRider().getLevel()))));
         pair.setOverSpeed(pair.getOverSpeed() + randomSpeed);
         return randomSpeed;
     }
+
 
     public void waitOfCircle() {
         try {
