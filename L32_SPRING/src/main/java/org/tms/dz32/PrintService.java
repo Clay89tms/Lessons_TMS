@@ -41,4 +41,12 @@ public class PrintService {
         return scannerChoice(sizePair, scanner);
     }
 
+    public static void waitOfCircle() {
+        try {
+            Thread.sleep(600);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
