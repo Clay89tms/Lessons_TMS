@@ -12,6 +12,9 @@ import java.util.Scanner;
 public class ControlService {
 
     private static int money = 50;
+
+    @Autowired
+    PrintService printService;
     @Autowired
     private List<Pair> pair;
 
@@ -20,7 +23,7 @@ public class ControlService {
     }
 
 
-    private void takeNewPair() {
+    public void takeNewPair() {
         for (int i = 0; i < pair.size(); i++) {
             pair.get(i).createPartner();
         }
@@ -46,6 +49,17 @@ public class ControlService {
         return (result);
     }
 
+    public boolean resultMoney(boolean result){
+        if (result) {
+            System.out.println("you win! Congratulations!!!");
+            money += 30;
+        } else {
+            System.out.println("you louse... don't worry!");
+            money -= 10;
+        }
+        return (money > 9);
+    }
+
 
     private int overallSpeedRandomCircle(Pair pair) {
         int randomSpeed = ((pair.getHorse().getSpeed()) * (int) (1 + (Math.random() * (pair.getRider().getLevel()))));
@@ -62,24 +76,6 @@ public class ControlService {
         }
     }
 
-    public boolean menuControlService(Scanner scanner) {
-        PrintService.question();
-        int scannerChoice = PrintService.scannerChoice(pair.size(), scanner);
-        takeNewPair();
-
-        System.out.println();
-        PrintService.printTablePair(getPair());
-        boolean result = startCircle(scannerChoice);
-
-        if (result) {
-            System.out.println("you win! Congratulations!!!");
-            money += 30;
-        } else {
-            System.out.println("you louse... don't worry!");
-            money -= 10;
-        }
-        return (money > 9);
-    }
 
     public List<Pair> getPair() {
         return pair;
