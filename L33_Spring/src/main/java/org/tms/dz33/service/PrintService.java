@@ -16,15 +16,14 @@ public class PrintService {
     public PrintService() {
     }
 
-
     public void question() {
         System.out.println("You have money: " + ControlService.getMoney());
         System.out.print("\nbet is = 10$; \nmake you're choice pair (1-3): ");
     }
 
-    public void printTablePair(List<Pair> pair){
+    public void printTablePair(List<Pair> pair) {
         for (int i = 0; i < pair.size(); i++) {
-            System.out.println("Pair# " + (i+1) + pair.get(i));
+            System.out.println("Pair# " + (i + 1) + pair.get(i));
         }
         System.out.println("________________________________");
     }
@@ -40,8 +39,7 @@ public class PrintService {
                 System.out.println("\n\tWe DON'T have this Pair");
                 question();
             }
-        }
-        else{
+        } else {
             System.out.println("do not correct! please try next!");
             scanner = new Scanner(System.in);
             question();
@@ -49,6 +47,7 @@ public class PrintService {
         }
         return scannerChoice(sizePair, scanner);
     }
+
     public boolean menuControlService(Scanner scanner) {
 
         question();
@@ -60,6 +59,14 @@ public class PrintService {
         boolean result = controlService.startCircle(scannerChoice);
 
         return controlService.resultMoney(result);
+    }
+
+    public void waitOfCircle() {
+        try {
+            Thread.sleep(600);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

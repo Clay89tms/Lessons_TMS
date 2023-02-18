@@ -2,7 +2,6 @@ package org.tms.dz33;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
-import org.tms.dz33.service.ControlService;
 import org.tms.dz33.service.PrintService;
 
 import java.util.Scanner;

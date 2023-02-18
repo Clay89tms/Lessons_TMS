@@ -6,13 +6,11 @@ import org.tms.dz33.aop.MyBenchmark;
 import org.tms.dz33.component.Pair;
 
 import java.util.List;
-import java.util.Scanner;
 
 @Service
 public class ControlService {
 
     private static int money = 50;
-
     @Autowired
     PrintService printService;
     @Autowired
@@ -39,7 +37,7 @@ public class ControlService {
             for (int i = 0; i < pair.size(); i++) {
                 System.out.println("Pair# " + (i + 1) + "; overal speed = " + overallSpeedRandomCircle((pair.get(i))));
             }
-            waitOfCircle();
+            printService.waitOfCircle();
         }
         for (Pair pair : pair) {
             if (!(this.pair.get(scannerChoice - 1).getOverSpeed() == pair.getOverSpeed())) {
@@ -49,7 +47,7 @@ public class ControlService {
         return (result);
     }
 
-    public boolean resultMoney(boolean result){
+    public boolean resultMoney(boolean result) {
         if (result) {
             System.out.println("you win! Congratulations!!!");
             money += 30;
@@ -60,22 +58,11 @@ public class ControlService {
         return (money > 9);
     }
 
-
     private int overallSpeedRandomCircle(Pair pair) {
         int randomSpeed = ((pair.getHorse().getSpeed()) * (int) (1 + (Math.random() * (pair.getRider().getLevel()))));
         pair.setOverSpeed(pair.getOverSpeed() + randomSpeed);
         return randomSpeed;
     }
-
-
-    public void waitOfCircle() {
-        try {
-            Thread.sleep(600);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
 
     public List<Pair> getPair() {
         return pair;

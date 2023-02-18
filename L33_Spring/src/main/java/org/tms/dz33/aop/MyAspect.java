@@ -1,7 +1,9 @@
 package org.tms.dz33.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,7 +15,7 @@ public class MyAspect {
 
     @Around("pointCutForBenchmark()")
     public Object runAdvice(ProceedingJoinPoint joinPoint) {
-        System.out.println("---start-advice---");
+        System.out.println("---start-race---");
         long timeStart = System.currentTimeMillis();
 
         Object proceed;
