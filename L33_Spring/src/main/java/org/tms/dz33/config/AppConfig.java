@@ -1,6 +1,9 @@
 package org.tms.dz33.config;
 
-import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.Scope;
 import org.tms.dz33.component.Horse;
 import org.tms.dz33.component.Pair;
 import org.tms.dz33.component.Rider;

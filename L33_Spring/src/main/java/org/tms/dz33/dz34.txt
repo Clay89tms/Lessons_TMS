@@ -6,8 +6,8 @@
     @Configuration
     @EnableAspectJAutoProxy
 
-    @EnableScheduling
-    @Scheduled(cron = "*/1 * * * * *")
+    @EnableScheduling                       (в конфигурацию установить для включения планировщика)
+    @Scheduled(cron = "*/1 * * * * *")          (установить над тем что надо вызывать в отдельном потоке для выполнения)
 
-    @EnableAsync
-    @Async
+    @EnableAsync        (в конфигурацию установить для включения создания отдельного потока)
+    @Async          (над чем создать отдельный поток)
