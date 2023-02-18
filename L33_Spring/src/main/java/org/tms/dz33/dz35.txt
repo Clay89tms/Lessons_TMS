@@ -1,0 +1,7 @@
+Выучить новые аннотации
+// Controller
+// RequestMapping, GetMapping, PostMapping ,......
+// RequestParam RequestHeader CookieValue
+// PathVariable
+
+Поднять проект с любым эндпоинтом, убедиться, что эндпоинт отзывается через браузер или постман
