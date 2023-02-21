@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/L28_Solid.iml" filepath="$PROJECT_DIR$/L28_Solid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L29_Pattern_p1.iml" filepath="$PROJECT_DIR$/L29_Pattern_p1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lessons_TMS.iml" filepath="$PROJECT_DIR$/Lessons_TMS.iml" />
     </modules>
   </component>
