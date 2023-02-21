@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$/L31_Grasp">
+      <sourceFolder url="file://$MODULE_DIR$/L31_Grasp/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/L31_Grasp/src/main/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/L31_Grasp/target" />
+    </content>
+  </component>
+</module>
