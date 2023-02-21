@@ -1,10 +1,12 @@
 package org.tms.dz33.service;
 
+import org.springframework.stereotype.Service;
 import org.tms.dz33.component.Pair;
 
 import java.util.List;
 import java.util.Scanner;
 
+@Service
 public class PrintService {
 
     public PrintService() {
