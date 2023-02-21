@@ -1,5 +1,8 @@
 package org.tms.dz33.component;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class Pair {
 
     private Horse horse;

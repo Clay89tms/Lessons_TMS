@@ -2,7 +2,6 @@ package org.tms.dz33;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
-import org.tms.dz33.service.ControlService;
 import org.tms.dz33.service.PrintService;
 
 import java.util.Scanner;
@@ -20,7 +19,7 @@ public class StartRaceAnnot {
     }
 
     private void startRace(PrintService beanControlService, Scanner scanner) {
-        if (beanControlService.menuControlService(scanner)) {
+        if (beanControlService.startMenu(scanner)) {
             startRace(beanControlService, scanner);
         }
     }

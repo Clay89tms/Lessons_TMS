@@ -1,78 +1,21 @@
 package org.tms.dz33.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.tms.dz33.aop.MyBenchmark;
 import org.tms.dz33.component.Pair;
 
 import java.util.List;
 
-@Service
-public class ControlService {
+public interface ControlService {
 
-    private static int money = 50;
-    @Autowired
-    PrintService printService;
-    @Autowired
-    private List<Pair> pair;
+        void takeNewPair();
 
-    public ControlService() {
-        System.out.println("controlService const");
-    }
+        boolean startCircle(int scannerChoice);
 
+        boolean resultMoney(boolean result);
 
-    public void takeNewPair() {
-        for (int i = 0; i < pair.size(); i++) {
-            pair.get(i).createPartner();
-        }
-    }
+        int overallSpeedRandomCircle(Pair pair);
 
-    @MyBenchmark
-    public boolean startCircle(int scannerChoice) {
-        boolean result = true;
-
-        for (int j = 1; j <= 5; j++) {
-            System.out.println("Circle# " + j);
-
-            for (int i = 0; i < pair.size(); i++) {
-                System.out.println("Pair# " + (i + 1) + "; overal speed = " + overallSpeedRandomCircle((pair.get(i))));
-            }
-            printService.waitOfCircle();
-        }
-        for (Pair pair : pair) {
-            if (!(this.pair.get(scannerChoice - 1).getOverSpeed() == pair.getOverSpeed())) {
-                result = (result && (this.pair.get(scannerChoice - 1).getOverSpeed() > pair.getOverSpeed()));
-            }
-        }
-        return (result);
-    }
-
-    public boolean resultMoney(boolean result) {
-        if (result) {
-            System.out.println("you win! Congratulations!!!");
-            money += 30;
-        } else {
-            System.out.println("you louse... don't worry!");
-            money -= 10;
-        }
-        return (money > 9);
-    }
-
-    private int overallSpeedRandomCircle(Pair pair) {
-        int randomSpeed = ((pair.getHorse().getSpeed()) * (int) (1 + (Math.random() * (pair.getRider().getLevel()))));
-        pair.setOverSpeed(pair.getOverSpeed() + randomSpeed);
-        return randomSpeed;
-    }
-
-    public List<Pair> getPair() {
-        return pair;
-    }
-
-    public void setPair(List<Pair> pair) {
-        this.pair = pair;
-    }
-
-    public static int getMoney() {
-        return money;
-    }
+        void addPairInToList(Pair pair);
+        List<Pair> getPairList();
 }

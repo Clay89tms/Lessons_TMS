@@ -1,23 +1,28 @@
 package org.tms.dz33.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.RequestScope;
 import org.tms.dz33.component.Pair;
 
 import java.util.List;
 import java.util.Scanner;
 
 @Service
+@RequestScope
 public class PrintService {
 
-    @Autowired
-    ControlService controlService;
+    private ControlServiceImpl controlService;
+
+    public PrintService(ControlServiceImpl controlService) {
+        this.controlService = controlService;
+    }
 
     public PrintService() {
+        System.out.println("printService const");
     }
 
     public void question() {
-        System.out.println("You have money: " + ControlService.getMoney());
+        System.out.println("You have money: " + controlService.getMoney());
         System.out.print("\nbet is = 10$; \nmake you're choice pair (1-3): ");
     }
 
@@ -48,14 +53,14 @@ public class PrintService {
         return scannerChoice(sizePair, scanner);
     }
 
-    public boolean menuControlService(Scanner scanner) {
+    public boolean startMenu(Scanner scanner) {
 
         question();
-        int scannerChoice = scannerChoice(controlService.getPair().size(), scanner);
+        int scannerChoice = scannerChoice(controlService.getPairList().size(), scanner);
         controlService.takeNewPair();
 
         System.out.println();
-        printTablePair(controlService.getPair());
+        printTablePair(controlService.getPairList());
         boolean result = controlService.startCircle(scannerChoice);
 
         return controlService.resultMoney(result);
