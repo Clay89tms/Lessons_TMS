@@ -11,15 +11,13 @@ import java.util.Scanner;
 @RequestScope
 public class PrintService {
 
-    private ControlServiceImpl controlService;
+    private final ControlServiceImpl controlService;
 
     public PrintService(ControlServiceImpl controlService) {
+        System.out.println("PrintService const");
         this.controlService = controlService;
     }
 
-    public PrintService() {
-        System.out.println("printService const");
-    }
 
     public void question() {
         System.out.println("You have money: " + controlService.getMoney());

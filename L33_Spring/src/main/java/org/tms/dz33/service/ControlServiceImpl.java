@@ -5,28 +5,23 @@ import org.springframework.web.context.annotation.RequestScope;
 import org.tms.dz33.aop.MyBenchmark;
 import org.tms.dz33.component.Pair;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ControlServiceImpl implements ControlService {
-
-    private String type;
+public class ControlServiceImpl {
 
     private static int money = 50;
 
-    private PrintService printService;
+    private final PrintService printService;
 
-    private List<Pair> pairList;
+    private List<Pair> pairList = new ArrayList<>();
 
-    public ControlServiceImpl(PrintService printService, List<Pair> pairList,String type) {
-        this.type = type;
+    public ControlServiceImpl(PrintService printService) {
+        System.out.println("Control const");
         this.printService = printService;
-        this.pairList = pairList;
     }
 
-    public ControlServiceImpl() {
-        System.out.println("controlService const");
-    }
 
     public void takeNewPair() {
         for (int i = 0; i < pairList.size(); i++) {
@@ -65,7 +60,7 @@ public class ControlServiceImpl implements ControlService {
         return (money > 9);
     }
 
-    @Override
+
     public int overallSpeedRandomCircle(Pair pair) {
         int randomSpeed = ((pair.getHorse().getSpeed()) * (int) (1 + (Math.random() * (pair.getRider().getLevel()))));
         pair.setOverSpeed(pair.getOverSpeed() + randomSpeed);

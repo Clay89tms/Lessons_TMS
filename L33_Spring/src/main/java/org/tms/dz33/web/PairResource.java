@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.tms.dz33.component.Horse;
 import org.tms.dz33.component.Pair;
 import org.tms.dz33.component.Rider;
@@ -17,28 +18,34 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
+@EnableWebMvc
 @RequestMapping(value = "/circle")
 public class PairResource {
 
-    private ControlService controlService;
+    private final ControlServiceImpl controlService;
 
-//    private PrintService printService;
+    private PrintService printService;
     private Pair pair;
 
-    public PairResource(ControlServiceImpl controlService, Pair pair) {
+    public PairResource(ControlServiceImpl controlService, Pair pair, PrintService printService) {
+        System.out.println("pairRes const");
+        this.printService = printService;
         this.controlService = controlService;
 
         this.pair = pair;
     }
 
-    public PairResource() {
-        System.out.println("pairRes const");
-    }
 
     @GetMapping()
-    public String homePage() {
-//        controlService.getPairList();
-        return "startMenu";
+    public ModelAndView homePage() {
+
+        List<Pair> pairList = controlService.getPairList();
+        Map<String, Object> map = new HashMap<>();
+        for (int i = 0; i < pairList.size(); i++) {
+            String number = "pairs" + i;
+            map.put(number, pairList.get(i));
+        }
+        return new ModelAndView("startMenu", map);
     }
 
     @PostMapping("/new")
