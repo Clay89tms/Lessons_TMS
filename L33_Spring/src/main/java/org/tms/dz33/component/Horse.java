@@ -4,10 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
+import javax.validation.constraints.NotBlank;
+
 @Component
 public class Horse {
     private int speed;
 
+    @NotBlank(message = "must not be blank")
     private String nameHorse;
 
     public Horse() {

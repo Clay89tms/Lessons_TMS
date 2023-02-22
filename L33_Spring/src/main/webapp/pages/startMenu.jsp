@@ -18,14 +18,20 @@
 Hello
 ${pair1}
 
-<form action="/circle" method="post">
-    <input type="text" name="nameHorse"> Horse<br/>
-    <input type="text" name="nameRider"> Rider<br/>
+<form action="/circle/add" method="post">
+    <input type="text" name="nameHorse"> Horse name | ${err_nameHorse}<br/>
+    <input type="text" name="nameRider"> Rider name | ${err_nameRider}<br/>
     <input type="submit" value="saved">
 </form>
 <br/>
 <br/>
 <hr/>
+<form action="/circle/getRace" method="get">
+    <input type="submit" value="go Race">
+</form>
+<hr/>
+
+
 ${pairs0}
 ${pairs1}
 

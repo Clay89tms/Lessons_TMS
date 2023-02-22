@@ -2,10 +2,14 @@ package org.tms.dz33.component;
 
 import org.springframework.stereotype.Component;
 
+import javax.validation.constraints.NotBlank;
+
 @Component
 public class Rider {
 
     private int level;
+
+    @NotBlank(message = "must not be blank")
     private String nameRider;
 
     public Rider() {

@@ -11,9 +11,9 @@ import java.util.Scanner;
 @RequestScope
 public class PrintService {
 
-    private final ControlServiceImpl controlService;
+    private final ControlService controlService;
 
-    public PrintService(ControlServiceImpl controlService) {
+    public PrintService(ControlService controlService) {
         System.out.println("PrintService const");
         this.controlService = controlService;
     }

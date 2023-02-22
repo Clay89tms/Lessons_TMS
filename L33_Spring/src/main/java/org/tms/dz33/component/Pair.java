@@ -2,6 +2,8 @@ package org.tms.dz33.component;
 
 import org.springframework.stereotype.Service;
 
+import javax.validation.constraints.NotBlank;
+
 @Service
 public class Pair {
 
@@ -46,7 +48,6 @@ public class Pair {
     public void setOverSpeed(int overSpeed) {
         this.overSpeed = overSpeed;
     }
-
 
 
     @Override
