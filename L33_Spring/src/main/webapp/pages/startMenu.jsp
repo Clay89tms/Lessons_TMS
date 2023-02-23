@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Menu</title>
@@ -16,7 +16,7 @@
 <br/>
 
 Hello
-${pair1}
+<%--${pair1}--%>
 
 <form action="/circle/add" method="post">
     <input type="text" name="nameHorse"> Horse name | ${err_nameHorse}<br/>
@@ -26,26 +26,24 @@ ${pair1}
 <br/>
 <br/>
 <hr/>
-<form action="/circle/getRace" method="get">
+<form action="/circle/toStart" method="get">
     <input type="submit" value="go Race">
 </form>
 <hr/>
 
-
-${pairs0}
-${pairs1}
-
-<c:if test="${model == true}">
-    test1
+${pairList}
+<%--${pairList.horse.nameHorse}--%>
+<c:if test="${list}">
+    new pairList
 </c:if>
 
-<c:if test="${map == true}">
-asd
-    <c:forEach items="pairList" var="pair">
-        ${pair.horse} <br/>
-    </c:forEach>
+<%--<c:if test="${List == true}">--%>
 
-</c:if>
+<c:forEach items="${pairList}" var="pair">
+    ${pair}<br/>
+</c:forEach>
+
+<%--</c:if>--%>
 
 
 </body>

@@ -42,41 +42,22 @@ public class PairResource {
 
     @GetMapping("/menu")
     public ModelAndView homePage() {
-        List<Pair> list = new ArrayList<>();
-        
-        Horse horse = new Horse();
-        horse.setNameHorse("oneH1");
+        Map<String, List<Pair>> model = new HashMap<>();
 
-        Rider rider = new Rider();
-        rider.setNameRider("oneR1");
-        list.add(new Pair(horse, rider));
-        
-        Horse horse1 = new Horse();
-        horse.setNameHorse("oneH2");
-
-        Rider rider1 = new Rider();
-        rider.setNameRider("oneR2");
-        list.add(new Pair(horse1, rider1));
-        
-        Map<String, Pair> map1 = new HashMap<>();
-
-        for (int i = 0; i < list.size(); i++) {
-            map1.put(list.get(i).getRider().getNameRider(), list.get(i));
-        }
-        return new ModelAndView("race", map1);
+        List<Pair> list = controlService.getPairList();
+        model.put("pairList", list);
+        return new ModelAndView("startMenu", model);
 
 //        return "startMenu";
     }
 
-    @GetMapping("/getRace")
-    public ModelAndView savePair(Horse horse, Rider rider) {
-        List<Pair> pairList = controlService.getPairList();
-        Map<String, Object> map = new HashMap<>();
-        for (int i = 0; i < pairList.size(); i++) {
-            String number = "pairs" + map.get(i);
-            map.put(number, pairList.get(i));
-        }
-        return new ModelAndView("race", map);
+    @GetMapping("/toStart")
+    public ModelAndView savePair() {
+        Map<String, List<Pair>> model = new HashMap<>();
+
+        List<Pair> list = controlService.getPairList();
+        model.put("pairList", list);
+        return new ModelAndView("race", model);
     }
 
     @PostMapping("/add")
@@ -98,12 +79,15 @@ public class PairResource {
 
             return modelAndView;
         }
-        Map<String, String> model = new HashMap<>();
-        model.put("pair1", "horRid");
+        Map<String, Object> model = new HashMap<>();
+
         pair = new Pair(horse, rider);
         pair.createPartner();
         controlService.addPairInToList(pair);
-        List<Pair> pairList = controlService.getPairList();
+        List<Pair> list = controlService.getPairList();
+        model.put("pairList", list);
+        int money = controlService.getMoney();
+//        model.put("")
         return new ModelAndView("startMenu", model);
     }
 
