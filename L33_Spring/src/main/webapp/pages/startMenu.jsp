@@ -31,19 +31,24 @@ Hello
 </form>
 <hr/>
 
-${pairList}
+
 <%--${pairList.horse.nameHorse}--%>
 <c:if test="${list}">
     new pairList
 </c:if>
 
-<%--<c:if test="${List == true}">--%>
+<br/><hr>
+${money}
+<br/>
+${moneyA}
+<br/>
+<c:if test="${pairList != null}">
 
-<c:forEach items="${pairList}" var="pair">
-    ${pair}<br/>
+<c:forEach items="${pairList}" var="pair" varStatus="ien">
+    ${ien.index + 1} ${pair}<br/>
 </c:forEach>
 
-<%--</c:if>--%>
+</c:if>
 
 
 </body>

@@ -1,6 +1,7 @@
 package org.tms.dz33.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -79,15 +80,15 @@ public class PairResource {
 
             return modelAndView;
         }
-        Map<String, Object> model = new HashMap<>();
 
+        Map<String, Object> model = new HashMap<>();
         pair = new Pair(horse, rider);
         pair.createPartner();
         controlService.addPairInToList(pair);
         List<Pair> list = controlService.getPairList();
         model.put("pairList", list);
         int money = controlService.getMoney();
-//        model.put("")
+        model.put("moneyA", money);
         return new ModelAndView("startMenu", model);
     }
 

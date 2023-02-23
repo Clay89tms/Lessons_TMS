@@ -52,8 +52,8 @@ public class Pair {
 
     @Override
     public String toString() {
-        return " | horse=" + horse.getSpeed() +
-                ", rider=" + rider.getLevel();
+        return " | horseName = " + horse.getNameHorse() + ", speed = " + horse.getSpeed() +
+                "; riderName = " + rider.getNameRider() + ", level = " + rider.getLevel();
     }
 }
 
