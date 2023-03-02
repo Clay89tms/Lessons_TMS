@@ -55,8 +55,10 @@ public class PairResource {
         ModelAndView modelAndView = new ModelAndView("startMenu");
 
         Map<String, Object> model = new HashMap<>();
+        model.put("money", controlService.getMoney());
         List<Pair> list = controlService.getPairList();
         model.put("pairList", list);
+
 
 
         if (result.hasErrors()) {
@@ -74,9 +76,8 @@ public class PairResource {
             Integer bet = Integer.valueOf(betChoose.getBet());
             Integer choose = Integer.valueOf(betChoose.getChoose());
             printService.startMenu(choose, bet, model);
-
+            model.put("pairSize", list.size());
             model.put("isThereAWinner", true);
-//            modelAndView.addAllObjects(model);
         }
         startIfoPairAndMoney(model);
         modelAndView.addAllObjects(model);
@@ -90,7 +91,7 @@ public class PairResource {
         ModelAndView modelAndView = new ModelAndView("startMenu");
 
         Map<String, Object> model = new HashMap<>();
-
+        startIfoPairAndMoney(model);
 
         if (result1.hasErrors() || result2.hasErrors()) {
             HashMap<String, String> errors = new HashMap<>();
@@ -113,8 +114,12 @@ public class PairResource {
         pair = new Pair(horse, rider);
         pair.createPartner();
         controlService.addPairInToList(pair);
-        startIfoPairAndMoney(model);
+
+        model.put("pairSize", controlService.getPairList().size());
+
         modelAndView.addAllObjects(model);
+//        int size = controlService.getPairList().size();
+
         return modelAndView;
     }
 

@@ -16,8 +16,10 @@
 <h1> Menu program. </h1>
 <br/>
 
-Hello
-<c:if test="${money < 9}"> <h2>!!!not enough money!!!</h2></c:if>
+
+<c:if test="${money < 10}">
+    !!!not enough money!!! Bye Bye! see you...
+</c:if>
 <c:if test="${money > 9}">
 
     <form action="/circle/add" method="post">
@@ -37,22 +39,20 @@ Hello
     <hr/>
 
     <c:if test="${pairList != null}">
+        <c:if test="${pairSize > 1}">
 
-        <form action="/circle/toStart" method="post">
+            <form action="/circle/toStart" method="post">
             Place your BET (10-30): <input type="text" name="bet">
             <input type="submit" value="go Race"> | ${err_bet}
             <hr/>
+        </c:if>
 
-            <c:forEach items="${pairList}" var="pair" varStatus="ien">
-                ${ien.index + 1} ${pair} <input type="radio" name="choose" value="${ien.index + 1}"> | ${err_choose}<br/>
-            </c:forEach>
-            <hr/>
-
-
-
-
+        <c:forEach items="${pairList}" var="pair" varStatus="ien">
+            ${ien.index + 1} ${pair} <input type="radio" name="choose" value="${ien.index + 1}"> | ${err_choose}
+            <br/>
+        </c:forEach>
+        <hr/>
         </form>
-
     </c:if>
 
 </c:if>
