@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Menu</title>
@@ -16,40 +17,44 @@
 <br/>
 
 Hello
-<%--${pair1}--%>
+<c:if test="${money < 9}"> <h2>!!!not enough money!!!</h2></c:if>
+<c:if test="${money > 9}">
 
-<form action="/circle/add" method="post">
-    <input type="text" name="nameHorse"> Horse name | ${err_nameHorse}<br/>
-    <input type="text" name="nameRider"> Rider name | ${err_nameRider}<br/>
-    <input type="submit" value="saved">
-</form>
-<br/>
-<br/>
-<hr/>
-<form action="/circle/toStart" method="get">
-    <input type="submit" value="go Race">
-</form>
-<hr/>
+    <form action="/circle/add" method="post">
+        <input type="text" name="nameHorse"> Horse name | ${err_nameHorse}<br/>
+        <input type="text" name="nameRider"> Rider name | ${err_nameRider}<br/>
+        <input type="submit" value="saved">
+    </form>
+    <br/>
+
+    <br/>
+    <hr>
+    Your money: ${money} |
+    <c:if test="${isThereAWinner == true}">
+        ${endOfRaceMessage}
+    </c:if>
+    <br/>
+    <hr/>
+
+    <c:if test="${pairList != null}">
+
+        <form action="/circle/toStart" method="post">
+            Place your BET (10-30): <input type="text" name="bet">
+            <input type="submit" value="go Race"> | ${err_bet}
+            <hr/>
+
+            <c:forEach items="${pairList}" var="pair" varStatus="ien">
+                ${ien.index + 1} ${pair} <input type="radio" name="choose" value="${ien.index + 1}"> | ${err_choose}<br/>
+            </c:forEach>
+            <hr/>
 
 
-<%--${pairList.horse.nameHorse}--%>
-<c:if test="${list}">
-    new pairList
+
+
+        </form>
+
+    </c:if>
+
 </c:if>
-
-<br/><hr>
-${money}
-<br/>
-${moneyA}
-<br/>
-<c:if test="${pairList != null}">
-
-<c:forEach items="${pairList}" var="pair" varStatus="ien">
-    ${ien.index + 1} ${pair}<br/>
-</c:forEach>
-
-</c:if>
-
-
 </body>
 </html>

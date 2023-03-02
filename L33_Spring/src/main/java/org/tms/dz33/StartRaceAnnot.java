@@ -19,8 +19,8 @@ public class StartRaceAnnot {
     }
 
     private void startRace(PrintService beanControlService, Scanner scanner) {
-        if (beanControlService.startMenu(scanner)) {
-            startRace(beanControlService, scanner);
-        }
+//        if (beanControlService.startMenu(scanner)) {
+//            startRace(beanControlService, scanner);
+//        }
     }
 }

@@ -5,7 +5,7 @@ import org.springframework.web.context.annotation.RequestScope;
 import org.tms.dz33.component.Pair;
 
 import java.util.List;
-import java.util.Scanner;
+import java.util.Map;
 
 @Service
 @RequestScope
@@ -18,12 +18,6 @@ public class PrintService {
         this.controlService = controlService;
     }
 
-
-    public void question() {
-        System.out.println("You have money: " + controlService.getMoney());
-        System.out.print("\nbet is = 10$; \nmake you're choice pair (1-3): ");
-    }
-
     public void printTablePair(List<Pair> pair) {
         for (int i = 0; i < pair.size(); i++) {
             System.out.println("Pair# " + (i + 1) + pair.get(i));
@@ -31,45 +25,16 @@ public class PrintService {
         System.out.println("________________________________");
     }
 
-    public int scannerChoice(int sizePair, Scanner scanner) {
-
-        if (scanner.hasNextInt()) {
-            int scannerNext = scanner.nextInt();
-
-            if (scannerNext <= sizePair) {
-                return scannerNext;
-            } else {
-                System.out.println("\n\tWe DON'T have this Pair");
-                question();
-            }
-        } else {
-            System.out.println("do not correct! please try next!");
-            scanner = new Scanner(System.in);
-            question();
-            return scannerChoice(sizePair, scanner);
-        }
-        return scannerChoice(sizePair, scanner);
-    }
-
-    public boolean startMenu(Scanner scanner) {
-
-        question();
-        int scannerChoice = scannerChoice(controlService.getPairList().size(), scanner);
+    public Map<String, Object> startMenu(int choose, int bet, Map<String, Object> model) {
         controlService.takeNewPair();
-
-        System.out.println();
         printTablePair(controlService.getPairList());
-        boolean result = controlService.startCircle(scannerChoice);
 
-        return controlService.resultMoney(result);
-    }
+        int winnerPair = controlService.startCircle(choose);
+        String endOfRaceMessage = controlService.resultMoney(choose, bet, winnerPair);
 
-    public void waitOfCircle() {
-        try {
-            Thread.sleep(600);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        model.put("endOfRaceMessage", endOfRaceMessage);
+        model.put("winnerPair", winnerPair);
+        return model;
     }
 
 }
