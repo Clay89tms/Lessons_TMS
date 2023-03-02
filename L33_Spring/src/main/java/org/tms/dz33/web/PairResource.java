@@ -24,7 +24,6 @@ import java.util.Map;
 public class PairResource {
 
     private final ControlService controlService;
-
     private PrintService printService;
     private Pair pair;
 
@@ -36,7 +35,6 @@ public class PairResource {
 
         this.pair = pair;
     }
-
 
     @GetMapping("/menu")
     public ModelAndView homePage() {
@@ -58,29 +56,26 @@ public class PairResource {
         model.put("money", controlService.getMoney());
         List<Pair> list = controlService.getPairList();
         model.put("pairList", list);
-
-
+        model.put("pairSize", list.size());
 
         if (result.hasErrors()) {
             HashMap<String, String> errors = new HashMap<>();
             List<FieldError> fieldErrors = result.getFieldErrors();
+
             for (FieldError fieldError1 : fieldErrors) {
                 errors.put("err_" + fieldError1.getField(), fieldError1.getDefaultMessage());
             }
 
             modelAndView.addAllObjects(errors);
+
         } else {
-            System.out.println();
-
-
-            Integer bet = Integer.valueOf(betChoose.getBet());
-            Integer choose = Integer.valueOf(betChoose.getChoose());
-            printService.startMenu(choose, bet, model);
-            model.put("pairSize", list.size());
+            printService.startMenu(betChoose.getChoose(), betChoose.getBet(), model);
             model.put("isThereAWinner", true);
         }
+
         startIfoPairAndMoney(model);
         modelAndView.addAllObjects(model);
+
         return modelAndView;
     }
 
@@ -116,9 +111,7 @@ public class PairResource {
         controlService.addPairInToList(pair);
 
         model.put("pairSize", controlService.getPairList().size());
-
         modelAndView.addAllObjects(model);
-//        int size = controlService.getPairList().size();
 
         return modelAndView;
     }

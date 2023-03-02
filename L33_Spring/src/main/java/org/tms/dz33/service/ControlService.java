@@ -7,6 +7,7 @@ import org.tms.dz33.component.Pair;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,13 +18,13 @@ public class ControlService {
 
     private PrintService printService;
 
-    @NotBlank(message = "you don't choose")
-    private String choose;
+    @NotNull(message = "you don't choose")
+    private Integer choose;
 
     @Min(value = 10)
     @Max(value = 30)
-    @NotBlank
-    private String bet;
+    @NotNull
+    private Integer bet;
 
     private List<Pair> pairList = new ArrayList<>();
 
@@ -99,19 +100,19 @@ public class ControlService {
         return money;
     }
 
-    public String getChoose() {
+    public Integer getChoose() {
         return choose;
     }
 
-    public void setChoose(String choose) {
+    public void setChoose(Integer choose) {
         this.choose = choose;
     }
 
-    public String getBet() {
+    public Integer getBet() {
         return bet;
     }
 
-    public void setBet(String bet) {
+    public void setBet(Integer bet) {
         this.bet = bet;
     }
 }
