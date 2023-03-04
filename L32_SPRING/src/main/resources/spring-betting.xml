@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.tms.dz32.PrintService" name="printService"></bean>
+
+    <bean class="org.tms.dz32.Horse" name="horse1" scope="prototype"></bean>
+    <bean class="org.tms.dz32.Rider" name="rider1" scope="prototype"></bean>
+    <bean class="org.tms.dz32.Pair" name="pair1" init-method="createPartner">
+        <constructor-arg name="horse" ref="horse1"></constructor-arg>
+        <constructor-arg name="rider" ref="rider1"></constructor-arg>
+    </bean>
+
+    <bean class="org.tms.dz32.Horse" name="horse2" scope="prototype"></bean>
+    <bean class="org.tms.dz32.Rider" name="rider2" scope="prototype"></bean>
+    <bean class="org.tms.dz32.Pair" name="pair2" init-method="createPartner">
+        <constructor-arg name="horse" ref="horse2"></constructor-arg>
+        <constructor-arg name="rider" ref="rider2"></constructor-arg>
+    </bean>
+
+    <bean class="org.tms.dz32.Horse" name="horse3" scope="prototype"></bean>
+    <bean class="org.tms.dz32.Rider" name="rider3" scope="prototype"></bean>
+    <bean class="org.tms.dz32.Pair" name="pair3" init-method="createPartner">
+        <constructor-arg name="horse" ref="horse3"></constructor-arg>
+        <constructor-arg name="rider" ref="rider3"></constructor-arg>
+    </bean>
+
+    <bean class="org.tms.dz32.ControlService" name="controlService" autowire="byType"></bean>
+
+
+</beans>

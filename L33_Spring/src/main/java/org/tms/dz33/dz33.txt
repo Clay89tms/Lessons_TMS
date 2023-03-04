@@ -1,0 +1,19 @@
+Модифицируем предыдущую домашку
+вместо xml конфигурации переводим проект на java + annotation конфигурацию (без редактирования бизнес кода)
+
+Посмотреть след видео
+	https://www.youtube.com/watch?v=BmBr5diz8WA
+	https://www.youtube.com/watch?v=cou_qomYLNU
+
+Выучить жизненные циклы контейнера и бинов
+выучить следующие аннотации
+	
+	Component Service Repository
+	Autowired
+	Qualifier
+	Scope
+	Configuration
+	Bean
+	ComponentScan
+	Primary
+	DependsOn
