@@ -1,5 +1,10 @@
 package org.tms.dz33.component;
 
+import org.springframework.stereotype.Service;
+
+import javax.validation.constraints.NotBlank;
+
+@Service
 public class Pair {
 
     private Horse horse;
@@ -45,11 +50,9 @@ public class Pair {
     }
 
 
-
     @Override
     public String toString() {
-        return " | horse=" + horse.getSpeed() +
-                ", rider=" + rider.getLevel();
+        return " | horseName = " + horse.getNameHorse() + "; riderName = " + rider.getNameRider();
     }
 }
 

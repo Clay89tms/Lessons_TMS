@@ -1,7 +1,17 @@
 package org.tms.dz33.component;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
+
+import javax.validation.constraints.NotBlank;
+
+@Component
 public class Horse {
     private int speed;
+
+    @NotBlank(message = "must not be blank")
+    private String nameHorse;
 
     public Horse() {
         System.out.println("horse const");
@@ -14,5 +24,13 @@ public class Horse {
     }
     public int getSpeed() {
         return speed;
+    }
+
+    public String getNameHorse() {
+        return nameHorse;
+    }
+
+    public void setNameHorse(String nameHorse) {
+        this.nameHorse = nameHorse;
     }
 }

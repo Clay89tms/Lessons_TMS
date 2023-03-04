@@ -1,24 +1,21 @@
 package org.tms.dz33.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.RequestScope;
 import org.tms.dz33.component.Pair;
 
 import java.util.List;
-import java.util.Scanner;
+import java.util.Map;
 
 @Service
+@RequestScope
 public class PrintService {
 
-    @Autowired
-    ControlService controlService;
+    private final ControlService controlService;
 
-    public PrintService() {
-    }
-
-    public void question() {
-        System.out.println("You have money: " + ControlService.getMoney());
-        System.out.print("\nbet is = 10$; \nmake you're choice pair (1-3): ");
+    public PrintService(ControlService controlService) {
+        System.out.println("PrintService const");
+        this.controlService = controlService;
     }
 
     public void printTablePair(List<Pair> pair) {
@@ -28,45 +25,16 @@ public class PrintService {
         System.out.println("________________________________");
     }
 
-    public int scannerChoice(int sizePair, Scanner scanner) {
-
-        if (scanner.hasNextInt()) {
-            int scannerNext = scanner.nextInt();
-
-            if (scannerNext <= sizePair) {
-                return scannerNext;
-            } else {
-                System.out.println("\n\tWe DON'T have this Pair");
-                question();
-            }
-        } else {
-            System.out.println("do not correct! please try next!");
-            scanner = new Scanner(System.in);
-            question();
-            return scannerChoice(sizePair, scanner);
-        }
-        return scannerChoice(sizePair, scanner);
-    }
-
-    public boolean menuControlService(Scanner scanner) {
-
-        question();
-        int scannerChoice = scannerChoice(controlService.getPair().size(), scanner);
+    public Map<String, Object> startMenu(int choose, int bet, Map<String, Object> model) {
         controlService.takeNewPair();
+        printTablePair(controlService.getPairList());
 
-        System.out.println();
-        printTablePair(controlService.getPair());
-        boolean result = controlService.startCircle(scannerChoice);
+        int winnerPair = controlService.startCircle(choose);
+        String endOfRaceMessage = controlService.resultMoney(choose, bet, winnerPair);
 
-        return controlService.resultMoney(result);
-    }
-
-    public void waitOfCircle() {
-        try {
-            Thread.sleep(600);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        model.put("endOfRaceMessage", endOfRaceMessage);
+        model.put("winnerPair", winnerPair);
+        return model;
     }
 
 }
