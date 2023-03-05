@@ -10,13 +10,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class UniversityService {
+public class UniversityService extends AbstractDaoService {
 
     private final SessionFactory factory;
 
     public void save(Teacher teacher) {
-        Session session = factory.openSession();
-        Transaction transaction = session.beginTransaction();
+        Session session = getOpening();
 
         session.save(teacher);
         Course course = teacher.getCourse();
@@ -24,50 +23,41 @@ public class UniversityService {
 
         session.save(course);
 
-        transaction.commit();
-        session.close();
+        close(session);
     }
 
     public Teacher getTeacher(Integer id) {
-        Session session = factory.openSession();
-        Transaction transaction = session.beginTransaction();
+        Session session = getOpening();
 
         Teacher teacher = session.find(Teacher.class, id);
 
-        transaction.commit();
-        session.close();
+        close(session);
         return teacher;
     }
     public Course getCourse(Integer id){
-        Session session = factory.openSession();
-        Transaction transaction = session.beginTransaction();
+        Session session = getOpening();
 
         Course course = session.find(Course.class, id);
 
-        transaction.commit();
-        session.close();
+        close(session);
         return course;
     }
     public void deleteTeacher(Integer id){
-        Session session = factory.openSession();
-        Transaction transaction = session.beginTransaction();
+        Session session = getOpening();
 
         Teacher teacher = session.get(Teacher.class, id);
         Course course = session.get(Course.class, id);
         session.delete(course);
         session.delete(teacher);
 
-        transaction.commit();
-        session.close();
+        close(session);
     }
     public void deleteCourse(Integer id){
-        Session session = factory.openSession();
-        Transaction transaction = session.beginTransaction();
+        Session session = getOpening();
 
         Course course = session.get(Course.class, id);
         session.delete(course);
 
-        transaction.commit();
-        session.close();
+        close(session);
     }
 }
