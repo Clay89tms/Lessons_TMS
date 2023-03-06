@@ -11,14 +11,17 @@ import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -36,17 +39,23 @@ public class UserEntity {
     private String password;
     @Column(name = "man")
     private Boolean isMan;
+
     private String nickname;
+
     @Embedded
     @AttributeOverrides(value = {
             @AttributeOverride(name = "city", column = @Column(name = "new_city"))
     })
     private Address address;
+
     @Temporal(TemporalType.DATE)
     private Date birthday;
+
     @Enumerated(EnumType.STRING)
     private Role role;
-    @OneToOne(mappedBy = "user")
-    private Phone phone;
+
+//    @OneToMany(fetch = FetchType.EAGER) // принудительно включает все данные из 2 табл
+    @OneToMany(mappedBy = "user")
+    private List<Phone> phones;
 
 }

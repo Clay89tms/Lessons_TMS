@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 public class ManiHibernate {
@@ -20,13 +21,15 @@ public class ManiHibernate {
         userService.save(main.create());
         userService.save(main.create());
         userService.save(main.create());
-
         System.out.println("___________________________");
+        UserEntity userEntity = userService.get(1);
 
-        UserEntity userEntity = userService.get(2);
-
-        Phone phone = userService.getPhone(2);
+        System.out.println("---------main!------------");
         System.out.println(userEntity);
+
+//        List<Phone> phones = userEntity.getPhones();
+
+        System.out.println("");
     }
 
     public UserEntity create() {
@@ -36,11 +39,15 @@ public class ManiHibernate {
         Address address = new Address("Minsk", "Lenina");
         user.setAddress(address);
         user.setBirthday(new Date());
-        System.out.println("create user = " + user);
+//        System.out.println("create user = " + user);
 
-        Phone phone = new Phone();
-        phone.setNumber((new Random().nextInt()));
-        user.setPhone(phone);
+        Phone phone1 = new Phone();
+        phone1.setNumber((new Random().nextInt()));
+
+        Phone phone2 = new Phone();
+        phone2.setNumber((new Random().nextInt()));
+
+        user.setPhones(List.of(phone1, phone2));
 
         return user;
     }

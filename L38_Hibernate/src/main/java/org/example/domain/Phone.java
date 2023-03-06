@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -27,8 +28,10 @@ public class Phone {
 
     private Integer number;
 
-    @OneToOne
-    @JoinColumn(name = "person_id")
+//    @OneToOne
+//    @JoinColumn(name = "person_id")
+    @ManyToOne
     @ToString.Exclude
     private UserEntity user;
+
 }
