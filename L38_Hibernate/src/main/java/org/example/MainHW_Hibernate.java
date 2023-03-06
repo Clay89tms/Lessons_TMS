@@ -25,18 +25,18 @@ public class MainHW_Hibernate {
         System.out.println("__________________________________");
 
         Teacher teacher = service.getTeacher(2);
-        System.out.println(teacher);
+//        System.out.println(teacher);
         System.out.println("__________________________________");
 
         Course course = service.getCourse(3);
         System.out.println(course);
         System.out.println("__________________________________");
 
-        service.deleteTeacher(1);
+//        service.deleteTeacher(1);
         System.out.println();
         System.out.println("__________________________________");
 
-        service.deleteCourse(2);
+//        service.deleteCourse(2);
         System.out.println();
         System.out.println("__________________________________");
 
@@ -66,6 +66,6 @@ public class MainHW_Hibernate {
         course.setName(nameCourse);
         course.setDate(date);
         course.setKeyRandomCourse("key_C#" + new Random().nextInt());
-        teacher.setCourse(course);
+//        teacher.setCourse(course);
     }
 }

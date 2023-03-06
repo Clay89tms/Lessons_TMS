@@ -18,10 +18,10 @@ public class UniversityService extends AbstractDaoService {
         Session session = getOpening();
 
         session.save(teacher);
-        Course course = teacher.getCourse();
-        course.setTeacher(teacher);
+//        Course course = teacher.getCourse();
+//        course.setTeacher(teacher);
 
-        session.save(course);
+//        session.save(course);
 
         close(session);
     }
