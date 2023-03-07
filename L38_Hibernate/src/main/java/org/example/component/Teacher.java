@@ -3,6 +3,7 @@ package org.example.component;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.example.domain.Position;
 
 import javax.persistence.AttributeOverride;
@@ -57,6 +58,7 @@ public class Teacher {
     })
     private Property property;
 
+    @ToString.Exclude
     @OneToMany(mappedBy = "teacher")
     private List<Course> courses;
 }

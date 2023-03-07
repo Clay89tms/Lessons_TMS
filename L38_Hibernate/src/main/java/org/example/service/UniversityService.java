@@ -23,18 +23,17 @@ public class UniversityService extends AbstractDaoService {
 
     }
 
-    public void save(Teacher teacher) {
-        Session session = getOpening();
-        session.save(teacher);
-        List<Course> courses = teacher.getCourses();
-        courses.forEach(course -> course.setTeacher(teacher));
-        System.out.println();
-//        Course course = teacher.getCourse();
-//        course.setTeacher(teacher);
 
-//        session.save(course);
+    public void saveCourseForTeacher(Teacher teacher, Course course) {
+        Session session = getOpening();
+        if (teacher.getId() == null) {
+            session.save(teacher);
+        }
+        course.setTeacher(teacher);
+        session.save(course);
 
         close(session);
+
     }
 
     public Teacher getTeacher(Integer id) {
