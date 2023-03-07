@@ -8,16 +8,27 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class UniversityService extends AbstractDaoService {
 
     private final SessionFactory factory;
 
-    public void save(Teacher teacher) {
+    public void saveCourse(Course course) {
         Session session = getOpening();
 
+        session.save(course);
+
+    }
+
+    public void save(Teacher teacher) {
+        Session session = getOpening();
         session.save(teacher);
+        List<Course> courses = teacher.getCourses();
+        courses.forEach(course -> course.setTeacher(teacher));
+        System.out.println();
 //        Course course = teacher.getCourse();
 //        course.setTeacher(teacher);
 
@@ -34,7 +45,8 @@ public class UniversityService extends AbstractDaoService {
         close(session);
         return teacher;
     }
-    public Course getCourse(Integer id){
+
+    public Course getCourse(Integer id) {
         Session session = getOpening();
 
         Course course = session.find(Course.class, id);
@@ -42,7 +54,8 @@ public class UniversityService extends AbstractDaoService {
         close(session);
         return course;
     }
-    public void deleteTeacher(Integer id){
+
+    public void deleteTeacher(Integer id) {
         Session session = getOpening();
 
         Teacher teacher = session.get(Teacher.class, id);
@@ -52,7 +65,8 @@ public class UniversityService extends AbstractDaoService {
 
         close(session);
     }
-    public void deleteCourse(Integer id){
+
+    public void deleteCourse(Integer id) {
         Session session = getOpening();
 
         Course course = session.get(Course.class, id);

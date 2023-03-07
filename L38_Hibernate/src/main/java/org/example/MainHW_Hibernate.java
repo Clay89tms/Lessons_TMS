@@ -1,5 +1,6 @@
 package org.example;
 
+import lombok.Builder;
 import org.example.component.Course;
 import org.example.component.Property;
 import org.example.component.Teacher;
@@ -9,6 +10,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 public class MainHW_Hibernate {
@@ -19,12 +21,19 @@ public class MainHW_Hibernate {
         UniversityService service = context.getBean(UniversityService.class);
         System.out.println();
 
-        service.save(mainHW.createTeacherAndCourse());
-        service.save(mainHW.createTeacherAndCourse());
-        service.save(mainHW.createTeacherAndCourse());
+        Teacher teacherSergey = mainHW.createTeacher();
+
+        Course javaDeveloper = mainHW.createCourse("Java Developer", new Date(123, 6, 26));
+        Course python = mainHW.createCourse("Python", new Date(123, 7, 27));
+        Course cSharp = mainHW.createCourse("C_Sharp", new Date(123, 8, 28));
+
+        mainHW.addCourseToTeacher(teacherSergey, javaDeveloper);
+        mainHW.addCourseToTeacher(teacherSergey, python);
+        mainHW.addCourseToTeacher(teacherSergey, cSharp);
+
         System.out.println("__________________________________");
 
-        Teacher teacher = service.getTeacher(2);
+        Teacher teacher1 = service.getTeacher(2);
 //        System.out.println(teacher);
         System.out.println("__________________________________");
 
@@ -44,8 +53,7 @@ public class MainHW_Hibernate {
     }
 
 
-
-    public Teacher createTeacherAndCourse() {
+    public Teacher createTeacher() {
         Teacher teacher = new Teacher();
         teacher.setKeyRandomTeacher("key_T#" + new Random().nextInt());
         teacher.setName("Sergey");
@@ -55,17 +63,21 @@ public class MainHW_Hibernate {
         Property property = new Property("Porsche", "House", "Apple");
         teacher.setProperty(property);
 
-        addNewCourse(teacher, "Java Developer", new Date(123, 06, 20));
-
         return teacher;
     }
 
 
-    public void addNewCourse(Teacher teacher, String nameCourse, Date date) {
+    public Course createCourse(String nameCourse, Date date) {
         Course course = new Course();
         course.setName(nameCourse);
         course.setDate(date);
         course.setKeyRandomCourse("key_C#" + new Random().nextInt());
-//        teacher.setCourse(course);
+        return course;
+    }
+
+    private void addCourseToTeacher(Teacher teacher, Course course) {
+        List<Course> courseList = teacher.getCourses();
+        courseList.add(course);
+        teacher.setCourses(courseList);
     }
 }
