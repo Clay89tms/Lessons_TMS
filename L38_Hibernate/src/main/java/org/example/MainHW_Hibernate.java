@@ -45,6 +45,7 @@ public class MainHW_Hibernate {
 
 
 
+
     public Teacher createTeacherAndCourse() {
         Teacher teacher = new Teacher();
         teacher.setKeyRandomTeacher("key_T#" + new Random().nextInt());
