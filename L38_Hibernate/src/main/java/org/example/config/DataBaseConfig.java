@@ -32,8 +32,8 @@ public class DataBaseConfig {
         configuration.addAnnotatedClass(UserEntity.class);
         configuration.addAnnotatedClass(Phone.class);
 //Homework
-        configuration.addAnnotatedClass(Teacher.class);
-        configuration.addAnnotatedClass(Course.class);
+//        configuration.addAnnotatedClass(Teacher.class);
+//        configuration.addAnnotatedClass(Course.class);
 
         return configuration.buildSessionFactory();
     }
