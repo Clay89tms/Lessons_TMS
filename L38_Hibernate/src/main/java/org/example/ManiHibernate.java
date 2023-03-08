@@ -27,6 +27,7 @@ public class ManiHibernate {
         System.out.println("___________________________");
 //        UserEntity userEntity = userService.get(1);
 
+
         Set<Report> users = userService.getByRole(Role.ADMIN);
 //        List<UserEntity> users = userService.getByRole(Role.ADMIN);
 //        Phone phone = users.get(0).getPhones().get(0);
