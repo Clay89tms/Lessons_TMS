@@ -1,5 +1,7 @@
 package org.example.config;
 
+import org.example.component.Course;
+import org.example.component.Teacher;
 import org.example.domain.Phone;
 import org.example.domain.UserEntity;
 import org.hibernate.SessionFactory;
@@ -26,9 +28,12 @@ public class DataBaseConfig {
         properties.put(Environment.SHOW_SQL, "true");
 
         configuration.addProperties(properties);
-
+//Classwork
         configuration.addAnnotatedClass(UserEntity.class);
         configuration.addAnnotatedClass(Phone.class);
+//Homework
+        configuration.addAnnotatedClass(Teacher.class);
+        configuration.addAnnotatedClass(Course.class);
 
         return configuration.buildSessionFactory();
     }
