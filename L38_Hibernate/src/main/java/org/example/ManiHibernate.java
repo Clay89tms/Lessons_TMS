@@ -25,6 +25,7 @@ public class ManiHibernate {
         userService.save(main.create(Role.USER));
         userService.save(main.create(Role.ADMIN));
         System.out.println("___________________________");
+
 //        UserEntity userEntity = userService.get(1);
 
 
