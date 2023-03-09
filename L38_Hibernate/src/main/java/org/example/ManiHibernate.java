@@ -21,15 +21,16 @@ public class ManiHibernate {
         ApplicationContext context = new AnnotationConfigApplicationContext("org.example");
         UserService userService = context.getBean(UserService.class);
 
-        userService.save(main.create(Role.USER));
-        userService.save(main.create(Role.USER));
-        userService.save(main.create(Role.ADMIN));
+        userService.save(main.create(Role.USER, "user21"));
+        userService.save(main.create(Role.USER, "user2"));
+        userService.save(main.create(Role.ADMIN, "suser2"));
         System.out.println("___________________________");
 
 //        UserEntity userEntity = userService.get(1);
 
+        List<UserEntity> user2 = userService.getBy("user", Role.USER);
 
-        Set<Report> users = userService.getByRole(Role.ADMIN);
+//        Set<Report> users = userService.getByRole(Role.ADMIN);
 //        List<UserEntity> users = userService.getByRole(Role.ADMIN);
 //        Phone phone = users.get(0).getPhones().get(0);
         System.out.println("---------main!------------");
@@ -40,9 +41,9 @@ public class ManiHibernate {
         System.out.println("");
     }
 
-    public UserEntity create(Role role) {
+    public UserEntity create(Role role, String login) {
         UserEntity user = new UserEntity();
-        user.setLogin("login" + new Random().nextInt());
+        user.setLogin(login);
         user.setPassword("password1");
         Address address = new Address("Minsk", "Lenina");
         user.setAddress(address);
