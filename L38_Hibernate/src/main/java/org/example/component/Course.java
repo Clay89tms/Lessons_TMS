@@ -14,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Data
@@ -36,6 +38,7 @@ public class Course {
     private String name;
 
     @Column(name = "start_course")
+    @Temporal(TemporalType.DATE)
     private Date date;
 
 //    @OneToOne
