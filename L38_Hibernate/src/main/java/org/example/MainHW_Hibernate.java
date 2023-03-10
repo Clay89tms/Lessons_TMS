@@ -3,7 +3,6 @@ package org.example;
 import lombok.Builder;
 import org.example.component.Course;
 import org.example.component.Property;
-import org.example.component.Student;
 import org.example.component.Teacher;
 import org.example.domain.Position;
 import org.example.service.UniversityService;
@@ -23,36 +22,20 @@ public class MainHW_Hibernate {
         UniversityService service = context.getBean(UniversityService.class);
 
         Teacher teacherSergey = mainHW.createTeacher();
-        service.saveTeacher(teacherSergey);
-
-        Course spring = mainHW.createCourse("Spring", new Date(123, 6, 26));
-        service.saveCourse(spring);
-        System.out.println("----------------");
-
-        Course hibernate = mainHW.createCourse("Hibernate", new Date(123, 7, 27));
-        service.saveCourse(hibernate);
-        System.out.println("----------------------");
-
-        Course dataBase = mainHW.createCourse("DataBase", new Date(123, 8, 28));
-        service.saveCourse(dataBase);
-        System.out.println("------------------------------");
+        Course javaDeveloper = mainHW.createCourse("Spring", new Date(123, 6, 26));
+        service.saveCourseForTeacher(teacherSergey, javaDeveloper);
 
 
-        service.addCourseForTeacher(teacherSergey, spring);
-        service.addCourseForTeacher(teacherSergey, hibernate);
-        service.addCourseForTeacher(teacherSergey, dataBase);
+        Course python = mainHW.createCourse("Hibernate", new Date(123, 7, 27));
+        service.saveCourseForTeacher(teacherSergey, python);
 
-        Student romanK = mainHW.createStudent("RomanK", 34);
-        System.out.println("---save_student(" + romanK.getName() + ")---");
-        service.saveStudent(romanK);
-        System.out.println("---save_student(" + romanK.getName() + ")---");
-
+        Course cSharp = mainHW.createCourse("DataBase", new Date(123, 8, 28));
+        service.saveCourseForTeacher(teacherSergey, cSharp);
 
         System.out.println("__________________________________");
 
-
-        Teacher teacher = service.getTeacher(1);
-        System.out.println(teacher);
+        Teacher teacher1 = service.getTeacher(1);
+//        System.out.println(teacher);
         System.out.println("__________________________________");
 
         Course course = service.getCourse(3);
@@ -92,14 +75,4 @@ public class MainHW_Hibernate {
         course.setKeyRandomCourse("key_C#" + new Random().nextInt());
         return course;
     }
-
-    public Student createStudent(String nameStudent, Integer age) {
-        Student student = new Student();
-        student.setName(nameStudent);
-        student.setAge(age);
-
-        return student;
-    }
-
-
 }
