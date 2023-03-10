@@ -1,6 +1,7 @@
 package org.example.config;
 
 import org.example.component.Course;
+import org.example.component.Student;
 import org.example.component.Teacher;
 import org.example.domain.Phone;
 import org.example.domain.UserEntity;
@@ -32,8 +33,9 @@ public class DataBaseConfig {
 //        configuration.addAnnotatedClass(UserEntity.class);
 //        configuration.addAnnotatedClass(Phone.class);
 //Homework
-//        configuration.addAnnotatedClass(Teacher.class);
-//        configuration.addAnnotatedClass(Course.class);
+        configuration.addAnnotatedClass(Teacher.class);
+        configuration.addAnnotatedClass(Course.class);
+        configuration.addAnnotatedClass(Student.class);
 
         return configuration.buildSessionFactory();
     }
