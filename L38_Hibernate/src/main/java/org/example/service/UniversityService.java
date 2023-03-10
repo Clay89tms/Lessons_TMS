@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -29,6 +30,16 @@ public class UniversityService extends AbstractDaoService {
         if (teacher.getId() == null) {
             session.save(teacher);
         }
+        List<Course> courses;
+
+        if (teacher.getCourses() == null) {
+            courses = new ArrayList<>();
+        } else {
+            courses = teacher.getCourses();
+        }
+        courses.add(course);
+        teacher.setCourses(courses);
+
         course.setTeacher(teacher);
         session.save(course);
 

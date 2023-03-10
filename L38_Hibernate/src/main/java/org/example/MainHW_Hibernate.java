@@ -22,14 +22,14 @@ public class MainHW_Hibernate {
         UniversityService service = context.getBean(UniversityService.class);
 
         Teacher teacherSergey = mainHW.createTeacher();
-        Course javaDeveloper = mainHW.createCourse("Java Developer", new Date(123, 6, 26));
+        Course javaDeveloper = mainHW.createCourse("Spring", new Date(123, 6, 26));
         service.saveCourseForTeacher(teacherSergey, javaDeveloper);
 
 
-        Course python = mainHW.createCourse("Python", new Date(123, 7, 27));
+        Course python = mainHW.createCourse("Hibernate", new Date(123, 7, 27));
         service.saveCourseForTeacher(teacherSergey, python);
 
-        Course cSharp = mainHW.createCourse("C_Sharp", new Date(123, 8, 28));
+        Course cSharp = mainHW.createCourse("DataBase", new Date(123, 8, 28));
         service.saveCourseForTeacher(teacherSergey, cSharp);
 
         System.out.println("__________________________________");
