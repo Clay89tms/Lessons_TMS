@@ -2,6 +2,8 @@ package org.example;
 
 import org.example.domain.Address;
 import org.example.domain.Phone;
+import org.example.domain.Report;
+import org.example.domain.Role;
 import org.example.domain.UserEntity;
 import org.example.service.UserService;
 import org.springframework.context.ApplicationContext;
@@ -10,6 +12,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 public class ManiHibernate {
     public static void main(String[] args) {
@@ -18,27 +21,35 @@ public class ManiHibernate {
         ApplicationContext context = new AnnotationConfigApplicationContext("org.example");
         UserService userService = context.getBean(UserService.class);
 
-        userService.save(main.create());
-        userService.save(main.create());
-        userService.save(main.create());
+        userService.save(main.create(Role.USER, "user21"));
+        userService.save(main.create(Role.USER, "user2"));
+        userService.save(main.create(Role.ADMIN, "suser2"));
         System.out.println("___________________________");
-        UserEntity userEntity = userService.get(1);
 
+//        UserEntity userEntity = userService.get(1);
+
+        List<UserEntity> user2 = userService.getBy("user", Role.USER);
+
+//        Set<Report> users = userService.getByRole(Role.ADMIN);
+//        List<UserEntity> users = userService.getByRole(Role.ADMIN);
+//        Phone phone = users.get(0).getPhones().get(0);
         System.out.println("---------main!------------");
-        System.out.println(userEntity);
+//        System.out.println(userEntity);
 
 //        List<Phone> phones = userEntity.getPhones();
 
         System.out.println("");
     }
 
-    public UserEntity create() {
+    public UserEntity create(Role role, String login) {
         UserEntity user = new UserEntity();
-        user.setLogin("login" + new Random().nextInt());
+        user.setLogin(login);
         user.setPassword("password1");
         Address address = new Address("Minsk", "Lenina");
         user.setAddress(address);
         user.setBirthday(new Date());
+
+        user.setRole(role);
 //        System.out.println("create user = " + user);
 
         Phone phone1 = new Phone();
