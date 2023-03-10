@@ -29,8 +29,8 @@ public class DataBaseConfig {
 
         configuration.addProperties(properties);
 //Classwork
-        configuration.addAnnotatedClass(UserEntity.class);
-        configuration.addAnnotatedClass(Phone.class);
+//        configuration.addAnnotatedClass(UserEntity.class);
+//        configuration.addAnnotatedClass(Phone.class);
 //Homework
 //        configuration.addAnnotatedClass(Teacher.class);
 //        configuration.addAnnotatedClass(Course.class);
