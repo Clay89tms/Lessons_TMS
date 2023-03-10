@@ -66,7 +66,6 @@ public class UniversityService extends AbstractDaoService {
             teacher.setCourses(courses);
 
             course.setTeacher(teacher);
-//            session.save(course);
             session.saveOrUpdate(course);
 
             close(session);
