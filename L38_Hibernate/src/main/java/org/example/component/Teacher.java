@@ -58,7 +58,7 @@ public class Teacher {
     })
     private Property property;
 
-    @ToString.Exclude
+//    @ToString.Exclude
     @OneToMany(mappedBy = "teacher")
     private List<Course> courses;
 }

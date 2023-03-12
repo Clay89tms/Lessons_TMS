@@ -1,6 +1,5 @@
 package org.example;
 
-import lombok.Builder;
 import org.example.component.Course;
 import org.example.component.Property;
 import org.example.component.Student;
@@ -10,9 +9,7 @@ import org.example.service.UniversityService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Random;
 
 public class MainHW_Hibernate {
@@ -22,9 +19,12 @@ public class MainHW_Hibernate {
         ApplicationContext context = new AnnotationConfigApplicationContext("org.example");
         UniversityService service = context.getBean(UniversityService.class);
 
+        System.out.println("---create_teacher---");
         Teacher teacherSergey = mainHW.createTeacher();
         service.saveTeacher(teacherSergey);
+        System.out.println("---end_create_teacher---");
 
+        System.out.println("---create_courses---");
         Course spring = mainHW.createCourse("Spring", new Date(123, 6, 26));
         service.saveCourse(spring);
         System.out.println("----------------");
@@ -35,39 +35,62 @@ public class MainHW_Hibernate {
 
         Course dataBase = mainHW.createCourse("DataBase", new Date(123, 8, 28));
         service.saveCourse(dataBase);
-        System.out.println("------------------------------");
+        System.out.println("------end_create_courses------------------------");
 
-
+        System.out.println("---add_course_for_teacher---");
         service.addCourseForTeacher(teacherSergey, spring);
         service.addCourseForTeacher(teacherSergey, hibernate);
         service.addCourseForTeacher(teacherSergey, dataBase);
+        System.out.println("---end_add_course_for_teacher---");
 
+        System.out.println("---add_students---");
         Student romanK = mainHW.createStudent("RomanK", 34);
-        System.out.println("---save_student(" + romanK.getName() + ")---");
         service.saveStudent(romanK);
-        System.out.println("---save_student(" + romanK.getName() + ")---");
 
+        Student danila = mainHW.createStudent("Danila", 27);
+        service.saveStudent(danila);
 
+        Student sviatoslav = mainHW.createStudent("Sviatoslav", 35);
+        service.saveStudent(sviatoslav);
+
+        Student pavel = mainHW.createStudent("Pavel", 30);
+        service.saveStudent(pavel);
+
+        Student petr = mainHW.createStudent("Petr", 32);
+        service.saveStudent(petr);
+        System.out.println("---end_add_students---");
+
+        System.out.println("---take_students_a_courses---");
+        service.addStudentForCourse(romanK, spring);
+        service.addStudentForCourse(romanK, hibernate);
+        service.addStudentForCourse(romanK, dataBase);
+
+        service.addStudentForCourse(danila, spring);
+        service.addStudentForCourse(danila, hibernate);
+        service.addStudentForCourse(danila, dataBase);
+
+        service.addStudentForCourse(sviatoslav, spring);
+        service.addStudentForCourse(sviatoslav, hibernate);
+
+        service.addStudentForCourse(pavel, dataBase);
+
+        service.addStudentForCourse(petr, spring);
+        service.addStudentForCourse(petr, dataBase);
+        System.out.println("---end_take_students_a_courses---");
+
+        service.deleteStudent(sviatoslav, hibernate);
+        service.deleteStudent(sviatoslav, spring);
+
+        service.addStudentForCourse(sviatoslav, dataBase);
+        service.addStudentForCourse(sviatoslav, spring);
         System.out.println("__________________________________");
 
-
-        Teacher teacher = service.getTeacher(1);
-        System.out.println(teacher);
+        System.out.println("--------metod1-----");
+        service.getTeacher(1);
+        System.out.println("--------metod2-----");
+        service.getTeacher1(teacherSergey);
         System.out.println("__________________________________");
 
-        Course course = service.getCourse(3);
-        System.out.println(course);
-        System.out.println("__________________________________");
-
-//        service.deleteTeacher(1);
-        System.out.println();
-        System.out.println("__________________________________");
-
-//        service.deleteCourse(2);
-        System.out.println();
-        System.out.println("__________________________________");
-
-        System.out.println();
     }
 
 

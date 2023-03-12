@@ -14,10 +14,9 @@ public class AbstractDaoService {
     public AbstractDaoService() {
     }
 
-    public Session getOpening(){
+    public Session getSession(){
         Session session = factory.openSession();
         session.beginTransaction();
-
         return session;
     }
 
