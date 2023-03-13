@@ -32,16 +32,7 @@ public class Student {
 
     private Integer age;
 
-//    @ToString.Exclude
+    @ToString.Exclude
     @ManyToMany(mappedBy = "students")
     private List<Course> courses;
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                '}';
-    }
 }

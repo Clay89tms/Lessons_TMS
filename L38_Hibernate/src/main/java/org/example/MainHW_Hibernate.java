@@ -21,43 +21,37 @@ public class MainHW_Hibernate {
 
         System.out.println("---create_teacher---");
         Teacher teacherSergey = mainHW.createTeacher();
-        service.saveTeacher(teacherSergey);
+        service.saveTeacherToDB(teacherSergey);
         System.out.println("---end_create_teacher---");
 
         System.out.println("---create_courses---");
         Course spring = mainHW.createCourse("Spring", new Date(123, 6, 26));
-        service.saveCourse(spring);
+        service.saveCourseToDB(spring);
         System.out.println("----------------");
 
         Course hibernate = mainHW.createCourse("Hibernate", new Date(123, 7, 27));
-        service.saveCourse(hibernate);
+        service.saveCourseToDB(hibernate);
         System.out.println("----------------------");
 
         Course dataBase = mainHW.createCourse("DataBase", new Date(123, 8, 28));
-        service.saveCourse(dataBase);
+        service.saveCourseToDB(dataBase);
         System.out.println("------end_create_courses------------------------");
 
         System.out.println("---add_course_for_teacher---");
-        service.addCourseForTeacher(teacherSergey, spring);
-        service.addCourseForTeacher(teacherSergey, hibernate);
-        service.addCourseForTeacher(teacherSergey, dataBase);
+        service.addCourseForTeacherToDB(teacherSergey, spring);
+        service.addCourseForTeacherToDB(teacherSergey, hibernate);
+        service.addCourseForTeacherToDB(teacherSergey, dataBase);
         System.out.println("---end_add_course_for_teacher---");
 
         System.out.println("---add_students---");
         Student romanK = mainHW.createStudent("RomanK", 34);
-        service.saveStudent(romanK);
+        service.saveStudentToDB(romanK);
 
         Student danila = mainHW.createStudent("Danila", 27);
-        service.saveStudent(danila);
+        service.saveStudentToDB(danila);
 
         Student sviatoslav = mainHW.createStudent("Sviatoslav", 35);
-        service.saveStudent(sviatoslav);
-
-        Student pavel = mainHW.createStudent("Pavel", 30);
-        service.saveStudent(pavel);
-
-        Student petr = mainHW.createStudent("Petr", 32);
-        service.saveStudent(petr);
+        service.saveStudentToDB(sviatoslav);
         System.out.println("---end_add_students---");
 
         System.out.println("---take_students_a_courses---");
@@ -71,11 +65,6 @@ public class MainHW_Hibernate {
 
         service.addStudentForCourse(sviatoslav, spring);
         service.addStudentForCourse(sviatoslav, hibernate);
-
-        service.addStudentForCourse(pavel, dataBase);
-
-        service.addStudentForCourse(petr, spring);
-        service.addStudentForCourse(petr, dataBase);
         System.out.println("---end_take_students_a_courses---");
 
         service.deleteStudent(sviatoslav, hibernate);
@@ -86,9 +75,9 @@ public class MainHW_Hibernate {
         System.out.println("__________________________________");
 
         System.out.println("--------metod1-----");
-        service.getTeacher(1);
+        service.getTeacherById(1);
         System.out.println("--------metod2-----");
-        service.getTeacher1(teacherSergey);
+        System.out.println(teacherSergey);
         System.out.println("__________________________________");
 
     }
