@@ -1,4 +1,4 @@
-package org.tms.dz33.config;
+package org.tms.dz33.dto;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
