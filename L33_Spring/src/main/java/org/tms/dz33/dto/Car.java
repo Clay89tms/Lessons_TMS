@@ -1,4 +1,4 @@
-package org.tms.dz33.dto;
+package org.tms.dz33.service;
 
 public class Car {
 
