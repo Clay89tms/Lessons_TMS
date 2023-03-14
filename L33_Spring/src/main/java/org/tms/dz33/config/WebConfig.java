@@ -1,4 +1,4 @@
-package org.tms.dz33.config;
+package org.tms.dz33.dto;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
