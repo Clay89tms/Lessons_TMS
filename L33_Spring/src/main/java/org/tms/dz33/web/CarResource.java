@@ -32,7 +32,7 @@ public class CarResource {
 //            @RequestParam(required = false, defaultValue = "defVal") String password,
 //            @RequestHeader(name = "head1", required = false) String head,
 //            @CookieValue(name = "cook") String cookValue,
-            @PathVariable(name = "type") String goodType
+                        @PathVariable(name = "type") String goodType
 
     ) {
         return "home";
