@@ -69,6 +69,7 @@ public class MainHW_Hibernate {
         System.out.println("---end_take_students_a_courses---");
 
         service.deleteStudentFromCourse(sviatoslav, spring);
+        service.deleteStudentFromCourse(sviatoslav, hibernate);
 
         service.addStudentForCourse(sviatoslav, dataBase);
         service.addStudentForCourse(sviatoslav, spring);
