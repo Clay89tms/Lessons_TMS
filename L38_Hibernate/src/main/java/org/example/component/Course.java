@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -50,21 +51,10 @@ public class Course {
     @ToString.Exclude
     private Teacher teacher;
 
-    //    @ToString.Exclude
-    @ManyToMany
+    @ToString.Exclude
+    @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(name = "courses_students",
-            joinColumns = @JoinColumn(name = "course_id"),
-            inverseJoinColumns = @JoinColumn(name = "student_id"))
+    joinColumns = @JoinColumn(name = "course_id"),
+    inverseJoinColumns = @JoinColumn(name = "student_id"))
     private List<Student> students;
-
-    @Override
-    public String toString() {
-        return "Course{" +
-                "id=" + id +
-                ", keyRandomCourse='" + keyRandomCourse + '\'' +
-                ", name='" + name + '\'' +
-                ", date=" + date +
-                ", students=" + students +
-                '}';
-    }
 }
