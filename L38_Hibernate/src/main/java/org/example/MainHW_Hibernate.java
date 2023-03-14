@@ -41,6 +41,7 @@ public class MainHW_Hibernate {
         service.addCourseForTeacherToDB(teacherSergey, spring);
         service.addCourseForTeacherToDB(teacherSergey, hibernate);
         service.addCourseForTeacherToDB(teacherSergey, dataBase);
+        service.addCourseForTeacherToDB(teacherSergey, spring);
         System.out.println("---end_add_course_for_teacher---");
 
         System.out.println("---add_students---");
@@ -67,18 +68,15 @@ public class MainHW_Hibernate {
         service.addStudentForCourse(sviatoslav, hibernate);
         System.out.println("---end_take_students_a_courses---");
 
-        service.deleteStudent(sviatoslav, hibernate);
-        service.deleteStudent(sviatoslav, spring);
+        service.deleteStudentFromCourse(sviatoslav, spring);
 
         service.addStudentForCourse(sviatoslav, dataBase);
         service.addStudentForCourse(sviatoslav, spring);
-        System.out.println("__________________________________");
+        service.addStudentForCourse(sviatoslav, hibernate);
 
-        System.out.println("--------metod1-----");
-        service.getTeacherById(1);
-        System.out.println("--------metod2-----");
-        System.out.println(teacherSergey);
-        System.out.println("__________________________________");
+        System.out.println("__________print________________________");
+        System.out.println(service.printAllByTeacherToId(teacherSergey.getId()));
+        System.out.println("__________print________________________");
 
     }
 

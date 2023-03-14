@@ -15,7 +15,7 @@ import java.util.List;
 public class UniversityService extends AbstractDaoService {
 
     private List<Course> courses;
-    private List<Student> students;
+    private List<Student> studentList;
 
     public void saveTeacherToDB(Teacher teacher) {
         if (teacher.getId() == null) {
@@ -51,19 +51,9 @@ public class UniversityService extends AbstractDaoService {
         if (teacher.getId() != null || course.getId() != null) {
             Session session = getSession();
 
-            Teacher teacherToDB = session.get(Teacher.class, teacher.getId());
-            Course courseToDB = session.get(Course.class, course.getId());
-
-            if (teacherToDB.getCourses() == null) {
-                courses = new ArrayList<>();
-            } else {
-                courses = teacherToDB.getCourses();
-            }
-            courseToDB.setTeacher(teacherToDB);
-            courses.add(course);
-            teacherToDB.setCourses(courses);
-            session.save(teacherToDB);
-            session.save(courseToDB);
+            Course courseFromDB = session.get(Course.class, course.getId());
+            courseFromDB.setTeacher(teacher);
+            session.save(courseFromDB);
 
             close(session);
         }
@@ -73,58 +63,66 @@ public class UniversityService extends AbstractDaoService {
         if (student.getId() != null || course.getId() != null) {
             Session session = getSession();
 
-            Course courseToDB = session.get(Course.class, course.getId());
-
-            if (courseToDB.getStudents() == null) {
-                students = new ArrayList<>();
+            Course courseFromDB = session.get(Course.class, course.getId());
+            Student studentFromDB = session.get(Student.class, student.getId());
+            if (courseFromDB.getStudents() == null) {
+                studentList = new ArrayList<>();
             } else {
-                students = courseToDB.getStudents();
+                studentList = courseFromDB.getStudents();
             }
-            students.add(student);
-            courseToDB.setStudents(students);
-            session.save(courseToDB);
-
+            boolean addOrNo = true;
+            for (Student studentFind : studentList) {
+                if (studentFind.equals(studentFromDB)) {
+                    addOrNo = false;
+                }
+            }
+            if (addOrNo) {
+                studentList.add(student);
+                courseFromDB.setStudents(studentList);
+                session.save(courseFromDB);
+            }
             close(session);
         }
     }
 
-    public void deleteStudent(Student student, Course course) {
+    public void deleteStudentFromCourse(Student student, Course course) {
         if (!(student.getId() == null && course.getId() == null)) {
             Session session = getSession();
 
-//            Student studentId = session.get(Student.class, student.getId());
-            Course courseId = session.get(Course.class, course.getId());
-//            courseId.getStudents().remove(studentId);
+            Course courseFromDB = session.get(Course.class, course.getId());
 
-            List<Student> studentsDB = courseId.getStudents();
-            for (Student studentDB : studentsDB) {
-                if (studentDB.getId().equals(student.getId())) {
-                    studentsDB.remove(studentDB);
-                    break;
+            if (courseFromDB.getStudents().isEmpty()) {
+                throw new RuntimeException("this Course dont have a students");
+            } else {
+                studentList = courseFromDB.getStudents();
+                for (Student studentFromDB : studentList) {
+                    if (studentFromDB.getId().equals(student.getId())) {
+                        studentList.remove(studentFromDB);
+                        break;
+                    }
                 }
             }
-
             close(session);
         }
     }
 
 
-    public Teacher getTeacherById(Integer id) {
+    public String printAllByTeacherToId(Integer id) {
         Session session = getSession();
+        String printResult = "";
 
         Teacher teacher = session.find(Teacher.class, id);
-        System.out.println("PRINTING teacher: " + teacher);
-        List<Course> courses = teacher.getCourses();
+        printResult = "PRINTING teacher: " + teacher;
+        courses = teacher.getCourses();
         for (Course course : courses) {
-            System.out.println(course);
-            List<Student> students = course.getStudents();
-            for (Student student : students) {
-                System.out.println(student);
+            printResult += "\n" + course;
+            studentList = course.getStudents();
+            for (Student student : studentList) {
+                printResult += " { " + student + " } ";
             }
         }
-
         close(session);
-        return teacher;
+        return printResult;
     }
 
     public Course getCourse(Integer id) {

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -51,7 +52,7 @@ public class Course {
     private Teacher teacher;
 
     @ToString.Exclude
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(name = "courses_students",
     joinColumns = @JoinColumn(name = "course_id"),
     inverseJoinColumns = @JoinColumn(name = "student_id"))
