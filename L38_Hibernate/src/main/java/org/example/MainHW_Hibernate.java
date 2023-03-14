@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.component.Course;
 import org.example.component.Property;
+import org.example.component.Student;
 import org.example.component.Teacher;
 import org.example.domain.Position;
 import org.example.service.UniversityService;
@@ -17,36 +18,70 @@ public class MainHW_Hibernate {
 
         ApplicationContext context = new AnnotationConfigApplicationContext("org.example");
         UniversityService service = context.getBean(UniversityService.class);
-        System.out.println();
 
-        service.save(mainHW.createTeacherAndCourse());
-        service.save(mainHW.createTeacherAndCourse());
-        service.save(mainHW.createTeacherAndCourse());
-        System.out.println("__________________________________");
+        System.out.println("---create_teacher---");
+        Teacher teacherSergey = mainHW.createTeacher();
+        service.saveTeacherToDB(teacherSergey);
+        System.out.println("---end_create_teacher---");
 
-        Teacher teacher = service.getTeacher(2);
-        System.out.println(teacher);
-        System.out.println("__________________________________");
+        System.out.println("---create_courses---");
+        Course spring = mainHW.createCourse("Spring", new Date(123, 6, 26));
+        service.saveCourseToDB(spring);
+        System.out.println("----------------");
 
-        Course course = service.getCourse(3);
-        System.out.println(course);
-        System.out.println("__________________________________");
+        Course hibernate = mainHW.createCourse("Hibernate", new Date(123, 7, 27));
+        service.saveCourseToDB(hibernate);
+        System.out.println("----------------------");
 
-        service.deleteTeacher(1);
-        System.out.println();
-        System.out.println("__________________________________");
+        Course dataBase = mainHW.createCourse("DataBase", new Date(123, 8, 28));
+        service.saveCourseToDB(dataBase);
+        System.out.println("------end_create_courses------------------------");
 
-        service.deleteCourse(2);
-        System.out.println();
-        System.out.println("__________________________________");
+        System.out.println("---add_course_for_teacher---");
+        service.addCourseForTeacherToDB(teacherSergey, spring);
+        service.addCourseForTeacherToDB(teacherSergey, hibernate);
+        service.addCourseForTeacherToDB(teacherSergey, dataBase);
+        service.addCourseForTeacherToDB(teacherSergey, spring);
+        System.out.println("---end_add_course_for_teacher---");
 
-        System.out.println();
+        System.out.println("---add_students---");
+        Student romanK = mainHW.createStudent("RomanK", 34);
+        service.saveStudentToDB(romanK);
+
+        Student danila = mainHW.createStudent("Danila", 27);
+        service.saveStudentToDB(danila);
+
+        Student sviatoslav = mainHW.createStudent("Sviatoslav", 35);
+        service.saveStudentToDB(sviatoslav);
+        System.out.println("---end_add_students---");
+
+        System.out.println("---take_students_a_courses---");
+        service.addStudentForCourse(romanK, spring);
+        service.addStudentForCourse(romanK, hibernate);
+        service.addStudentForCourse(romanK, dataBase);
+
+        service.addStudentForCourse(danila, spring);
+        service.addStudentForCourse(danila, hibernate);
+        service.addStudentForCourse(danila, dataBase);
+
+        service.addStudentForCourse(sviatoslav, spring);
+        service.addStudentForCourse(sviatoslav, hibernate);
+        System.out.println("---end_take_students_a_courses---");
+
+        service.deleteStudentFromCourse(sviatoslav, spring);
+
+        service.addStudentForCourse(sviatoslav, dataBase);
+        service.addStudentForCourse(sviatoslav, spring);
+        service.addStudentForCourse(sviatoslav, hibernate);
+
+        System.out.println("__________print________________________");
+        System.out.println(service.printAllByTeacherToId(teacherSergey.getId()));
+        System.out.println("__________print________________________");
+
     }
 
 
-
-
-    public Teacher createTeacherAndCourse() {
+    public Teacher createTeacher() {
         Teacher teacher = new Teacher();
         teacher.setKeyRandomTeacher("key_T#" + new Random().nextInt());
         teacher.setName("Sergey");
@@ -56,17 +91,25 @@ public class MainHW_Hibernate {
         Property property = new Property("Porsche", "House", "Apple");
         teacher.setProperty(property);
 
-        addNewCourse(teacher, "Java Developer", new Date(123, 06, 20));
-
         return teacher;
     }
 
 
-    public void addNewCourse(Teacher teacher, String nameCourse, Date date) {
+    public Course createCourse(String nameCourse, Date date) {
         Course course = new Course();
         course.setName(nameCourse);
         course.setDate(date);
         course.setKeyRandomCourse("key_C#" + new Random().nextInt());
-        teacher.setCourse(course);
+        return course;
     }
+
+    public Student createStudent(String nameStudent, Integer age) {
+        Student student = new Student();
+        student.setName(nameStudent);
+        student.setAge(age);
+
+        return student;
+    }
+
+
 }

@@ -5,22 +5,27 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+
 
 @Entity
 @Table(name = "course_name")
@@ -40,8 +45,16 @@ public class Course {
     @Temporal(TemporalType.DATE)
     private Date date;
 
-    @OneToOne
-    @JoinColumn(name = "teacher_id")
+    //    @OneToOne
+//    @JoinColumn(name = "teacher_id")
+    @ManyToOne
     @ToString.Exclude
     private Teacher teacher;
+
+    @ToString.Exclude
+    @ManyToMany(cascade = CascadeType.PERSIST)
+    @JoinTable(name = "courses_students",
+    joinColumns = @JoinColumn(name = "course_id"),
+    inverseJoinColumns = @JoinColumn(name = "student_id"))
+    private List<Student> students;
 }
