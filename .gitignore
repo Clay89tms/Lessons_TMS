@@ -1,6 +1,7 @@
 ### IntelliJ IDEA ###
 out/
 */target/*
+.idea/compiler.xml
 !**/src/main/**/out/
 !**/src/test/**/out/
 .idea/*
