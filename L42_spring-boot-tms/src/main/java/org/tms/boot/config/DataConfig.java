@@ -1,5 +1,7 @@
 package org.tms.boot.config;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -12,10 +14,14 @@ import javax.sql.DataSource;
 import java.util.List;
 
 @Configuration
+@RequiredArgsConstructor
 public class DataConfig {
 
-    @Value(value = "${car.types[0]}")
-    private String types;
+
+    private final CarConfig config;
+
+    private final DSConfig dsConfig;
+
 
     @Value("${spring.datasource.ur:world}")
     private String url;

@@ -21,6 +21,15 @@ book:
 
 car:
   types:
-    - honda
-    - bmw
-    - audi
+    BMV:
+      name: BMW car
+      age: 20
+      color: black
+    AUDI:
+      name: AUDI car
+      age: 5
+      color: WHITE
+    HONDA:
+      name: HONDA car
+      age: 10
+      color: RED
