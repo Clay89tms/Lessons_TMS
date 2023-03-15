@@ -23,19 +23,12 @@ public class DataConfig {
     private final DSConfig dsConfig;
 
 
-    @Value("${spring.datasource.ur:world}")
-    private String url;
-    @Value("${spring.datasource.username:world}")
-    private String username;
-    @Value("${spring.datasource.password:world}")
-    private String password;
-
     @Bean
     DataSource dataSource(){
         DriverManagerDataSource source = new DriverManagerDataSource();
-        source.setUrl(url);
-        source.setUsername(username);
-        source.setPassword(password);
+        source.setUrl(dsConfig.getDatasource().getUrl());
+        source.setUsername(dsConfig.getDatasource().getUsername());
+        source.setPassword(dsConfig.getDatasource().getPassword());
         return source;
     }
 
