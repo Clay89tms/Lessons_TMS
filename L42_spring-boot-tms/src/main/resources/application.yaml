@@ -1,0 +1,35 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: MyAppClay
+  datasource:
+    ur: jdbc:postgresql://localhost:5432/postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+management:
+  endpoints:
+    web:
+      exposure:
+        include: env, beans
+book:
+  service: true
+
+car:
+  types:
+    BMV:
+      name: BMW car
+      age: 20
+      color: black
+    AUDI:
+      name: AUDI car
+      age: 5
+      color: WHITE
+    HONDA:
+      name: HONDA car
+      age: 10
+      color: RED
