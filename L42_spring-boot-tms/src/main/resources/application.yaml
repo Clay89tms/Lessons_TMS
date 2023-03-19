@@ -1,5 +1,6 @@
 server:
   port: 8090
+
 spring:
   application:
     name: MyAppClay
@@ -11,11 +12,13 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
+
 management:
   endpoints:
     web:
       exposure:
         include: env, beans
+
 book:
   service: true
 
@@ -33,3 +36,7 @@ car:
       name: HONDA car
       age: 10
       color: RED
+
+file:
+  create-path:
+    path: C:\Users\User\IdeaProjects\Lessons_TMS\L42_spring-boot-tms\src\main\java\org\tms\boot\
