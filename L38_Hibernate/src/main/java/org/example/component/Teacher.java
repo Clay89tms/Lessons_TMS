@@ -8,6 +8,7 @@ import org.example.domain.Position;
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -58,7 +59,7 @@ public class Teacher {
     })
     private Property property;
 
-    //    @ToString.Exclude
+    @ToString.Exclude
     @OneToMany(mappedBy = "teacher")
     private List<Course> courses;
 }
