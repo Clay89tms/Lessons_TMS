@@ -21,11 +21,11 @@ public class AppLaunchCounter {
 
     @Bean
     public void startCounterExist() {
-        if (pathConfig.getCreatePath().getName() == null){
-            pathConfig.getCreatePath().setName("");
-        }
-        if (pathConfig.getCreatePath().getPath().isEmpty() || pathConfig.getCreatePath().getName().isEmpty()) {
-            System.out.println("the one of param is empty");
+        if (pathConfig.getCreatePath().getName() == null ||
+                pathConfig.getCreatePath().getPath() == null ||
+                pathConfig.getCreatePath().getPath().isEmpty() ||
+                pathConfig.getCreatePath().getName().isEmpty()) {
+            System.out.println("the one of param is empty or null");
         } else {
             String pathFolder = pathConfig.getCreatePath().getPath();
             String pathName = pathConfig.getCreatePath().getName();
