@@ -10,19 +10,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L44 Spring boot MVC Classwork initial commit">
-      <change afterPath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/webapp/home2.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/webapp/pages/home.jsp" afterDir="false" />
+    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L44 Spring boot MVC Classwork initial commit1">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/java/com/example/springbootmvctms/SpringBootMvcTmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/java/com/example/springbootmvctms/SpringBootMvcTmsApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-mvc-tms/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-mvc-tms/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-mvc-tms/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-mvc-tms/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-mvc-tms/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-mvc-tms/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-mvc-tms/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/java/com/example/springbootmvctms/SpringBootMvcTmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-mvc-tms/src/main/java/com/example/springbootmvctms/SpringBootMvcTmsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-mvc-tms/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/webapp/home2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-mvc-tms/src/main/webapp/home2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/webapp/pages/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-mvc-tms/src/main/webapp/pages/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/test/java/com/example/springbootmvctms/SpringBootMvcTmsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-mvc-tms/src/test/java/com/example/springbootmvctms/SpringBootMvcTmsApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,23 +75,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="spring-boot-mvc-tms" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="spring-boot-mvc-tms" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="spring-boot-mvc-tms" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -245,7 +232,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.L44_spring-boot-mvc-tms [bootRunMainClassName]">
+  <component name="RunManager" selected="Spring Boot.SpringBootMvcTmsApplication">
     <configuration name="L43_Spring_Data [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -500,14 +487,7 @@
       <workItem from="1678904719310" duration="26652000" />
       <workItem from="1679312327669" duration="15200000" />
       <workItem from="1679392288418" duration="19916000" />
-      <workItem from="1679430510601" duration="4256000" />
-    </task>
-    <task id="LOCAL-00035" summary="L33 Spring (Homework) initial commit">
-      <created>1676105850441</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1676105850441</updated>
+      <workItem from="1679430510601" duration="5763000" />
     </task>
     <task id="LOCAL-00036" summary="L33 Spring (Homework) com1">
       <created>1676106505363</created>
@@ -845,7 +825,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679423488434</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="L44 Spring boot MVC Classwork initial commit1">
+      <created>1679472490818</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1679472490819</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -880,7 +867,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="L35 Spring WEB Homework com6" />
     <MESSAGE value="L35 Spring WEB Homework com7" />
     <MESSAGE value="L35 Spring WEB Homework com8" />
     <MESSAGE value="L38 Hibernate initial commit" />
@@ -905,7 +891,8 @@
     <MESSAGE value="L43 Spring DATA Classwork initial commit" />
     <MESSAGE value="L43 Spring DATA Classwork comm1 &#10;[structure create and used]" />
     <MESSAGE value="L44 Spring boot MVC Classwork initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="L44 Spring boot MVC Classwork initial commit" />
+    <MESSAGE value="L44 Spring boot MVC Classwork initial commit1" />
+    <option name="LAST_COMMIT_MESSAGE" value="L44 Spring boot MVC Classwork initial commit1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -996,7 +983,7 @@
           <option name="timeStamp" value="425" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/java/com/example/springbootmvctms/SpringBootMvcTmsApplication.java</url>
+          <url>file://$PROJECT_DIR$/spring-boot-mvc-tms/src/main/java/com/example/springbootmvctms/SpringBootMvcTmsApplication.java</url>
           <line>19</line>
           <option name="timeStamp" value="427" />
         </line-breakpoint>
