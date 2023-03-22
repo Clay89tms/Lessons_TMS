@@ -9,16 +9,43 @@
         <outputRelativeToContentRoot value="true" />
         <module name="L28_Solid" />
         <module name="L26JSTL" />
+        <module name="L38_Hibernate" />
         <module name="L31_Grasp" />
         <module name="L29_Pattern_p1" />
         <module name="L30_Pattern_p2" />
         <module name="Servlet" />
         <module name="L22" />
+        <module name="L33_Spring" />
+      </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.7.9/d2a58cd8b62976d9711178f9a12e888d0616e60c/spring-boot-configuration-processor-2.7.9.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.26/8f8cf0372abf564913e9796623aac4c8ea44025a/lombok-1.18.26.jar" />
+        </processorPath>
+        <module name="spring-boot-tms.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="com.example.spring-boot-tms.main" target="17" />
+      <module name="com.example.spring-boot-tms.test" target="17" />
       <module name="l22" target="11" />
       <module name="L26_JSTL" target="11" />
+      <module name="L32_SPRING" target="11" />
+      <module name="L42_Spring-boot-tms" target="17" />
+      <module name="L42_Spring-boot-tms.main" target="17" />
+      <module name="L42_Spring-boot-tms.test" target="17" />
+      <module name="org.tms.spring-boot-tms" target="17" />
+      <module name="org.tms.spring-boot-tms.main" target="17" />
+      <module name="org.tms.spring-boot-tms.test" target="17" />
+      <module name="Spring_Boot_MVC" target="17" />
+      <module name="Spring_Boot_MVC.main" target="17" />
+      <module name="Spring_Boot_MVC.test" target="17" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-boot-tms" options="-parameters" />
+    </option>
   </component>
 </project>

@@ -2,24 +2,98 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="L26JSTL:war" />
+      <artifact name="L33_Spring:war" />
+      <artifact name="L33_Spring:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="ALL" />
+    <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L32 Spring (Class Work) com1">
+    <list default="true" id="a80dadd4-da61-4abd-b0d3-789142dd94db" name="Changes" comment="L44 Spring boot MVC Classwork initial commit">
+      <change afterPath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/webapp/home2.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/webapp/pages/home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/java/com/example/springbootmvctms/SpringBootMvcTmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/java/com/example/springbootmvctms/SpringBootMvcTmsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/L42_Spring-boot-tms">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/L42_Spring_Data">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/L42_spring-boot-tms">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/L43_Spring_Data">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/L44_spring-boot-mvc-tms">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/Spring_Boot_MVC">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/spring-boot-mvc-tms">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/spring-boot-tms">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/spring-data">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/L42_spring-boot-tms">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/L43_Spring_Data">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/L44_spring-boot-mvc-tms">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-boot-mvc-tms" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-boot-mvc-tms" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spring-boot-mvc-tms" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -28,20 +102,24 @@
         <option value="CSS File" />
         <option value="HTML File" />
         <option value="module-info" />
+        <option value="AnnotationType" />
         <option value="spring-beans.schema" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lesson_31_grasp" />
+        <entry key="$PROJECT_DIR$" value="Lesson_43_Spring_Data_CW" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -52,7 +130,7 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="ca9ef640-aba9-4907-b936-65920d02b212" />
+        <option name="accountId" value="c8c8146f-aa59-4235-b0c4-94ad51957176" />
         <option name="url" value="https://github.com/Clay89tms/Lessons_TMS.git" />
       </UrlAndAccount>
     </option>
@@ -97,51 +175,59 @@
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/Lessons_TMS/L32_SPRING",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/Lessons_TMS/Spring_Boot_MVC/src/main",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.15039062",
     "project.structure.side.proportion": "0.2",
-    "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.build.tools.auto.reload": "SELECTIVE",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "spring.configuration.checksum": "19eb929ea6efc1b8318b1090e6c7781d",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "postgresql"
+    ],
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PLAIN_TEXT"
     ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.springdata.model" />
+      <recent name="com.example.springdata.service" />
+      <recent name="org.tms.dz33.service" />
       <recent name="org.example" />
       <recent name="org.example.decorator" />
-      <recent name="org.example.adapter" />
-      <recent name="org.example.template" />
-      <recent name="org.example.strategy" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L32_SPRING\src\main" />
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL\src\main\java\org\example" />
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL\src\main\java\idCarsServlet" />
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L27JSTL\src" />
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L26JSTL" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\Spring_Boot_MVC\src\main" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L42_spring-boot-tms\src\main\resources" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L33_Spring\src\main\java\org\tms\dz33\web" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L33_Spring\src\main\java\org\tms\dz33" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L33_Spring\src\main\java\org\tms\dz33\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src\main\webapp" />
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src\main\java\org\example" />
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src\main\webapp\WEB-INF" />
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src\test" />
-      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L22\src" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L44_spring-boot-mvc-tms\src\main\webapp" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L44_spring-boot-mvc-tms\src\main\webapp\pages" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L42_Spring-boot-tms\src\main" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L38_Hibernate\src\main\java" />
+      <recent name="C:\Users\User\IdeaProjects\Lessons_TMS\L33_Spring\src\main\webapp\pages" />
     </key>
     <key name="CreateBuilderDialog.RecentsKey">
       <recent name="org.example.builder" />
@@ -152,13 +238,118 @@
       <recent name="org.example.factory_method" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="L32_SPRING" />
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.L44_spring-boot-mvc-tms [bootRunMainClassName]">
+    <configuration name="L43_Spring_Data [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/L43_Spring_Data" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="L43_Spring_Data [compileJava]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/L43_Spring_Data" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="compileJava" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="L44_spring-boot-mvc-tms [bootJarMainClassName]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/L44_spring-boot-mvc-tms" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJarMainClassName" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="L44_spring-boot-mvc-tms [bootRunMainClassName]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/L44_spring-boot-mvc-tms" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRunMainClassName" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SpringBootMvcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Spring_Boot_MVC.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tms.spring_boot_mvc.SpringBootMvcApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootMvcTmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="spring-boot-mvc-tms.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springbootmvctms.SpringBootMvcTmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootTmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="spring-boot-tms.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tms.boot.SpringBootTmsApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.Messenger" />
+          <option name="PATTERN" value="org.tms.boot.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,65 +357,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.template.MainApp" />
-      <module name="L30_Pattern_p2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.template.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="org.example.adapter.MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.adapter.MainApp" />
-      <module name="L30_Pattern_p2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.adapter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="org.example.decorator.MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.decorator.MainApp" />
-      <module name="L30_Pattern_p2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.decorator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="org.example.strategy.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.strategy.Main" />
-      <module name="L30_Pattern_p2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.strategy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="SpringDataApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="spring-data.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springdata.SpringDataApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.70" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.70" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/start27.jsp" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/circle/menu" />
       <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
-        <artifact name="L26JSTL:war">
+        <artifact name="L33_Spring:war">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
@@ -304,25 +450,29 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="L26JSTL:war" />
+          <artifact name="L33_Spring:war" />
+          <artifact name="L33_Spring:war" />
         </option>
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.MainApp" />
-      <item itemvalue="Application.org.example.adapter.MainApp" />
-      <item itemvalue="Application.org.example.decorator.MainApp" />
-      <item itemvalue="Application.org.example.strategy.Main" />
+      <item itemvalue="Gradle.L44_spring-boot-mvc-tms [bootJarMainClassName]" />
+      <item itemvalue="Gradle.L44_spring-boot-mvc-tms [bootRunMainClassName]" />
+      <item itemvalue="Gradle.L43_Spring_Data [clean]" />
+      <item itemvalue="Gradle.L43_Spring_Data [compileJava]" />
+      <item itemvalue="Spring Boot.SpringBootMvcApplication" />
+      <item itemvalue="Spring Boot.SpringBootMvcTmsApplication" />
+      <item itemvalue="Spring Boot.SpringDataApplication" />
+      <item itemvalue="Spring Boot.SpringBootTmsApplication" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.70" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.org.example.strategy.Main" />
-        <item itemvalue="Application.org.example.decorator.MainApp" />
-        <item itemvalue="Application.org.example.adapter.MainApp" />
-        <item itemvalue="Application.MainApp" />
+        <item itemvalue="Gradle.L44_spring-boot-mvc-tms [bootRunMainClassName]" />
+        <item itemvalue="Gradle.L44_spring-boot-mvc-tms [bootJarMainClassName]" />
+        <item itemvalue="Spring Boot.SpringBootTmsApplication" />
+        <item itemvalue="Gradle.L43_Spring_Data [compileJava]" />
+        <item itemvalue="Gradle.L43_Spring_Data [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -345,197 +495,357 @@
       <workItem from="1673541042326" duration="8807000" />
       <workItem from="1673714955648" duration="7865000" />
       <workItem from="1673933671950" duration="80353000" />
+      <workItem from="1678394848264" duration="325000" />
+      <workItem from="1678467160846" duration="46229000" />
+      <workItem from="1678904719310" duration="26652000" />
+      <workItem from="1679312327669" duration="15200000" />
+      <workItem from="1679392288418" duration="19916000" />
+      <workItem from="1679430510601" duration="4256000" />
     </task>
-    <task id="LOCAL-00001" summary="initial Commit">
-      <created>1671047214017</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+    <task id="LOCAL-00035" summary="L33 Spring (Homework) initial commit">
+      <created>1676105850441</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
       <option name="project" value="LOCAL" />
-      <updated>1671047214017</updated>
+      <updated>1676105850441</updated>
     </task>
-    <task id="LOCAL-00002" summary="L22 Commit">
-      <created>1671047581869</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
+    <task id="LOCAL-00036" summary="L33 Spring (Homework) com1">
+      <created>1676106505363</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1671047581870</updated>
+      <updated>1676106505363</updated>
     </task>
-    <task id="LOCAL-00003" summary="L22 Commit 1&#10;add servlet">
-      <created>1671049793910</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
+    <task id="LOCAL-00037" summary="L33 Spring (Homework) com2">
+      <created>1676227761325</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1671049793910</updated>
+      <updated>1676227761325</updated>
     </task>
-    <task id="LOCAL-00004" summary="L23 Work online - Commit 1">
-      <created>1671393216755</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
+    <task id="LOCAL-00038" summary="L32 Spring (Homework) com11">
+      <created>1676404989681</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1671393216755</updated>
+      <updated>1676404989681</updated>
     </task>
-    <task id="LOCAL-00005" summary="L23 HW Com1 (p3)">
-      <created>1671568577980</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
+    <task id="LOCAL-00039" summary="L33 Spring (Homework) com3">
+      <created>1676487075412</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
       <option name="project" value="LOCAL" />
-      <updated>1671568577980</updated>
+      <updated>1676487075412</updated>
     </task>
-    <task id="LOCAL-00006" summary="L23 HW Com2 (p3)">
-      <created>1671719703508</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
+    <task id="LOCAL-00040" summary="L33 Spring (Homework) com4">
+      <created>1676489378889</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
       <option name="project" value="LOCAL" />
-      <updated>1671719703508</updated>
+      <updated>1676489378889</updated>
     </task>
-    <task id="LOCAL-00007" summary="L26 HW Com1">
-      <created>1672778762828</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
+    <task id="LOCAL-00041" summary="L33 Spring (Homework) com5">
+      <created>1676491490906</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
       <option name="project" value="LOCAL" />
-      <updated>1672778762828</updated>
+      <updated>1676491490906</updated>
     </task>
-    <task id="LOCAL-00008" summary="L26 HW Com2">
-      <created>1672779986538</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
+    <task id="LOCAL-00042" summary="L34 Spring Aspect initial commit">
+      <created>1676491880528</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
       <option name="project" value="LOCAL" />
-      <updated>1672779986538</updated>
+      <updated>1676491880528</updated>
     </task>
-    <task id="LOCAL-00009" summary="L26 JSP HW Com3 100% + (*)">
-      <created>1672946446538</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
+    <task id="LOCAL-00043" summary="L34 Spring Aspect com1">
+      <created>1676582119272</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
       <option name="project" value="LOCAL" />
-      <updated>1672946446538</updated>
+      <updated>1676582119272</updated>
     </task>
-    <task id="LOCAL-00010" summary="L26 JSTL init commit">
-      <created>1672947121705</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
+    <task id="LOCAL-00044" summary="L34 Spring Aspect com3">
+      <created>1676727096453</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
       <option name="project" value="LOCAL" />
-      <updated>1672947121705</updated>
+      <updated>1676727096453</updated>
     </task>
-    <task id="LOCAL-00011" summary="L27 JSTL Start">
-      <created>1672947912271</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
+    <task id="LOCAL-00045" summary="L34 Spring Aspect com4">
+      <created>1676728009227</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
       <option name="project" value="LOCAL" />
-      <updated>1672947912271</updated>
+      <updated>1676728009227</updated>
     </task>
-    <task id="LOCAL-00012" summary="L27 JSTL Start">
-      <created>1672948242553</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
+    <task id="LOCAL-00046" summary="L35 Spring WEB initial commit">
+      <created>1676728502335</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
       <option name="project" value="LOCAL" />
-      <updated>1672948242553</updated>
+      <updated>1676728502335</updated>
     </task>
-    <task id="LOCAL-00013" summary="L27 JSTL Start">
-      <created>1672948250582</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
+    <task id="LOCAL-00047" summary="L35 Spring WEB Classwork">
+      <created>1676998157769</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
       <option name="project" value="LOCAL" />
-      <updated>1672948250583</updated>
+      <updated>1676998157769</updated>
     </task>
-    <task id="LOCAL-00014" summary="L26 JSP Repair">
-      <created>1673191269277</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
+    <task id="LOCAL-00048" summary="L35 Spring WEB Homework com1">
+      <created>1677012365487</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
       <option name="project" value="LOCAL" />
-      <updated>1673191269277</updated>
+      <updated>1677012365487</updated>
     </task>
-    <task id="LOCAL-00015" summary="L27 JSTL Com3">
-      <created>1673279918388</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
+    <task id="LOCAL-00049" summary="L35 Spring WEB Homework com3">
+      <created>1677098765154</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
       <option name="project" value="LOCAL" />
-      <updated>1673279918388</updated>
+      <updated>1677098765154</updated>
     </task>
-    <task id="LOCAL-00016" summary="L27 JSTL Com4 (MyTag add) (StartUpServlet add).&#10;(90%)">
-      <created>1673538652715</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
+    <task id="LOCAL-00050" summary="L35 Spring WEB Homework com5">
+      <created>1677184560179</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
       <option name="project" value="LOCAL" />
-      <updated>1673538652715</updated>
+      <updated>1677184560180</updated>
     </task>
-    <task id="LOCAL-00017" summary="L27 JSTL Com4 (MyTag add) (StartUpServlet add).&#10;(90%)">
-      <created>1673625191503</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
+    <task id="LOCAL-00051" summary="L35 Spring WEB Homework com6">
+      <created>1677759505216</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
       <option name="project" value="LOCAL" />
-      <updated>1673625191503</updated>
+      <updated>1677759505216</updated>
     </task>
-    <task id="LOCAL-00018" summary="L27 JSTL Com4 DataBase (OK)&#10;(100%)">
-      <created>1673722371218</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
+    <task id="LOCAL-00052" summary="L35 Spring WEB Homework com7">
+      <created>1677766919390</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
       <option name="project" value="LOCAL" />
-      <updated>1673722371218</updated>
+      <updated>1677766919390</updated>
     </task>
-    <task id="LOCAL-00019" summary="L28 SOLID initial commit">
-      <created>1673931576137</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
+    <task id="LOCAL-00053" summary="L35 Spring WEB Homework com8">
+      <created>1677786690374</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
-      <updated>1673931576137</updated>
+      <updated>1677786690374</updated>
     </task>
-    <task id="LOCAL-00020" summary="L28 SOLID initial commit">
-      <created>1673933005633</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
+    <task id="LOCAL-00054" summary="L38 Hibernate initial commit">
+      <created>1677786964975</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
       <option name="project" value="LOCAL" />
-      <updated>1673933005633</updated>
+      <updated>1677786964976</updated>
     </task>
-    <task id="LOCAL-00021" summary="L28 Realization Singleton v1.1 v1.2">
-      <created>1673933098181</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
+    <task id="LOCAL-00055" summary="L38 Hibernate Classwork">
+      <created>1677943333758</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
       <option name="project" value="LOCAL" />
-      <updated>1673933098181</updated>
+      <updated>1677943333758</updated>
     </task>
-    <task id="LOCAL-00022" summary="L29 Pattern part1 Initial commit">
-      <created>1673933512701</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
+    <task id="LOCAL-00056" summary="L38 Hibernate Homework initial commit">
+      <created>1677943496482</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
       <option name="project" value="LOCAL" />
-      <updated>1673933512701</updated>
+      <updated>1677943496482</updated>
     </task>
-    <task id="LOCAL-00023" summary="L29 Pattern part1 complete">
-      <created>1674328706102</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
+    <task id="LOCAL-00057" summary="L38 Hibernate Homework com1">
+      <created>1678015278074</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
       <option name="project" value="LOCAL" />
-      <updated>1674328706102</updated>
+      <updated>1678015278075</updated>
     </task>
-    <task id="LOCAL-00024" summary="L31 GRASP init commit">
-      <created>1674765469534</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
+    <task id="LOCAL-00058" summary="L38 Hibernate Homework com2">
+      <created>1678021260891</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
       <option name="project" value="LOCAL" />
-      <updated>1674765469534</updated>
+      <updated>1678021260891</updated>
     </task>
-    <task id="LOCAL-00025" summary="L31 GRASP init commit">
-      <created>1674765582476</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
+    <task id="LOCAL-00059" summary="L39 Hibernate classwork2 initial commit">
+      <created>1678023801475</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
       <option name="project" value="LOCAL" />
-      <updated>1674765582476</updated>
+      <updated>1678023801475</updated>
     </task>
-    <task id="LOCAL-00026" summary="L30 Pattern part2 (homework Cache with Decorator) com3 (CRUD+) repair 1">
-      <created>1675003596569</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
+    <task id="LOCAL-00060" summary="L39 Hibernate classwork2 initial commit">
+      <created>1678023867353</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
       <option name="project" value="LOCAL" />
-      <updated>1675003596569</updated>
+      <updated>1678023867353</updated>
     </task>
-    <task id="LOCAL-00027" summary="L32 Spring (Class Work) com1">
-      <created>1675627166544</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
+    <task id="LOCAL-00061" summary="L39 Hibernate classwork2 com1 (One2May) &#10;Bi-directional communication">
+      <created>1678117576590</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
       <option name="project" value="LOCAL" />
-      <updated>1675627166544</updated>
+      <updated>1678117576590</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00062" summary="L40 Hibernate Homework com1 (One2May) &#10;Bi-directional communication">
+      <created>1678133960388</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1678133960388</updated>
+    </task>
+    <task id="LOCAL-00063" summary="L40 Hibernate Homework com3 (One2Many) &#10;Bi-directional communication">
+      <created>1678209926584</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1678209926584</updated>
+    </task>
+    <task id="LOCAL-00064" summary="L40 Hibernate Classwork initial commit">
+      <created>1678210715907</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1678210715907</updated>
+    </task>
+    <task id="LOCAL-00065" summary="L39 Hibernate classwork2 com2 (One2May) (Many2Many)&#10;Bi-directional communication">
+      <created>1678309967384</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1678309967384</updated>
+    </task>
+    <task id="LOCAL-00066" summary="L40 Hibernate Classwork initial commit">
+      <created>1678310076391</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1678310076391</updated>
+    </task>
+    <task id="LOCAL-00067" summary="L40 Hibernate Homework com4 (One2Many)&#10;Bi-directional communication">
+      <created>1678394462086</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1678394462086</updated>
+    </task>
+    <task id="LOCAL-00068" summary="L40 Hibernate Homework com4 (One2Many)&#10;Bi-directional communication">
+      <created>1678394781404</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1678394781404</updated>
+    </task>
+    <task id="LOCAL-00069" summary="L40 Hibernate Homework com7 (One2Many) (Many2Many)&#10;Bi-directional communication">
+      <created>1678634277688</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1678634277688</updated>
+    </task>
+    <task id="LOCAL-00070" summary="L40 Hibernate Homework com8.1 (One2Many) (Many2Many)&#10;Bi-directional communication">
+      <created>1678740835721</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1678740835721</updated>
+    </task>
+    <task id="LOCAL-00071" summary="L42 Spring Boot Classwork com1">
+      <created>1678824205111</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1678824205111</updated>
+    </task>
+    <task id="LOCAL-00072" summary="L42 Spring Boot Classwork com1">
+      <created>1678824292449</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1678824292449</updated>
+    </task>
+    <task id="LOCAL-00073" summary="L42 Spring Boot Classwork com1">
+      <created>1678825991130</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1678825991131</updated>
+    </task>
+    <task id="LOCAL-00074" summary="L42 Spring Boot Classwork com1">
+      <created>1678826575471</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1678826575471</updated>
+    </task>
+    <task id="LOCAL-00075" summary="L42 Spring Boot Classwork com2">
+      <created>1678827910822</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1678827910822</updated>
+    </task>
+    <task id="LOCAL-00076" summary="L42 Spring Boot Classwork com2">
+      <created>1678827981725</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1678827981726</updated>
+    </task>
+    <task id="LOCAL-00077" summary="L42 Spring Boot Classwork com1.3 dataSource new vers">
+      <created>1678903628228</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1678903628228</updated>
+    </task>
+    <task id="LOCAL-00078" summary="L42 Spring Boot Classwork com1.3 dataSource new vers">
+      <created>1678904155088</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1678904155088</updated>
+    </task>
+    <task id="LOCAL-00079" summary="L42 Spring Boot Homework (COUNTER EXIST) com1">
+      <created>1679238342975</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1679238342976</updated>
+    </task>
+    <task id="LOCAL-00080" summary="L42 Spring Boot Homework (COUNTER EXIST) com2">
+      <created>1679306212248</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1679306212248</updated>
+    </task>
+    <task id="LOCAL-00081" summary="L43 Spring DATA Classwork initial commit">
+      <created>1679312482490</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1679312482490</updated>
+    </task>
+    <task id="LOCAL-00082" summary="L43 Spring DATA Classwork comm1 &#10;[structure create and used]">
+      <created>1679412927918</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1679412927919</updated>
+    </task>
+    <task id="LOCAL-00083" summary="L44 Spring boot MVC Classwork initial commit">
+      <created>1679423488434</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1679423488434</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +867,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Lesson_29_Pattern1" />
+                        <option value="Lesson_42_Spring_Boot_CW" />
                       </list>
                     </value>
                   </entry>
@@ -570,29 +880,32 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial Commit" />
-    <MESSAGE value="L22 Commit" />
-    <MESSAGE value="L22 Commit 1&#10;add servlet" />
-    <MESSAGE value="L23 Work online - Commit 1" />
-    <MESSAGE value="L23 HW Com1 (p3)" />
-    <MESSAGE value="L23 HW Com2 (p3)" />
-    <MESSAGE value="L26 HW Com1" />
-    <MESSAGE value="L26 HW Com2" />
-    <MESSAGE value="L26 JSP HW Com3 100% + (*)" />
-    <MESSAGE value="L26 JSTL init commit" />
-    <MESSAGE value="L27 JSTL Start" />
-    <MESSAGE value="L26 JSP Repair" />
-    <MESSAGE value="L27 JSTL Com3" />
-    <MESSAGE value="L27 JSTL Com4 (MyTag add) (StartUpServlet add).&#10;(90%)" />
-    <MESSAGE value="L27 JSTL Com4 DataBase (OK)&#10;(100%)" />
-    <MESSAGE value="L28 SOLID initial commit" />
-    <MESSAGE value="L28 Realization Singleton v1.1 v1.2" />
-    <MESSAGE value="L29 Pattern part1 Initial commit" />
-    <MESSAGE value="L29 Pattern part1 complete" />
-    <MESSAGE value="L31 GRASP init commit" />
-    <MESSAGE value="L30 Pattern part2 (homework Cache with Decorator) com3 (CRUD+) repair 1" />
-    <MESSAGE value="L32 Spring (Class Work) com1" />
-    <option name="LAST_COMMIT_MESSAGE" value="L32 Spring (Class Work) com1" />
+    <MESSAGE value="L35 Spring WEB Homework com6" />
+    <MESSAGE value="L35 Spring WEB Homework com7" />
+    <MESSAGE value="L35 Spring WEB Homework com8" />
+    <MESSAGE value="L38 Hibernate initial commit" />
+    <MESSAGE value="L38 Hibernate Classwork" />
+    <MESSAGE value="L38 Hibernate Homework initial commit" />
+    <MESSAGE value="L38 Hibernate Homework com1" />
+    <MESSAGE value="L38 Hibernate Homework com2" />
+    <MESSAGE value="L39 Hibernate classwork2 initial commit" />
+    <MESSAGE value="L39 Hibernate classwork2 com1 (One2May) &#10;Bi-directional communication" />
+    <MESSAGE value="L40 Hibernate Homework com1 (One2May) &#10;Bi-directional communication" />
+    <MESSAGE value="L40 Hibernate Homework com3 (One2Many) &#10;Bi-directional communication" />
+    <MESSAGE value="L39 Hibernate classwork2 com2 (One2May) (Many2Many)&#10;Bi-directional communication" />
+    <MESSAGE value="L40 Hibernate Classwork initial commit" />
+    <MESSAGE value="L40 Hibernate Homework com4 (One2Many)&#10;Bi-directional communication" />
+    <MESSAGE value="L40 Hibernate Homework com7 (One2Many) (Many2Many)&#10;Bi-directional communication" />
+    <MESSAGE value="L40 Hibernate Homework com8.1 (One2Many) (Many2Many)&#10;Bi-directional communication" />
+    <MESSAGE value="L42 Spring Boot Classwork com1" />
+    <MESSAGE value="L42 Spring Boot Classwork com2" />
+    <MESSAGE value="L42 Spring Boot Classwork com1.3 dataSource new vers" />
+    <MESSAGE value="L42 Spring Boot Homework (COUNTER EXIST) com1" />
+    <MESSAGE value="L42 Spring Boot Homework (COUNTER EXIST) com2" />
+    <MESSAGE value="L43 Spring DATA Classwork initial commit" />
+    <MESSAGE value="L43 Spring DATA Classwork comm1 &#10;[structure create and used]" />
+    <MESSAGE value="L44 Spring boot MVC Classwork initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="L44 Spring boot MVC Classwork initial commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -611,6 +924,81 @@
           <url>file://$PROJECT_DIR$/L30_Pattern_p2/src/main/java/org/example/dz30/CarsDataBaseImpl.java</url>
           <line>72</line>
           <option name="timeStamp" value="218" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L32_SPRING/src/main/java/org/example/Main.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="249" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L32_SPRING/src/main/java/org/tms/dz32/PrintService.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="257" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L32_SPRING/src/main/java/org/tms/dz32/PrintService.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="259" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L32_SPRING/src/main/java/org/tms/dz32/Horse.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L33_Spring/src/main/java/org/tms/dz33/aop/MyBenchmark.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="281" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L33_Spring/src/main/java/org/tms/dz33/component/Horse.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="297" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L33_Spring/src/main/java/org/tms/dz33/component/Rider.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="300" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L33_Spring/src/main/java/org/tms/dz33/service/CarServiceImpl.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="321" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L38_Hibernate/src/main/java/org/example/ManiHibernate.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="372" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L38_Hibernate/src/main/java/org/example/MainHW_Hibernate.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="407" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L38_Hibernate/src/main/java/org/example/MainHW_Hibernate.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="412" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L38_Hibernate/src/main/java/org/example/MainHW_Hibernate.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="413" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L38_Hibernate/src/main/java/org/example/MainHW_Hibernate.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="414" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L42_spring-boot-tms/src/main/java/org/tms/boot/service/AppLaunchCounter.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="425" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/L44_spring-boot-mvc-tms/src/main/java/com/example/springbootmvctms/SpringBootMvcTmsApplication.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="427" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -4,6 +4,12 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/L22" />
     <file type="web" url="file://$PROJECT_DIR$/L26JSTL" />
+    <file type="web" url="file://$PROJECT_DIR$/L33_Spring" />
+    <file type="web" url="file://$PROJECT_DIR$/L42_spring-boot-tms" />
+    <file type="web" url="file://$PROJECT_DIR$/L43_Spring_Data" />
+    <file type="web" url="file://$PROJECT_DIR$/L44_spring-boot-mvc-tms" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-boot-mvc-tms" />
+    <file type="web" url="file://$PROJECT_DIR$/Spring_Boot_MVC" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -11,14 +17,16 @@
         <option value="$PROJECT_DIR$/L22/pom.xml" />
         <option value="$PROJECT_DIR$/L26JSTL/pom.xml" />
         <option value="$PROJECT_DIR$/L27JSTL/pom.xml" />
+        <option value="$PROJECT_DIR$/L38_Hibernate/pom.xml" />
         <option value="$PROJECT_DIR$/L28_Solid/pom.xml" />
+        <option value="$PROJECT_DIR$/L31_Grasp/pom.xml" />
         <option value="$PROJECT_DIR$/L29_Pattern_p1/pom.xml" />
         <option value="$PROJECT_DIR$/L30_Pattern_p2/pom.xml" />
-        <option value="$PROJECT_DIR$/L31_Grasp/pom.xml" />
+        <option value="$PROJECT_DIR$/L33_Spring/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
